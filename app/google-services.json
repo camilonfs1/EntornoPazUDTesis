@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1067516751970",
+    "firebase_url": "https://tesisudpaz.firebaseio.com",
+    "project_id": "tesisudpaz",
+    "storage_bucket": "tesisudpaz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067516751970:android:4139a8c3be57fb1500a13b",
+        "android_client_info": {
+          "package_name": "com.example.entornopazud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067516751970-qd2vdef15b4o66hc3l3hlar00oo7bast.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.entornopazud",
+            "certificate_hash": "b627aa3a7a5796e0e91f6839f375be02c41c7509"
+          }
+        },
+        {
+          "client_id": "1067516751970-krcdk58squ4sfuvsi1k0n6ko9to6ag8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1--pFShyefWvyHI0Kcg2evjjukVjV1tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067516751970-krcdk58squ4sfuvsi1k0n6ko9to6ag8b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
