@@ -2,13 +2,19 @@
     <string name="app_name">EntornoPazUD</string>
 
     <!--Register-->
-    <string name="RegisterHiper"><u>Registrar nuevo usuario</u>.</string>
+    <string name="HomeHiper"><u>Inicio</u>.</string>
     <string name="EmailText">Email</string>
-    <string name="PassText">Contraseña</string>
+    <string name="IdText">Identificacion</string>
+    <string name="PassText">Contraseña con 6 caracteres min</string>
+    <string name="PassConfirmText">Confirma la Contraseña</string>
     <string name="BtnReg">Registrar</string>
+    <string name="RadTech">Docente</string>
+    <string name="RadStud">Aprendiente</string>
+    <string name="NameText">Nombre</string>
 
     <!--Login-->
     <string name="Title">App Paz UD</string>
     <string name="BtnEnt">Ingresar</string>
+    <string name="RegisterHiper"><u>Registrar nuevo usuario</u>.</string>
     <string name="comentari">Esta app fue realizada por Camilo Vargas Romero para la Universidad Distrital Francisco Jose de Caldas</string>
 </resources>

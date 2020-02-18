@@ -12,7 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -20,39 +21,46 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/RbtnTechReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
+                android:text="@string/RadTech"
                 android:layout_weight="1"
                 android:textAlignment="center"/>
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/RBtnStudReg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
+                android:text="@string/RadStud"
                 android:layout_weight="1"
                 android:textAlignment="center"/>
         </RadioGroup>
-
+        <EditText
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/NameText" />
+        <EditText
+            android:id="@+id/txtId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/IdText" />
         <EditText
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/EmailText" />
-
         <EditText
             android:id="@+id/txtPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/PassText" />
         <EditText
-            android:id="@+id/txtName"
+            android:id="@+id/txtPassConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/PassText" />
-
+            android:hint="@string/PassConfirmText" />
 
         <Button
             android:id="@+id/btnRegister"
@@ -60,6 +68,17 @@
             android:layout_height="wrap_content"
             android:text="@string/BtnReg"
             android:onClick="onClick"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:gravity="center"
+            android:linksClickable="false"
+            android:onClick="onClickRegister"
+            android:selectAllOnFocus="false"
+            android:layout_gravity="bottom"
+            android:text="@string/HomeHiper"
+            android:textColor="@color/colorHiper" />
     </LinearLayout>
 
 </RelativeLayout>
