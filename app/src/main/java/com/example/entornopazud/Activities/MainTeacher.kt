@@ -1,7 +1,8 @@
-package com.example.entornopazud
+package com.example.entornopazud.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.entornopazud.R
 
 class MainTeacher : AppCompatActivity() {
 

@@ -1,9 +1,10 @@
-package com.example.entornopazud
+package com.example.entornopazud.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.entornopazud.R
 
-class MainEstudent : AppCompatActivity() {
+class MainStudent : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

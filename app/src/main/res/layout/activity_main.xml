@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="15dp"
-    tools:context=".MainActivity"
+    tools:context=".Activities.MainActivity"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,27 +26,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_weight="1">
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/RbtnTech"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/RadTech"
-                android:layout_weight="1"
-                android:textAlignment="center"/>
-
-            <RadioButton
-                android:id="@+id/RBtnStud"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/RadStud"
-                android:layout_weight="1"
-                android:textAlignment="center"/>
-        </RadioGroup>
         <EditText
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
@@ -60,10 +40,9 @@
             android:hint="@string/PassText" />
 
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnEnter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onClick"
             android:text="@string/BtnEnt" />
 
         <TextView

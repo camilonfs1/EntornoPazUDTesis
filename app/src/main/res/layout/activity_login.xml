@@ -4,13 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.MainTeacher"
+    tools:context=".Activities.Login"
+    android:gravity="center"
     android:orientation="vertical">
-
     <TextView
-        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Docente"
-        android:textSize="40dp"/>
+        android:text="Bienvenido :)"
+        android:gravity="center"
+        android:textSize="30dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cargando..."
+        android:gravity="center"
+        android:textSize="15dp"/>
+
 </LinearLayout>

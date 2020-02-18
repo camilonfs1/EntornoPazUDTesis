@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainRegister"
+    tools:context=".Activities.MainRegister"
     android:padding="15dp"
     android:gravity="center">
 
@@ -66,8 +66,7 @@
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/BtnReg"
-            android:onClick="onClick"/>
+            android:text="@string/BtnReg"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
