@@ -1,14 +1,13 @@
-package com.example.entornopazud.Activities
+package com.example.entornopazud.Clases
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
-import android.widget.Toast
+import com.example.entornopazud.Activities.MainStudent
+import com.example.entornopazud.Activities.MainTeacher
 import com.example.entornopazud.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_login.*
 
 class Login : AppCompatActivity() {
     private var mDatabaseReference: DatabaseReference? = null
