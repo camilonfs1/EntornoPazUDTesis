@@ -12,14 +12,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f1948a"
+        android:background="#673AB7"
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:gravity="left">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:src="@drawable/main_black_icon" />
+        </LinearLayout>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/main_color_icon"
+            android:src="@drawable/user_icon"
             android:layout_weight="5"
             />
         <TextView
@@ -27,18 +40,18 @@
             android:layout_weight="0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" AppPazUD "
+            android:text=" Nombre Aprendiente "
             android:textAlignment="center"
             android:textColor="#ffffff"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:textSize="22sp"
+            android:textStyle="italic" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background=" #fadbd8 "
+        android:background="#B39DDB"
         android:layout_weight="0.5">
         <GridLayout
             android:id="@+id/idGrid"
@@ -49,7 +62,7 @@
             android:rowCount="3">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/StudentsCard"
+                android:id="@+id/ProfileCard"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -68,16 +81,16 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/users_icon"
+                        android:src="@drawable/adjustment_icon"
                         android:layout_weight="0.5"
                         android:layout_marginTop="15dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Aprendientes"
+                        android:text="Tu perfil"
                         android:textAlignment="center"
-                        android:textColor="#DD0E2F"
+                        android:textColor="#646161"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:layout_weight="1"/>
@@ -105,7 +118,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/group_icon"
+                        android:src="@drawable/activity_icon"
                         android:layout_weight="0.5"
                         android:layout_marginTop="15dp"/>
 
@@ -113,9 +126,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Cursos"
+                        android:text="Aprender"
                         android:textAlignment="center"
-                        android:textColor="#00B7FF"
+                        android:textColor="#3F51B5"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:layout_weight="1"/>
@@ -161,7 +174,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/DBCard"
+                android:id="@+id/AvatarCard"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -179,16 +192,16 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/db_icon"
+                        android:src="@drawable/avatar_icon"
                         android:layout_weight="0.5"
                         android:layout_marginTop="15dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Bases de datos"
+                        android:text="Avatar"
                         android:textAlignment="center"
-                        android:textColor="#2FBEBA"
+                        android:textColor="#EC427D"
                         android:textSize="20sp"
                         android:layout_weight="1"
                         android:textStyle="bold" />
@@ -197,7 +210,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/ActivitysCard"
+                android:id="@+id/PrizeCard"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_rowWeight="1"
@@ -215,13 +228,13 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/peace_icon"
+                        android:src="@drawable/trophy_icon"
                         android:layout_weight="0.5"
                         android:layout_marginTop="15dp"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Actividades"
+                        android:text="Premios"
                         android:textAlignment="center"
                         android:textColor="#ffcc00"
                         android:textSize="20sp"

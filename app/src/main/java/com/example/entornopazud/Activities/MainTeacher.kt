@@ -14,8 +14,8 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_teacher)
-        FragmentTeacher = MainTeacherFragment()
 
+        FragmentTeacher = MainTeacherFragment()
         supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, FragmentTeacher!!).commit()
     }
 
