@@ -29,7 +29,6 @@ class MainRegister : AppCompatActivity() {
     private var TextEmail: EditText? = null
     private var TextPass: EditText? = null
     private var TextId: EditText? = null
-    private var TextRoll: String? = ""
     private var TextName: EditText? = null
     private var TextPassConf: EditText? = null
     private var RadioStud: RadioButton? = null

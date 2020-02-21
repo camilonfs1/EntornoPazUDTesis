@@ -1,15 +1,14 @@
 package com.example.entornopazud.Activities
 
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.entornopazud.Fragments.MainTeacherFragment
-import com.example.entornopazud.Interfaces.iComunicationFragments
+import com.example.entornopazud.Interfaces.iComunicationFragmentsTeacher
 import com.example.entornopazud.R
 
-class MainTeacher : AppCompatActivity(), iComunicationFragments {
+class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
 
     var FragmentTeacher: Fragment?=null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +20,28 @@ class MainTeacher : AppCompatActivity(), iComunicationFragments {
     }
 
 
-    override fun iniciarjuego() {
-        Toast.makeText(applicationContext,"Iniciar app",Toast.LENGTH_SHORT).show()
+    override fun Students() {
+        Toast.makeText(applicationContext,"Aprendientes",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun Courses() {
+        Toast.makeText(applicationContext,"Cursos",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun Stadistics() {
+        Toast.makeText(applicationContext,"Estadisticas",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun DataBases() {
+        Toast.makeText(applicationContext,"Bases de datos",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun Activitys() {
+        Toast.makeText(applicationContext,"Actividades",Toast.LENGTH_SHORT).show()
+    }
+
+    override fun Chats() {
+        Toast.makeText(applicationContext,"Chats",Toast.LENGTH_SHORT).show()
     }
 
 
