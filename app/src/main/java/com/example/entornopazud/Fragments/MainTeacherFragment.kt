@@ -13,7 +13,7 @@ import com.example.entornopazud.R
 
 
 class MainTeacherFragment : Fragment() {
-
+    /* This class is the logic for fragment teacher */
     private var StudentCard: CardView? = null
     private var CoursesCard: CardView? = null
     private var StadisticsCard: CardView? = null
@@ -21,6 +21,7 @@ class MainTeacherFragment : Fragment() {
     private var ActivitysCard: CardView? = null
     private var ChatsCard: CardView? = null
     private var vista: View? = null
+
     private var activity: Activity?=null
     private  var ifragment: iComunicationFragmentsTeacher?= null
 
@@ -29,15 +30,15 @@ class MainTeacherFragment : Fragment() {
         container: ViewGroup?,
         saverdInstanceState: Bundle?
     ): View? {
-
+        //Replace the container activity to fragmente teacher
         vista = inflater.inflate(R.layout.fragment_main_teacher, container, false)
+
         StudentCard = vista!!.findViewById(R.id.StudentsCard)
         CoursesCard = vista!!.findViewById(R.id.CorusesCard)
         StadisticsCard = vista!!.findViewById(R.id.StadisticCard)
         DataBasesCard = vista!!.findViewById(R.id.DBCard)
         ActivitysCard = vista!!.findViewById(R.id.ActivitysCard)
         ChatsCard = vista!!.findViewById(R.id.ChatsCard)
-
 
         listenerEvents()
 

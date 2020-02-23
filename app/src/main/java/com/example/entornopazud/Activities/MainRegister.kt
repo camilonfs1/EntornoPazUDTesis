@@ -20,12 +20,12 @@ import kotlinx.android.synthetic.main.activity_main_register.txtEmail
 import kotlinx.android.synthetic.main.activity_main_register.txtPass
 
 class MainRegister : AppCompatActivity() {
+    /* This activity contain the register case use */
     //Firebase references
     private var mDatabaseReference: DatabaseReference? = null
     private var mDatabase: FirebaseDatabase? = null
     private var mAuth: FirebaseAuth? = null
-
-
+    //Initialize variables that use in XML view
     private var TextEmail: EditText? = null
     private var TextPass: EditText? = null
     private var TextId: EditText? = null
@@ -35,6 +35,7 @@ class MainRegister : AppCompatActivity() {
     private var RadioTech: RadioButton? = null
     private var BtnReg: Button? = null
 
+    //Progress Dialog declaration
     private var mProgressBar: ProgressDialog? = null
     private val TAG = "CreateAccountActivity"
 
@@ -62,16 +63,18 @@ class MainRegister : AppCompatActivity() {
         TextPassConf = txtPassConfirm
         RadioStud = RBtnStudReg
         RadioTech = RbtnTechReg
-        TextName= txtName
+        TextName = txtName
         BtnReg = btnRegister
 
         mProgressBar = ProgressDialog(this)
 
         mDatabase = FirebaseDatabase.getInstance()
         mAuth = FirebaseAuth.getInstance()
-        mDatabaseReference = mDatabase!!.reference!!.child("Users")
+        mDatabaseReference =
+            mDatabase!!.reference!!.child("Users")//Create child Users in firebase database
+
         BtnReg!!.setOnClickListener {
-           registerUser()
+            registerUser()
         }
 
     }
@@ -82,22 +85,22 @@ class MainRegister : AppCompatActivity() {
         Email = TextEmail?.text.toString()
         Pass = TextPass?.text.toString()
         PassConf = TextPassConf?.text.toString()
-        Roll = Radios()
+        Roll = Radios()//Call radios function
 
 
         if (!TextUtils.isEmpty(Name) && !TextUtils.isEmpty(Id) && !TextUtils.isEmpty(Email)
-            && !TextUtils.isEmpty(Pass) && !TextUtils.isEmpty(PassConf) && !TextUtils.isEmpty(Roll)
+            && !TextUtils.isEmpty(Pass) && !TextUtils.isEmpty(PassConf) && !TextUtils.isEmpty(Roll)//If no box is empty
         ) {
-            if (Pass == PassConf && Pass!!.length >= 6) {
+            if (Pass == PassConf && Pass!!.length >= 6) {//Only six characters is good for pass
                 mProgressBar!!.setMessage("Registrando Usuario...")
                 mProgressBar!!.show()
 
                 mAuth!!
-                    .createUserWithEmailAndPassword(Email!!, Pass!!)
+                    .createUserWithEmailAndPassword(Email!!, Pass!!)//Create login with
                     .addOnCompleteListener(this) { task ->
                         mProgressBar!!.hide()
-                        if (task.isSuccessful) {
-                            // Sign in success, update UI with the signed-in user's information
+
+                        if (task.isSuccessful) { // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success")
                             val userId = mAuth!!.currentUser!!.uid
                             //Verify Email
@@ -147,27 +150,19 @@ class MainRegister : AppCompatActivity() {
         TextName!!.setText("")
     }
 
-    private fun verifyEmail() {
-        val mUser = mAuth!!.currentUser;
+    private fun verifyEmail() {//This function check de email
+        val mUser = mAuth!!.currentUser
         mUser!!.sendEmailVerification()
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(
-                        this,
-                        "Verification email sent to " + mUser.getEmail(),
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this, "Email correcto " + mUser.getEmail(), Toast.LENGTH_SHORT)
+                        .show()
                 } else {
                     Log.e(TAG, "sendEmailVerification", task.exception)
-                    Toast.makeText(
-                        this,
-                        "Failed to send verification email.",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this, "Email incorrecto.", Toast.LENGTH_SHORT).show()
                 }
             }
     }
-
 
     fun onClickRegister(view: View) {
         startActivity(Intent(this, MainActivity::class.java))

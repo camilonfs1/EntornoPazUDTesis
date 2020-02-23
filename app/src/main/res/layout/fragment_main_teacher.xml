@@ -44,7 +44,8 @@
             android:layout_height="match_parent"
             android:columnCount="2"
             android:padding="10dp"
-            android:rowCount="3">
+            android:rowCount="3"
+            android:layout_marginTop="0dp">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/StudentsCard"

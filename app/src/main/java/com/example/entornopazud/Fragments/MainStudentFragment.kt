@@ -13,6 +13,9 @@ import com.example.entornopazud.Interfaces.iComunicationFragmentsStudent
 import com.example.entornopazud.R
 
 class MainStudentFragment : Fragment() {
+    /* This class is the logic for fragment teacher */
+
+    //CardView initialization
     private var ProfileCard: CardView? = null
     private var ActivityCard: CardView? = null
     private var StadisticCard: CardView? = null
@@ -21,7 +24,9 @@ class MainStudentFragment : Fragment() {
     private var ChatsCard: CardView? = null
     private var vista: View? = null
     private var activitys: Activity?=null
+
     private  var ifragment: iComunicationFragmentsStudent?= null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
