@@ -64,6 +64,15 @@
         android:layout_weight="1"
         android:gravity="bottom">
         <TextView
+            android:id="@+id/txtInternetConection1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Conexion a internet ok"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:textColor="#DC3347"
+            />
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/comentari"

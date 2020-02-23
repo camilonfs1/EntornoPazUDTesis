@@ -1,20 +1,20 @@
 package com.example.entornopazud.Activities
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.Toast
+import android.widget.*
 import com.example.entornopazud.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_register.*
 import kotlinx.android.synthetic.main.activity_main_register.txtEmail
 import kotlinx.android.synthetic.main.activity_main_register.txtPass
@@ -47,12 +47,14 @@ class MainRegister : AppCompatActivity() {
     private var PassConf: String? = null
     private var Roll: String? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_register)
 
         initialise()
     }
+
 
 
     private fun initialise() {

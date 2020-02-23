@@ -13,10 +13,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class CRUD_Student_main : AppCompatActivity() {
-
+    /*This class has the student list */
     var mDatabase: DatabaseReference? = null
     var students: ArrayList<User> = ArrayList<User>()
-    var recicler: RecyclerView? = null
+    var recyclerStudents: RecyclerView? = null
     var adapter: Adapter_Students? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,27 +28,34 @@ class CRUD_Student_main : AppCompatActivity() {
     private fun initialise() {
 
         mDatabase = FirebaseDatabase.getInstance().reference
-        recicler = findViewById(R.id.recyclar_Students)
-        recicler!!.layoutManager = LinearLayoutManager(this)
+        recyclerStudents = findViewById(R.id.recyclar_Students)
+        recyclerStudents!!.layoutManager = LinearLayoutManager(this)
+
         datosFirebase()
     }
 
     private fun datosFirebase() {
+
         mDatabase!!.child("Users").addValueEventListener(object : ValueEventListener {
+            //call "User" child in database firebase
             override fun onCancelled(p0: DatabaseError) {
             }
+
             override fun onDataChange(p0: DataSnapshot) {
-                students.clear()
-                if (p0.exists()) {
+                students.clear()//clead de userlist
+                if (p0.exists()) {//if User child exist
                     for (e in p0.children) {
                         var name = e.child("Name").getValue().toString()
                         var email = e.child("Email").getValue().toString()
                         var id = e.child("Id").getValue().toString()
                         var roll = e.child("Roll").getValue().toString()
-                        students!!.add(User(name, email,id,roll))
+                        students!!.add(User(name, email, id, roll))
                     }
-                    adapter = Adapter_Students(students, R.layout.recycler_row)
-                    recicler!!.adapter = adapter
+                    adapter = Adapter_Students(
+                        students,
+                        R.layout.recycler_row
+                    )//sent userlist to adapter class
+                    recyclerStudents!!.adapter = adapter//assign adapter to recyclerView
                 }
             }
 

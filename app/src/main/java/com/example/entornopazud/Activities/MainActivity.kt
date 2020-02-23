@@ -1,7 +1,9 @@
 package com.example.entornopazud.Activities
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -29,13 +31,27 @@ class MainActivity : AppCompatActivity() {
     private var BtnEnter: Button? = null
     private var Email: String? = null
     private var Pass: String? = null
+    private var TextInternetConection: TextView? = null
+
     //Initialize progressBar
     private var mProgressBar: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        internetCon()
         initialise()
+    }
+    public fun internetCon() {
+        TextInternetConection = txtInternetConection1
+        val cm = baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo = cm.activeNetworkInfo
+
+        if (networkInfo != null && networkInfo.isConnectedOrConnecting) {
+            TextInternetConection!!.setText("")
+        } else {
+            TextInternetConection!!.setText("--> Error de conexion <--")
+        }
     }
 
     private fun initialise() {
