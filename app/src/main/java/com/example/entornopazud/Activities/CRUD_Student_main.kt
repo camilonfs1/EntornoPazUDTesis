@@ -2,17 +2,14 @@ package com.example.entornopazud.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ListView
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.entornopazud.Adapters.Adapter_Students
 import com.example.entornopazud.Clases.User
 import com.example.entornopazud.R
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
-class CRUD_Student_main : AppCompatActivity() {
+class CRUD_Student_main : AppCompatActivity(){
     /*This class has the student list */
     var mDatabase: DatabaseReference? = null
     var students: ArrayList<User> = ArrayList<User>()
@@ -26,11 +23,9 @@ class CRUD_Student_main : AppCompatActivity() {
     }
 
     private fun initialise() {
-
         mDatabase = FirebaseDatabase.getInstance().reference
         recyclerStudents = findViewById(R.id.recyclar_Students)
         recyclerStudents!!.layoutManager = LinearLayoutManager(this)
-
         datosFirebase()
     }
 
@@ -61,6 +56,8 @@ class CRUD_Student_main : AppCompatActivity() {
 
         })
     }
+
+
 
 
 }

@@ -3,80 +3,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="15dp"
-    tools:context=".Activities.MainActivity"
-    android:orientation="vertical">
+    tools:context=".Activities.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@drawable/girasol_icon"
+            android:textAlignment="center" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Title"
-            android:textAlignment="center"
-            android:textSize="40dp"/>
+            android:layout_weight="0"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="#2196F3"
+            android:textStyle="bold"
+            android:text="App PAZ UD" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:gravity="bottom">
 
         <EditText
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/EmailText" />
+            android:hint="@string/EmailText"
+            android:textColor="#FFFFFF" />
 
         <EditText
             android:id="@+id/txtPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/PassText" />
+            android:hint="@string/PassText"
+            android:textColor="#FFFFFF" />
 
-        <Button
-            android:id="@+id/btnEnter"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/BtnEnt" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/BtnEnt" />
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:autoLink="all"
             android:gravity="center"
             android:linksClickable="false"
             android:onClick="onClickRegister"
             android:selectAllOnFocus="false"
-            android:layout_gravity="bottom"
             android:text="@string/RegisterHiper"
             android:textColor="@color/colorHiper" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:layout_weight="1"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/txtInternetConection1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Conexion a internet ok"
             android:textAlignment="center"
-            android:textSize="14dp"
-            android:textColor="#DC3347"
-            />
+            android:textColor="#FF8300"
+            android:textSize="14dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/comentari"
             android:textAlignment="center"
-            android:textSize="12dp"/>
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp" />
     </LinearLayout>
 </LinearLayout>
