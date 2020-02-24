@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.entornopazud.Interfaces.iComunicationFragmentsStudent
@@ -25,6 +26,7 @@ class MainStudentFragment : Fragment() {
     private var vista: View? = null
     private var activitys: Activity?=null
 
+
     private  var ifragment: iComunicationFragmentsStudent?= null
 
     override fun onCreateView(
@@ -32,6 +34,8 @@ class MainStudentFragment : Fragment() {
         container: ViewGroup?,
         saverdInstanceState: Bundle?
     ): View? {
+
+
 
         vista = inflater.inflate(R.layout.fragment_main_student, container, false)
 
@@ -41,6 +45,8 @@ class MainStudentFragment : Fragment() {
         AvatarCard = vista!!.findViewById(R.id.AvatarCard)
         PrizesCard = vista!!.findViewById(R.id.PrizeCard)
         ChatsCard = vista!!.findViewById(R.id.ChatsCard)
+
+
 
        listenerEvents()
 
@@ -65,6 +71,7 @@ class MainStudentFragment : Fragment() {
         ChatsCard!!.setOnClickListener {
             ifragment!!.Chats()
         }
+
     }
 
     override fun onAttach(context: Context) {

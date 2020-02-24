@@ -95,4 +95,12 @@ class MainActivity : AppCompatActivity() {
     fun onClickRegister(view: View) {
         startActivity(Intent(this, MainRegister::class.java))//Open Register Ac
     }
+
+    override fun onStart() {
+        super.onStart()
+
+        if(mAuth!!.currentUser != null){
+            startActivity(Intent(this, Login::class.java))//Open Login Activity
+        }
+    }
 }

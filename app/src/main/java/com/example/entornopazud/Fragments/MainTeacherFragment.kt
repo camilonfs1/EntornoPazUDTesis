@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.entornopazud.Interfaces.iComunicationFragmentsTeacher
@@ -21,6 +23,8 @@ class MainTeacherFragment : Fragment() {
     private var ActivitysCard: CardView? = null
     private var ChatsCard: CardView? = null
     private var vista: View? = null
+    private var btnOut: Button?= null
+    private var TextUserName : TextView? = null
 
     private var activity: Activity?=null
     private  var ifragment: iComunicationFragmentsTeacher?= null
@@ -39,9 +43,11 @@ class MainTeacherFragment : Fragment() {
         DataBasesCard = vista!!.findViewById(R.id.DBCard)
         ActivitysCard = vista!!.findViewById(R.id.ActivitysCard)
         ChatsCard = vista!!.findViewById(R.id.ChatsCard)
+        btnOut = vista!!.findViewById(R.id.BtnSigout)
+        TextUserName = vista!!.findViewById(R.id.txtxUserName)
 
         listenerEvents()
-
+        TextUserName!!.setText(ifragment!!.nameUser())
         return vista
     }
 
@@ -64,6 +70,11 @@ class MainTeacherFragment : Fragment() {
         ChatsCard!!.setOnClickListener {
             ifragment!!.Chats()
         }
+        btnOut!!.setOnClickListener {
+            ifragment!!.SigOut()
+        }
+
+
     }
 
     override fun onAttach(context: Context) {

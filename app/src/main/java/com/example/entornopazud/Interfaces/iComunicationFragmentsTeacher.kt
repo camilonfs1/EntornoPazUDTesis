@@ -7,4 +7,6 @@ interface iComunicationFragmentsTeacher {
     fun DataBases()
     fun Activitys()
     fun Chats()
+    fun SigOut()
+    fun nameUser(): String
 }

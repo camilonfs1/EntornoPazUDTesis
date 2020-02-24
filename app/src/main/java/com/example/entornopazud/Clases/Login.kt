@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.Activities.MainStudent
 import com.example.entornopazud.Activities.MainTeacher
+import com.example.entornopazud.Fragments.MainTeacherFragment
 import com.example.entornopazud.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -34,16 +35,19 @@ class Login : AppCompatActivity() {
         mUserReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val roll =snapshot.child("Roll").value as String
-                roll(roll)
+                val name =snapshot.child("Name").value as String
+                roll(roll, name)
             }
             override fun onCancelled(databaseError: DatabaseError) {
 
             }
         })
     }
-    private fun roll(roll:String){
+    private fun roll(roll:String, name:String){
         if(roll.equals("Docente")){
-            startActivity(Intent(this, MainTeacher::class.java))
+            var intent = Intent(this,MainTeacher::class.java)
+            intent.putExtra("name",name)
+            this.startActivity(intent)
         }else if(roll.equals("Aprendiente")){
             startActivity(Intent(this, MainStudent::class.java))
         }

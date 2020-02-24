@@ -1,30 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/thi"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.MainTeacherFragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Fragments.MainTeacherFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f1948a"
         android:layout_weight="1"
+        android:background="#f1948a"
         android:orientation="vertical"
         android:padding="10dp">
-        <ImageView
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/main_color_icon"
-            android:layout_weight="5"
-            />
+            android:layout_weight="1"
+            android:background="#f1948a"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#f1948a"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txtxUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="Docente"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#f1948a"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:src="@drawable/main_color_icon" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#f1948a"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/BtnSigout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#C7736A"
+                    android:elevation="6dp"
+                    android:text="salir"
+                    android:textColor="#ffff" />
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/nameTech"
-            android:layout_weight="0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="0"
             android:text=" AppPazUD "
             android:textAlignment="center"
             android:textColor="#ffffff"
@@ -36,16 +96,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background=" #fadbd8 "
-        android:layout_weight="0.5">
+        android:layout_weight="0.5"
+        android:background=" #fadbd8 ">
+
         <GridLayout
             android:id="@+id/idGrid"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
             android:columnCount="2"
             android:padding="10dp"
-            android:rowCount="3"
-            android:layout_marginTop="0dp">
+            android:rowCount="3">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/StudentsCard"
@@ -59,6 +120,7 @@
                 android:elevation="6dp"
                 android:foreground="?selectableItemBackground"
                 app:cardCornerRadius="8dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -67,19 +129,19 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/users_icon"
+                        android:layout_marginTop="15dp"
                         android:layout_weight="0.5"
-                        android:layout_marginTop="15dp"/>
+                        android:src="@drawable/users_icon" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Aprendientes"
                         android:textAlignment="center"
                         android:textColor="#DD0E2F"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
 
@@ -97,27 +159,29 @@
                 android:elevation="6dp"
                 android:foreground="?selectableItemBackground"
                 app:cardCornerRadius="8dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/group_icon"
+                        android:layout_marginTop="15dp"
                         android:layout_weight="0.5"
-                        android:layout_marginTop="15dp"/>
+                        android:src="@drawable/group_icon" />
 
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Cursos"
                         android:textAlignment="center"
                         android:textColor="#00B7FF"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
 
@@ -135,25 +199,27 @@
                 android:elevation="6dp"
                 android:foreground="?selectableItemBackground"
                 app:cardCornerRadius="8dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/progress_icon"
+                        android:layout_marginTop="15dp"
                         android:layout_weight="0.5"
-                        android:layout_marginTop="15dp"/>
+                        android:src="@drawable/progress_icon" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Avances"
                         android:textAlignment="center"
                         android:textColor="#FF8807"
                         android:textSize="20sp"
-                        android:layout_weight="1"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -171,25 +237,27 @@
                 android:elevation="6dp"
                 android:foreground="?selectableItemBackground"
                 app:cardCornerRadius="8dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/db_icon"
+                        android:layout_marginTop="15dp"
                         android:layout_weight="0.5"
-                        android:layout_marginTop="15dp"/>
+                        android:src="@drawable/db_icon" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Bases de datos"
                         android:textAlignment="center"
                         android:textColor="#2FBEBA"
                         android:textSize="20sp"
-                        android:layout_weight="1"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -207,24 +275,27 @@
                 android:elevation="6dp"
                 android:foreground="?selectableItemBackground"
                 app:cardCornerRadius="8dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/peace_icon"
+                        android:layout_marginTop="15dp"
                         android:layout_weight="0.5"
-                        android:layout_marginTop="15dp"/>
+                        android:src="@drawable/peace_icon" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Actividades"
                         android:textAlignment="center"
                         android:textColor="#ffcc00"
                         android:textSize="20sp"
-                        android:layout_weight="1"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -242,28 +313,29 @@
                 android:elevation="6dp"
                 android:foreground="?selectableItemBackground"
                 app:cardCornerRadius="8dp">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/chats_icon"
+                        android:layout_marginTop="15dp"
                         android:layout_weight="0.5"
-                        android:layout_marginTop="15dp"/>
+                        android:src="@drawable/chats_icon" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Chat"
                         android:textAlignment="center"
                         android:textColor="#7C5AC7"
                         android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:layout_weight="1"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
-
 
 
             </androidx.cardview.widget.CardView>

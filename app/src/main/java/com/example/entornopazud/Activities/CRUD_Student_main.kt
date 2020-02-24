@@ -9,7 +9,7 @@ import com.example.entornopazud.Clases.User
 import com.example.entornopazud.R
 import com.google.firebase.database.*
 
-class CRUD_Student_main : AppCompatActivity(){
+class CRUD_Student_main : AppCompatActivity() {
     /*This class has the student list */
     var mDatabase: DatabaseReference? = null
     var students: ArrayList<User> = ArrayList<User>()
@@ -44,7 +44,9 @@ class CRUD_Student_main : AppCompatActivity(){
                         var email = e.child("Email").getValue().toString()
                         var id = e.child("Id").getValue().toString()
                         var roll = e.child("Roll").getValue().toString()
-                        students!!.add(User(name, email, id, roll))
+                        if (roll.equals("Aprendiente")) {
+                            students!!.add(User(name, email, id, roll))
+                        }
                     }
                     adapter = Adapter_Students(
                         students,
@@ -56,8 +58,6 @@ class CRUD_Student_main : AppCompatActivity(){
 
         })
     }
-
-
 
 
 }
