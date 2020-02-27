@@ -23,11 +23,14 @@
             android:orientation="horizontal"
             android:gravity="left">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="left"
-                android:src="@drawable/main_black_icon" />
+            <Button
+                android:id="@+id/BtnSigout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#876BC9"
+                android:elevation="6dp"
+                android:text="salir"
+                android:textColor="#ffff" />
         </LinearLayout>
         <ImageView
             android:layout_width="match_parent"

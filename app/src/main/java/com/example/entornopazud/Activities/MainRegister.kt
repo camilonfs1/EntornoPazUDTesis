@@ -72,8 +72,7 @@ class MainRegister : AppCompatActivity() {
 
         mDatabase = FirebaseDatabase.getInstance()
         mAuth = FirebaseAuth.getInstance()
-        mDatabaseReference =
-            mDatabase!!.reference!!.child("Users")//Create child Users in firebase database
+        mDatabaseReference = mDatabase!!.reference!!.child("Users")//Create child Users in firebase database
 
         BtnReg!!.setOnClickListener {
             registerUser()

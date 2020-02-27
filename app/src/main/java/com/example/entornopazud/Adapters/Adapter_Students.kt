@@ -40,6 +40,7 @@ class Adapter_Students (items: ArrayList<User>,resourcek : Int) : RecyclerView.A
         holder.vista.setOnClickListener(object : View.OnClickListener  {
             override fun onClick(v: View?) {
                 var intent = Intent(v!!.context,CRUDStudenIndivitual::class.java)
+                intent.putExtra("key",item?.key)
                 intent.putExtra("name",item?.name)
                 intent.putExtra("id",item?.id)
                 intent.putExtra("email",item?.email)

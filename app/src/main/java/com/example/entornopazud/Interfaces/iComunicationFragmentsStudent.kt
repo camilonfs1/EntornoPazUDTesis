@@ -7,5 +7,6 @@ interface iComunicationFragmentsStudent {
     fun Avatar()
     fun Prize()
     fun Chats()
+    fun SigOut()
 
 }

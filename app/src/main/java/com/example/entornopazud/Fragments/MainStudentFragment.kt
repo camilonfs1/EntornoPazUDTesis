@@ -24,6 +24,7 @@ class MainStudentFragment : Fragment() {
     private var PrizesCard: CardView? = null
     private var ChatsCard: CardView? = null
     private var vista: View? = null
+    private var btnOut: Button?= null
     private var activitys: Activity?=null
 
 
@@ -39,6 +40,7 @@ class MainStudentFragment : Fragment() {
 
         vista = inflater.inflate(R.layout.fragment_main_student, container, false)
 
+        btnOut = vista!!.findViewById(R.id.BtnSigout)
         ProfileCard = vista!!.findViewById(R.id.ProfileCard)
         ActivityCard = vista!!.findViewById(R.id.CorusesCard)
         StadisticCard = vista!!.findViewById(R.id.StadisticCard)
@@ -70,6 +72,9 @@ class MainStudentFragment : Fragment() {
         }
         ChatsCard!!.setOnClickListener {
             ifragment!!.Chats()
+        }
+        btnOut!!.setOnClickListener {
+            ifragment!!.SigOut()
         }
 
     }

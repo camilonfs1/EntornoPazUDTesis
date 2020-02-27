@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="#fec516"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="15dp"
@@ -39,21 +39,27 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:background="@drawable/linear_layuout_back"
+        android:padding="15dp"
+        android:elevation="6dp">
 
         <EditText
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/EmailText"
-            android:textColor="#FFFFFF" />
+            android:textStyle="bold"
+            android:textColor="#000000" />
 
         <EditText
             android:id="@+id/txtPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/PassText"
-            android:textColor="#FFFFFF" />
+            android:hint="Contraseña"
+            android:textColor="#020202"
+            android:textStyle="bold"
+            android:inputType="textPassword"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,9 +69,13 @@
 
             <Button
                 android:id="@+id/btnEnter"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/BtnEnt" />
+                android:text="@string/BtnEnt"
+                android:background="@drawable/btn_back"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:elevation="5dp"/>
         </LinearLayout>
 
 
@@ -95,8 +105,8 @@
             android:layout_height="wrap_content"
             android:text="Conexion a internet ok"
             android:textAlignment="center"
-            android:textColor="#FF8300"
-            android:textSize="14dp" />
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
 
         <TextView
             android:layout_width="match_parent"

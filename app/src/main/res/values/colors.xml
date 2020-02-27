@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorHiper">#1B44D8</color>
     <color name="colorError">#D81B51</color>
+    <color name="colorBlue">#673AB7</color>
 </resources>

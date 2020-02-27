@@ -4,28 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF5722"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".Activities.CRUDStudenIndivitual"
-    android:orientation="vertical">
+    android:padding="20dp">
 
-    <TextView
-        android:id="@+id/txtName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="name"/>
-    <TextView
-    android:id="@+id/txtIdd"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-        android:text="Id"/>
-    <TextView
-        android:id="@+id/txtEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"/>
-    <TextView
-        android:id="@+id/txtRoll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Roll"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@drawable/linear_layuout_back"
+        android:padding="15dp"
+        android:elevation="6dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Estudiante"
+            android:textColor="#FF5722"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_weight="1"/>
+
+
+
+
+        <EditText
+            android:id="@+id/txtNameCrud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/txtIdCRUD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Id"
+            android:textColor="#020202"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/txtEmailCRUD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColor="#020202"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#020202"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/BtnDeleteCrud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Borrar"
+                android:background="@drawable/btn_back"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:elevation="5dp"
+                android:layout_marginRight="5dp"/>
+            <Button
+                android:id="@+id/BtnUpdateCrud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Editar"
+                android:background="@drawable/btn_back"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:elevation="5dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:orientation="vertical"/>
 </LinearLayout>
