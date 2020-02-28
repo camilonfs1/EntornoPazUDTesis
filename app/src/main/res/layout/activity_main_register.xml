@@ -28,7 +28,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/RadTech"
                 android:layout_weight="1"
-                android:textAlignment="center"
                 android:textStyle="bold"/>
 
             <RadioButton
@@ -37,9 +36,18 @@
                 android:layout_height="wrap_content"
                 android:text="@string/RadStud"
                 android:layout_weight="1"
-                android:textAlignment="center"
                 android:textStyle="bold"/>
+
         </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinnerCourses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            />
+
         <EditText
             android:id="@+id/txtName"
             android:layout_width="match_parent"
@@ -51,12 +59,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/IdText"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:inputType="number"/>
         <EditText
             android:id="@+id/txtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/EmailText"
+            android:inputType="textEmailSubject"
             android:textStyle="bold"/>
         <EditText
             android:id="@+id/txtPass"

@@ -10,6 +10,7 @@ import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
 import com.example.entornopazud.Clases.Login
@@ -19,7 +20,7 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-/* This activity contain the login case use  */
+    /* This activity contain the login case use  */
     private val TAG = "LoginActivity"
 
     //Firebase references
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         internetCon()
         initialise()
     }
+
     public fun internetCon() {
         TextInternetConection = txtInternetConection1
         val cm = baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -67,6 +69,8 @@ class MainActivity : AppCompatActivity() {
         BtnEnter!!.setOnClickListener { login() }
     }
 
+
+
     private fun login() {
         Email = TextEmail?.text.toString()
         Pass = TextPass?.text.toString()
@@ -75,32 +79,44 @@ class MainActivity : AppCompatActivity() {
             mProgressBar!!.setMessage("Buscando usuario...")
             mProgressBar!!.show()
             Log.d(TAG, "Logging in user.")
-            mAuth!!.signInWithEmailAndPassword(Email!!, Pass!!)//call sigInWithEmail.. firebase function
+            mAuth!!.signInWithEmailAndPassword(
+                Email!!,
+                Pass!!
+            )//call sigInWithEmail.. firebase function
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {//If login is succesfull
                         Log.d(TAG, "signInWithEmail:success")
                         updateUI()
                     } else {//If login isn't succesfull
                         Log.e(TAG, "signInWithEmail:failure", task.exception)
-                        Toast.makeText(this, "Tenemos un error, comprueba tus datos y conexion :(", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this,
+                            "Tenemos un error, comprueba tus datos y conexion :(",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
         } else {
             Toast.makeText(this, "Porfavor llena los datos :|", Toast.LENGTH_SHORT).show()
         }
     }
+
     private fun updateUI() {
-        startActivity(Intent(this, Login::class.java))//Open Login Activity
+        val mUser = mAuth!!.currentUser
+        var intent = Intent(this, Login::class.java)
+        intent.putExtra("mUser", mUser)
+        this.startActivity(intent)
     }
+
     fun onClickRegister(view: View) {
         startActivity(Intent(this, MainRegister::class.java))//Open Register Ac
     }
 
-    override fun onStart() {
+    /*override fun onStart() {
         super.onStart()
 
-        if(mAuth!!.currentUser != null){
+        if (mAuth!!.currentUser != null) {
             startActivity(Intent(this, Login::class.java))//Open Login Activity
         }
-    }
+    }*/
 }

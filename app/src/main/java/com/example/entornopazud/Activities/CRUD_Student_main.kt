@@ -38,7 +38,8 @@ class CRUD_Student_main : AppCompatActivity() {
     }
 
     private fun datosFirebase() {
-        mDatabase!!.child("Users").addValueEventListener(object : ValueEventListener {
+
+        /*mDatabase!!.child("Aprendientes").addValueEventListener(object : ValueEventListener {
             //call "User" child in database firebase
             override fun onCancelled(p0: DatabaseError) {
             }
@@ -64,7 +65,7 @@ class CRUD_Student_main : AppCompatActivity() {
                 }
             }
 
-        })
+        })*/
     }
 
 

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/iconepaz_main_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.CRUDStudenIndivitual"></activity>
+        <activity android:name=".Activities.CRUD_Courses"></activity>
+        <activity android:name=".Activities.CRUDStudenIndivitual" />
         <activity android:name=".Activities.CRUD_Student_main" />
         <activity android:name=".Clases.Login" />
         <activity android:name=".Activities.MainTeacher" />

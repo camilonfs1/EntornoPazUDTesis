@@ -14,16 +14,16 @@ import kotlinx.android.synthetic.main.fragment_main_teacher.*
 
 class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
     /* This activity contain the personal login case use for students */
+
     var FragmentTeacher: Fragment? = null
     var mAuth: FirebaseAuth? = null
     var TextUserN: TextView?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_teacher)
 
         TextUserN = findViewById(R.id.txtxUserName)
-
-
 
         mAuth = FirebaseAuth.getInstance()
         FragmentTeacher = MainTeacherFragment()//assign the fragment object
@@ -33,11 +33,17 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
 
     //functions inherited from the iComunicationFragmentsTeacher class
     override fun Students() {
-        startActivity(Intent(this, CRUD_Student_main::class.java))
+        var name = nameUser()
+        var intent = Intent(this, CRUD_Student_main::class.java)
+        intent.putExtra("name", name)
+        this.startActivity(intent)
     }
 
     override fun Courses() {
-        Toast.makeText(applicationContext, "Cursos", Toast.LENGTH_SHORT).show()
+        var name = nameUser()
+        var intent = Intent(this, CRUD_Courses::class.java)
+        intent.putExtra("name", name)
+        this.startActivity(intent)
     }
 
     override fun Stadistics() {
@@ -63,7 +69,7 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
     }
 
     override fun nameUser(): String {
-            var name = intent.getStringExtra("name")
+       var name = intent.getStringExtra("name")
        return name
 
     }

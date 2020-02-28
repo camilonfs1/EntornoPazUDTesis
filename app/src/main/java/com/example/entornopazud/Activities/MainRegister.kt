@@ -1,5 +1,6 @@
 package com.example.entornopazud.Activities
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
@@ -10,10 +11,10 @@ import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.*
+import com.example.entornopazud.Clases.Courses
 import com.example.entornopazud.R
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_register.*
 import kotlinx.android.synthetic.main.activity_main_register.txtEmail
@@ -21,10 +22,12 @@ import kotlinx.android.synthetic.main.activity_main_register.txtPass
 
 class MainRegister : AppCompatActivity() {
     /* This activity contain the register case use */
+
     //Firebase references
     private var mDatabaseReference: DatabaseReference? = null
     private var mDatabase: FirebaseDatabase? = null
     private var mAuth: FirebaseAuth? = null
+
     //Initialize variables that use in XML view
     private var TextEmail: EditText? = null
     private var TextPass: EditText? = null
@@ -34,6 +37,7 @@ class MainRegister : AppCompatActivity() {
     private var RadioStud: RadioButton? = null
     private var RadioTech: RadioButton? = null
     private var BtnReg: Button? = null
+    private var SCourses: Spinner? = null
 
     //Progress Dialog declaration
     private var mProgressBar: ProgressDialog? = null
@@ -47,14 +51,13 @@ class MainRegister : AppCompatActivity() {
     private var PassConf: String? = null
     private var Roll: String? = null
 
+    private var CoursesList: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_register)
-
         initialise()
     }
-
 
 
     private fun initialise() {
@@ -67,18 +70,47 @@ class MainRegister : AppCompatActivity() {
         RadioTech = RbtnTechReg
         TextName = txtName
         BtnReg = btnRegister
+        SCourses = spinnerCourses
 
         mProgressBar = ProgressDialog(this)
 
         mDatabase = FirebaseDatabase.getInstance()
         mAuth = FirebaseAuth.getInstance()
-        mDatabaseReference = mDatabase!!.reference!!.child("Users")//Create child Users in firebase database
-
+        readCoursesDb()
         BtnReg!!.setOnClickListener {
             registerUser()
         }
 
     }
+
+    private fun readCoursesDb() {
+        mDatabaseReference =
+            mDatabase!!.reference!!.child("Courses")//Create child Courses in firebase database
+        mDatabaseReference!!.addValueEventListener(object : ValueEventListener {
+            //call "Courses" child in database firebase
+            override fun onCancelled(p0: DatabaseError) {
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+                CoursesList.clear()
+                if (p0.exists()) {
+                    for (e in p0.children) {
+                        var cours = Courses(e.child("Name").getValue().toString())
+                        println(cours.name)
+                        CoursesList.add(cours.name)
+                    }
+                    updateList(CoursesList)
+                }
+            }
+        })
+    }
+
+    private fun updateList(listaCourses: ArrayList<String>) {
+        var adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, listaCourses)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
+        SCourses!!.setAdapter(adapter)
+    }
+
 
     private fun registerUser() {
         Name = TextName?.text.toString()
@@ -87,8 +119,6 @@ class MainRegister : AppCompatActivity() {
         Pass = TextPass?.text.toString()
         PassConf = TextPassConf?.text.toString()
         Roll = Radios()//Call radios function
-
-
         if (!TextUtils.isEmpty(Name) && !TextUtils.isEmpty(Id) && !TextUtils.isEmpty(Email)
             && !TextUtils.isEmpty(Pass) && !TextUtils.isEmpty(PassConf) && !TextUtils.isEmpty(Roll)//If no box is empty
         ) {
@@ -129,14 +159,17 @@ class MainRegister : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Ingresa todos los datos", Toast.LENGTH_SHORT).show()
         }
-
     }
 
     private fun Radios(): String {//Determined which radioButton isSelected
         var Roll = ""
-        if (RadioStud!!.isChecked()) {//Which radioButton is selected by user
+        var curso = SCourses?.selectedItem.toString()
+        if (RadioStud!!.isChecked() && !curso.isEmpty()) {//Which radioButton is selected by user
+            mDatabaseReference = mDatabase!!.reference!!.child("Courses").child(curso)
+                .child("Students")//Create child Users in firebase database
             Roll = "Aprendiente"//Student radioButton is selected
         } else if (RadioTech!!.isChecked()) {
+            mDatabaseReference = mDatabase!!.reference!!.child("Users").child("Teachers")//Create child Users in firebase database
             Roll = "Docente"//Teacher radioButton is selected
         }
         return Roll
@@ -149,6 +182,7 @@ class MainRegister : AppCompatActivity() {
         TextPass!!.setText("")
         TextPassConf!!.setText("")
         TextName!!.setText("")
+        Toast.makeText(this,"Registrado",Toast.LENGTH_LONG).show()
     }
 
     private fun verifyEmail() {//This function check de email

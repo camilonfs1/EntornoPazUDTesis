@@ -20,8 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:src="@drawable/girasol_icon"
-            android:textAlignment="center" />
+            android:src="@drawable/girasol_icon" />
 
         <TextView
             android:layout_width="match_parent"
@@ -39,10 +38,12 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:gravity="bottom"
+        android:gravity="center"
         android:background="@drawable/linear_layuout_back"
         android:padding="15dp"
         android:elevation="6dp">
+
+
 
         <EditText
             android:id="@+id/txtEmail"
@@ -76,20 +77,24 @@
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:elevation="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:autoLink="all"
+                android:textSize="19dp"
+                android:gravity="center"
+                android:linksClickable="false"
+                android:onClick="onClickRegister"
+                android:selectAllOnFocus="false"
+                android:text="@string/RegisterHiper"
+                android:textColor="@color/colorHiper" />
+
         </LinearLayout>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:autoLink="all"
-            android:gravity="center"
-            android:linksClickable="false"
-            android:onClick="onClickRegister"
-            android:selectAllOnFocus="false"
-            android:text="@string/RegisterHiper"
-            android:textColor="@color/colorHiper" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -99,20 +104,21 @@
         android:gravity="bottom"
         android:orientation="vertical">
 
+
         <TextView
             android:id="@+id/txtInternetConection1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Conexion a internet ok"
-            android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="24dp" />
+            android:textSize="29dp"
+            android:gravity="center"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/comentari"
-            android:textAlignment="center"
+            android:gravity="center"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:textSize="12dp" />
