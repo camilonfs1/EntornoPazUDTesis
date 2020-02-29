@@ -19,14 +19,11 @@ class Login : AppCompatActivity() {
     private var mUserReference: DatabaseReference? = null
     private var CoursesList: ArrayList<String> = ArrayList()
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         initialise()
     }
-
     private fun initialise() {
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference
@@ -35,16 +32,13 @@ class Login : AppCompatActivity() {
     }
 
     override fun onStart() {
-        // var roll = getRollRadio()
-
         super.onStart()
         val mUser = mAuth!!.currentUser
-
         mUserReference = mDatabaseReference!!.child("Users").child("Teachers").child(mUser!!.uid)
         mUserReference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    var name =snapshot.child("Name").value as String
+                    var name = snapshot.child("Name").value as String
                     var Roll = snapshot.child("Roll").value as String
                     roll(Roll, name)
 
@@ -53,14 +47,13 @@ class Login : AppCompatActivity() {
                     readCoursesDb(mUser)
                 }
             }
-            override fun onCancelled(databaseError: DatabaseError) {
 
+            override fun onCancelled(databaseError: DatabaseError) {
             }
         })
     }
 
     private fun readCoursesDb(mUser: FirebaseUser) {
-        mDatabaseReference = mDatabase!!.reference
         mDatabaseReference =
             mDatabase!!.reference!!.child("Courses")//Create child Courses in firebase database
         mDatabaseReference!!.addValueEventListener(object : ValueEventListener {
@@ -76,42 +69,37 @@ class Login : AppCompatActivity() {
                         //println(cours.name)
                         CoursesList.add(cours.name)
                     }
-                    StudentsRead(CoursesList,mUser)
-                }else{
+                    StudentsRead(CoursesList, mUser)
+                } else {
                     mens()
                 }
             }
         })
     }
-    private fun mens(){
-        Toast.makeText(this,"Error",Toast.LENGTH_LONG).show()
-    }
-    private fun StudentsRead(listaCourses: ArrayList<String>,mUser:  FirebaseUser) {
-        var user = mUser
 
+    private fun mens() {
+        Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
+    }
+
+    private fun StudentsRead(listaCourses: ArrayList<String>, mUser: FirebaseUser) {
+        var user = mUser
         mDatabaseReference = mDatabase!!.reference
         for (f in listaCourses) {
-            println(f)
-            mUserReference =  mDatabaseReference!!.child("Courses").child(f).child("Students").child(user!!.uid)
-
+            mUserReference =
+                mDatabaseReference!!.child("Courses").child(f).child("Students").child(user!!.uid)
             mUserReference?.addValueEventListener(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
-
                 }
 
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()) {
-                        println("Existeeeeeeeeeeeeeeeeee" + snapshot.child("Name").value as String)
-                        var name =snapshot.child("Name").value as String
+                        var name = snapshot.child("Name").value as String
                         var Roll = snapshot.child("Roll").value as String
                         roll(Roll, name)
-
                     }
-
                 }
             })
         }
-
     }
 
     private fun roll(roll: String, name: String) {

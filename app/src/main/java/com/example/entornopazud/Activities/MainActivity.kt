@@ -68,9 +68,6 @@ class MainActivity : AppCompatActivity() {
 
         BtnEnter!!.setOnClickListener { login() }
     }
-
-
-
     private fun login() {
         Email = TextEmail?.text.toString()
         Pass = TextPass?.text.toString()

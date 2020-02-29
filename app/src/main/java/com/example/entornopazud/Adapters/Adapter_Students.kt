@@ -1,32 +1,25 @@
 package com.example.entornopazud.Adapters
 
 import android.R
-import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.entornopazud.Activities.CRUDStudenIndivitual
 import com.example.entornopazud.Clases.User
 import kotlinx.android.synthetic.main.recycler_row.view.*
-import kotlin.coroutines.coroutineContext
 
-
-class Adapter_Students (items: ArrayList<User>,resourcek : Int) : RecyclerView.Adapter<Adapter_Students.ViewHolder>(){
+class Adapter_Students (items: ArrayList<User>,resourcek : Int,mUser : String) : RecyclerView.Adapter<Adapter_Students.ViewHolder>(){
     /* This class is the adapter to fill the recycler view */
     var items: ArrayList<User>? = null
-
-    var mContext: Context? =  null
-
-
     var resource : Int
+    var mUser : String
     init{
         this.items = items
         this.resource = resourcek
+        this.mUser = mUser
         //this.mContext = context
     }
 
@@ -35,7 +28,7 @@ class Adapter_Students (items: ArrayList<User>,resourcek : Int) : RecyclerView.A
         holder.name?.text = item?.name
         holder.email?.text = item?.email
         holder.id?.text = item?.id
-        holder.roll?.text = item?.roll
+        holder.cours?.text = item?.course
 
         holder.vista.setOnClickListener(object : View.OnClickListener  {
             override fun onClick(v: View?) {
@@ -45,6 +38,8 @@ class Adapter_Students (items: ArrayList<User>,resourcek : Int) : RecyclerView.A
                 intent.putExtra("id",item?.id)
                 intent.putExtra("email",item?.email)
                 intent.putExtra("roll",item?.roll)
+                intent.putExtra("course",item?.course)
+                intent.putExtra("Teacher",mUser)
                 v.context.startActivity(intent)
             }
 
@@ -64,20 +59,17 @@ class Adapter_Students (items: ArrayList<User>,resourcek : Int) : RecyclerView.A
     }
 
     class ViewHolder(v : View): RecyclerView.ViewHolder(v){
-
-
         var vista = v
         var name :TextView? = null
         var email: TextView?=null
         var id :TextView? = null
-        var roll: TextView?=null
-
+        var cours: TextView?=null
         init {
 
             name = vista.txtName
             email = vista.txtEmail
             id = vista.txtId
-            roll = vista.txtRoll
+            cours = vista.txtCourse
         }
 
 

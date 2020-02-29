@@ -29,7 +29,9 @@ class CRUDStudenIndivitual : AppCompatActivity() {
     private var id: String? = null
     private var email: String? = null
     private var roll: String? = null
+    private var course: String? = null
     private var key: String? = null
+    private var Teacher: String? = null
 
     private var mDatabase: DatabaseReference? = null
 
@@ -43,10 +45,8 @@ class CRUDStudenIndivitual : AppCompatActivity() {
         BtnDelete = findViewById(R.id.BtnDeleteCrud)
         BtnUpdate = findViewById(R.id.BtnUpdateCrud)
         TextKey = txtKey
-
-        mDatabase = FirebaseDatabase.getInstance().reference.child("Users")
         getIncomingIntent()
-
+        mDatabase = FirebaseDatabase.getInstance().reference.child("Courses").child(course+"")
         BtnUpdate?.setOnClickListener {
             updateStudent()
 
@@ -59,7 +59,7 @@ class CRUDStudenIndivitual : AppCompatActivity() {
     }
 
     private fun updateStudent() {
-        val currentUser = mDatabase?.child(key.toString())
+        val currentUser = mDatabase?.child("Students")!!.child(key.toString())
         val map = mutableMapOf<String, Any?>()
         map.put("Name",TextName?.text.toString())
         map.put("Id",TextID?.text.toString())
@@ -67,11 +67,13 @@ class CRUDStudenIndivitual : AppCompatActivity() {
         map.put("Roll","Aprendiente")
         currentUser!!.updateChildren(map)
         Toast.makeText(this, "Actualizado", Toast.LENGTH_SHORT).show()
-        startActivity(Intent(this, CRUD_Student_main::class.java))
+        var intent = Intent(this,CRUD_Student_main::class.java)
+        intent.putExtra("name",Teacher)
+        startActivity(intent)
     }
 
     private fun deleteStudent() {
-        var currentUser = mDatabase?.child(key.toString())
+        var currentUser = mDatabase?.child("Students")?.child(key.toString())
         val dialogBuilder = AlertDialog.Builder(this)
         dialogBuilder.setMessage("Quieres borrar a "+name+"?")
             .setCancelable(false)
@@ -79,7 +81,9 @@ class CRUDStudenIndivitual : AppCompatActivity() {
                 currentUser?.removeValue()
                 Toast.makeText(this, "Borrado", Toast.LENGTH_SHORT).show()
                 finish()
-                startActivity(Intent(this, CRUD_Student_main::class.java))
+                var intent = Intent(this,CRUD_Student_main::class.java)
+                intent.putExtra("name",Teacher)
+                startActivity(intent)
             })
             .setNegativeButton("Cancelar", DialogInterface.OnClickListener { dialog, id ->
                 dialog.cancel()
@@ -90,20 +94,19 @@ class CRUDStudenIndivitual : AppCompatActivity() {
     }
 
     fun getIncomingIntent() {
-        if (intent.hasExtra("name") && intent.hasExtra("id") && intent.hasExtra("email") && intent.hasExtra(
-                "roll"
-            )
-        ) {
+        if (intent.hasExtra("name") && intent.hasExtra("id") && intent.hasExtra("email") && intent.hasExtra("roll" )) {
             key = intent.getStringExtra("key")
             name = intent.getStringExtra("name")
             id = intent.getStringExtra("id")
             email = intent.getStringExtra("email")
             roll = intent.getStringExtra("roll")
+            course = intent.getStringExtra("course")
+            Teacher = intent.getStringExtra("Teacher")
             TextName!!.setText(name)
             TextID!!.setText(id)
             TextEmail!!.setText(email)
-
         }
     }
+
 
 }

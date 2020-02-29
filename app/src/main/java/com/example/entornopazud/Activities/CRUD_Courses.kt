@@ -3,6 +3,7 @@ package com.example.entornopazud.Activities
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -54,7 +55,6 @@ class CRUD_Courses : AppCompatActivity() {
     fun nameUser(): String {
         var name = intent.getStringExtra("name")
         return name
-
     }
 
     private fun createCourse() {
@@ -67,6 +67,9 @@ class CRUD_Courses : AppCompatActivity() {
             currentCoursDb.child("Name").setValue(name)
             currentCoursDb.child("Teacher").setValue(mUser)
             nameCourse!!.setText("")
+            var intent = Intent(this, CRUD_Courses::class.java)
+            this.startActivity(intent)
+            println("creado el curso")
             Toast.makeText(this, "Curso creado", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "Llena la casilla nombre", Toast.LENGTH_SHORT).show()
@@ -83,7 +86,6 @@ class CRUD_Courses : AppCompatActivity() {
                 if (p0.exists()) {
                     for (e in p0.children) {
                         var cours = Courses(e.child("Name").getValue().toString())
-                        println(cours.name)
                         CoursesList.add(cours)
                     }
                     updateList(CoursesList)

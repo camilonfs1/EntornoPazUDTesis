@@ -110,8 +110,6 @@ class MainRegister : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
         SCourses!!.setAdapter(adapter)
     }
-
-
     private fun registerUser() {
         Name = TextName?.text.toString()
         Id = TextId?.text.toString()
@@ -142,7 +140,6 @@ class MainRegister : AppCompatActivity() {
                             currentUserDb.child("Id").setValue(Id)
                             currentUserDb.child("Email").setValue(Email)
                             currentUserDb.child("Roll").setValue(Roll)
-
                             updateUserInfoAndUI()
                         } else {
                             // If sign in fails, display a message to the user.

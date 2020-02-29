@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.entornopazud.Adapters.Adapter_Students
+import com.example.entornopazud.Clases.Courses
 import com.example.entornopazud.Clases.User
 import com.example.entornopazud.R
 import com.google.firebase.database.*
@@ -14,11 +15,13 @@ import kotlinx.android.synthetic.main.activity_crud__student_main.*
 
 class CRUD_Student_main : AppCompatActivity() {
     /*This class has the student list */
-    var mDatabase: DatabaseReference? = null
+    private var mDatabase: FirebaseDatabase? = null
+    private var mDatabaseReference: DatabaseReference? = null
     var students: ArrayList<User> = ArrayList<User>()
     var recyclerStudents: RecyclerView? = null
     var adapter: Adapter_Students? = null
-    var btnHome: Button?= null
+    var btnHome: Button? = null
+    private var CoursesList: ArrayList<String> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,47 +30,77 @@ class CRUD_Student_main : AppCompatActivity() {
     }
 
     private fun initialise() {
-        mDatabase = FirebaseDatabase.getInstance().reference
+        mDatabase = FirebaseDatabase.getInstance()
+        mDatabaseReference = mDatabase!!.reference
         recyclerStudents = findViewById(R.id.recyclar_Students)
         recyclerStudents!!.layoutManager = LinearLayoutManager(this)
-        btnHome=BtnHome
+        btnHome = BtnHome
         btnHome!!.setOnClickListener {
             startActivity(Intent(this, MainTeacher::class.java))
         }
-        datosFirebase()
+        var name = intent.getStringExtra("name")
+
+        if (!name.isEmpty()){
+            readCoursesDb(name)
+        }
+
     }
 
-    private fun datosFirebase() {
+    private fun readCoursesDb(mUser: String) {
 
-        /*mDatabase!!.child("Aprendientes").addValueEventListener(object : ValueEventListener {
-            //call "User" child in database firebase
+        mDatabaseReference = mDatabase!!.reference!!.child("Courses")//Create child Courses in firebase database
+        mDatabaseReference!!.addValueEventListener(object : ValueEventListener {
+            //call "Courses" child in database firebase
             override fun onCancelled(p0: DatabaseError) {
             }
-
             override fun onDataChange(p0: DataSnapshot) {
-                students.clear()//clead de userlist
-                if (p0.exists()) {//if User child exist
+                CoursesList.clear()
+                if (p0.exists()) {
                     for (e in p0.children) {
-                        var key = e.key.toString()
-                        var name = e.child("Name").getValue().toString()
-                        var email = e.child("Email").getValue().toString()
-                        var id = e.child("Id").getValue().toString()
-                        var roll = e.child("Roll").getValue().toString()
-                        if (roll.equals("Aprendiente")) {
-                            students!!.add(User(key,name, email, id, roll))
+                        var cours = Courses(e.child("Name").getValue().toString())
+                        var teacher = Courses(e.child("Teacher").getValue().toString())
+
+                        if (teacher.name.equals(mUser)) {
+                            CoursesList.add(cours.name)
                         }
                     }
-                    adapter = Adapter_Students(
-                        students,
-                        R.layout.recycler_row
-                        )//sent userlist to adapter class
-                    recyclerStudents!!.adapter = adapter//assign adapter to recyclerView
+                    datosFirebase(CoursesList,mUser)
                 }
-            }
 
-        })*/
+            }
+        })
     }
+
+    private fun datosFirebase(Courses: ArrayList<String>, mUser:String) {
+        var i = 0
+        for (value in 0..Courses.size-1 ){
+            otra(Courses[value],mUser) }
+    }
+fun otra(it : String,mUser: String){
+    mDatabaseReference = mDatabase!!.reference!!.child("Courses").child(it+"").child("Students")
+    mDatabaseReference!!.addValueEventListener(object : ValueEventListener {
+        //call "User" child in database firebase
+        override fun onCancelled(p0: DatabaseError) {
+        }
+        override fun onDataChange(p0: DataSnapshot) {
+            for (e in p0.children) {
+                var name = e.child("Name").getValue().toString()
+                var email = e.child("Email").getValue().toString()
+                var id = e.child("Id").getValue().toString()
+                var roll = e.child("Roll").getValue().toString()
+                students!!.add(User(e.key.toString(), name, email, id, roll,it))
+            }
+            adapter = Adapter_Students( students,R.layout.recycler_row,mUser )//sent userlist to adapter class
+            recyclerStudents!!.adapter =
+                adapter
+
+        }
+    })
+}
+
 
 
 }
+
+
 

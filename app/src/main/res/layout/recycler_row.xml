@@ -50,19 +50,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txtRoll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="roll"
-                    android:textStyle="italic" />
-                <TextView
                     android:id="@+id/txtCourse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="roll"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    />
+                    android:text="curso"
+                    android:textStyle="italic" />
+
             </LinearLayout>
 
             <LinearLayout
