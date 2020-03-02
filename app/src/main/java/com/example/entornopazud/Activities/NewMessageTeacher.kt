@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.recycler_row.view.*
 
 class NewMessageTeacher : AppCompatActivity() {
     private var BtnBack: Button? = null
-    private var BtnNew: Button? = null
     private var RecyNewMen: RecyclerView? = null
 
     private var mDatabase: FirebaseDatabase? = null
@@ -56,7 +55,6 @@ class NewMessageTeacher : AppCompatActivity() {
 
     private fun readCoursesDb(keyTeacher: String,nameTeacher: String) {
         val adapter = GroupAdapter<GroupieViewHolder>()
-        mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference =
             mDatabase!!.reference!!.child("Courses")//Create child Courses in firebase database
         mDatabaseReference!!.addValueEventListener(object : ValueEventListener {

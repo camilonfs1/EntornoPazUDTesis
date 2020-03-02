@@ -8,5 +8,6 @@ interface iComunicationFragmentsStudent {
     fun Prize()
     fun Chats()
     fun SigOut()
+    fun nameUser(): String
 
 }

@@ -45,12 +45,21 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
     }
 
     override fun Chats() {
-        Toast.makeText(applicationContext, "chat", Toast.LENGTH_SHORT).show()
+        var name = nameUser()
+        var intent = Intent(this, MainStudentChat::class.java)
+        intent.putExtra("name", name)
+        intent.putExtra("key", mAuth!!.uid)
+        this.startActivity(intent)
     }
 
     override fun SigOut() {
         mAuth!!.signOut()
         startActivity(Intent(this, MainActivity::class.java))
         finish()
+    }
+    override fun nameUser(): String {
+        var name = intent.getStringExtra("name")
+        return name
+
     }
 }
