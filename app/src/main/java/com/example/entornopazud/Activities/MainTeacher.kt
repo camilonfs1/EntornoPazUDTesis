@@ -10,7 +10,7 @@ import com.example.entornopazud.Fragments.MainTeacherFragment
 import com.example.entornopazud.Interfaces.iComunicationFragmentsTeacher
 import com.example.entornopazud.R
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.fragment_main_teacher.*
+import com.google.firebase.auth.FirebaseAuth.*
 
 class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
     /* This activity contain the personal login case use for students */
@@ -25,7 +25,7 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
 
         TextUserN = findViewById(R.id.txtxUserName)
 
-        mAuth = FirebaseAuth.getInstance()
+        mAuth = getInstance()
         FragmentTeacher = MainTeacherFragment()//assign the fragment object
         supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, FragmentTeacher!!)
             .commit()
@@ -59,7 +59,12 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
     }
 
     override fun Chats() {
-        Toast.makeText(applicationContext, "Chats", Toast.LENGTH_SHORT).show()
+
+        var name = nameUser()
+        var intent = Intent(this, MainTeacherChat::class.java)
+        intent.putExtra("name", name)
+        intent.putExtra("key", mAuth!!.uid)
+        this.startActivity(intent)
     }
 
     override fun SigOut() {

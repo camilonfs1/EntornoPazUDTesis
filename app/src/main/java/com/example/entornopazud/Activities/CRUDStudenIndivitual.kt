@@ -65,7 +65,7 @@ class CRUDStudenIndivitual : AppCompatActivity() {
         map.put("Id",TextID?.text.toString())
         map.put("Email",TextEmail?.text.toString())
         map.put("Roll","Aprendiente")
-        currentUser!!.updateChildren(map)
+        currentUser.updateChildren(map)
         Toast.makeText(this, "Actualizado", Toast.LENGTH_SHORT).show()
         var intent = Intent(this,CRUD_Student_main::class.java)
         intent.putExtra("name",Teacher)

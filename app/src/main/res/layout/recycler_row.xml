@@ -63,10 +63,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
+                android:gravity="center"
                 android:background="@drawable/icon_style">
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:src="@drawable/avatar_icon"
                     />
 

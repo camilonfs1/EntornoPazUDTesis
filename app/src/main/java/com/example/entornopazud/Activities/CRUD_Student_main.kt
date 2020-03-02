@@ -35,10 +35,14 @@ class CRUD_Student_main : AppCompatActivity() {
         recyclerStudents = findViewById(R.id.recyclar_Students)
         recyclerStudents!!.layoutManager = LinearLayoutManager(this)
         btnHome = BtnHome
-        btnHome!!.setOnClickListener {
-            startActivity(Intent(this, MainTeacher::class.java))
-        }
+
         var name = intent.getStringExtra("name")
+
+        btnHome!!.setOnClickListener {
+            var intent = Intent(this, MainTeacher::class.java)
+            intent.putExtra("name", name)
+            this.startActivity(intent)
+        }
 
         if (!name.isEmpty()){
             readCoursesDb(name)
@@ -72,7 +76,6 @@ class CRUD_Student_main : AppCompatActivity() {
     }
 
     private fun datosFirebase(Courses: ArrayList<String>, mUser:String) {
-        var i = 0
         for (value in 0..Courses.size-1 ){
             otra(Courses[value],mUser) }
     }
