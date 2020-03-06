@@ -14,6 +14,7 @@ import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.activity_main_student_chat.*
 import kotlinx.android.synthetic.main.recycler_row.view.*
+import java.sql.Struct
 
 class MainStudentChat : AppCompatActivity() {
     private var Recycler: RecyclerView? = null
@@ -70,10 +71,11 @@ class MainStudentChat : AppCompatActivity() {
                                 if (p1.exists()) {
                                     for (e1 in p1.children) {
                                         var studentName = e1.child("Name").getValue().toString()
-
+                                        var studentKey = e1.key
                                         if (studentName.equals(nameStudent)){
-                                            println(".................>"+teacher.name)
-                                            adapter.add(UserItem(UserItemStudent()))
+
+                                            searchTeacher(studentName,studentKey+"",teacher.name)
+
                                         }
 
                                     }
@@ -89,14 +91,60 @@ class MainStudentChat : AppCompatActivity() {
         })
 
     }
+    private fun searchTeacher(studentName: String,studentKey: String,teacherName: String){
+        val adapter = GroupAdapter<GroupieViewHolder>()
+        mDatabaseReference = mDatabase!!.reference!!.child("Users")
+        mDatabaseReference!!.child("Teachers").addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+                for (e1 in p0.children) {
+                    var name = e1.child("Name").getValue().toString()
+                    var email = e1.child("Email").getValue().toString()
+                    var key = e1.key
+                    if(name.equals(teacherName)){
+                        println("--->"+name)
+                        println("--->"+studentName)
+                        println("--->"+studentKey)
+                        adapter.add(UserItemStudent(name, email,key+""))
+                    }
+
+
+                }
+                adapter.setOnItemClickListener { item, view ->
+                    val UserItemStudent = item as UserItemStudent
+                    val intent = Intent(view.context,ChatLogActivity::class.java)
+                    intent.putExtra("UserKeyA",studentKey)
+                    intent.putExtra("userNameA",studentName)
+                    intent.putExtra("userNameB",UserItemStudent.name)
+                    intent.putExtra("UserKeyB",UserItemStudent.key)
+                    intent.putExtra("Roll","Student")
+                    startActivity(intent )
+                    finish()
+                }
+            }
+
+        })
+        Recycler!!.adapter = adapter
+    }
 }
 
-class UserItemStudent (): Item<GroupieViewHolder>() {
+class UserItemStudent (name:String, email:String, key: String): Item<GroupieViewHolder>() {
+     var name: String
+     var email: String
+    var key: String
+    init {
+        this.name = name
+        this.email = email
+        this.key = key
+    }
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
-        viewHolder.itemView.txtName.text = user.name
+        viewHolder.itemView.txtName.text = name
         viewHolder.itemView.txtId.text = ""
-        viewHolder.itemView.txtEmail.text = ""
-        viewHolder.itemView.txtCourse.text = user.course
+        viewHolder.itemView.txtEmail.text = email
+        viewHolder.itemView.txtCourse.text = "Docente"
     }
 
     override fun getLayout(): Int {

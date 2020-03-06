@@ -101,6 +101,7 @@ class NewMessageTeacher : AppCompatActivity() {
                     intent.putExtra("userNameA",nameTeacher)
                     intent.putExtra("userNameB",UserItem.user.name)
                     intent.putExtra("UserKeyB",UserItem.user.key)
+                    intent.putExtra("Roll","Teacher")
                     startActivity(intent )
                     finish()
                 }

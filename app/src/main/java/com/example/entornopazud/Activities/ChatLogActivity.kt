@@ -44,6 +44,7 @@ class ChatLogActivity : AppCompatActivity() {
         val userNameA = intent.getStringExtra("userNameA")
         val UserKeyB = intent.getStringExtra("UserKeyB")
         val UserKeyA = intent.getStringExtra("UserKeyA")
+        val roll = intent.getStringExtra("Roll")
 
         TextNameChat!!.setText(userNameB)
 
@@ -56,10 +57,18 @@ class ChatLogActivity : AppCompatActivity() {
             performSendMassage(UserKeyA, UserKeyB)
         }
         btnBack!!.setOnClickListener {
-            var intent = Intent(this, MainTeacherChat::class.java)
-            intent.putExtra("name", userNameA)
-            intent.putExtra("key", UserKeyA)
-            this.startActivity(intent)
+            if(roll.equals("Student")){
+                var intent = Intent(this, MainStudentChat::class.java)
+                intent.putExtra("name", userNameA)
+                intent.putExtra("key", UserKeyA)
+                this.startActivity(intent)
+            }else if(roll.equals("Teacher")){
+                var intent = Intent(this, MainTeacherChat::class.java)
+                intent.putExtra("name", userNameA)
+                intent.putExtra("key", UserKeyA)
+                this.startActivity(intent)
+            }
+
         }
     }
 
@@ -118,6 +127,8 @@ class ChatLogActivity : AppCompatActivity() {
 
             }
         referenceto.setValue(chatMessage)
+        val latesMessageeRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$fromId/$toId")
+        latesMessageeRef.setValue(chatMessage)
     }
 
 
