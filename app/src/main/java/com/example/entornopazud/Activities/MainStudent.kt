@@ -29,7 +29,7 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
     }
 
     override fun Activities1() {
-        Toast.makeText(applicationContext, "Aprender", Toast.LENGTH_SHORT).show()
+        startActivity(Intent(this, educationalModule::class.java))
     }
 
     override fun Stadistics() {

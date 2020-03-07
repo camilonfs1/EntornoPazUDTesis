@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/iconepaz_main_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.MainStudentChat"></activity>
+        <activity android:name=".Activities.MainEducationalContainer"></activity>
+        <activity android:name=".Activities.educationalContainer" />
+        <activity android:name=".Activities.educationalContainer" />
+        <activity android:name=".Activities.educationalModule" />
+        <activity android:name=".Activities.MainStudentChat" />
         <activity android:name=".Activities.ChatLogActivity" />
         <activity android:name=".Activities.NewMessageTeacher" />
         <activity android:name=".Activities.MainTeacherChat" />

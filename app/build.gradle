@@ -54,6 +54,10 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.0.0'
     implementation 'com.google.firebase:firebase-storage:16.0.4'
     implementation "com.xwray:groupie:2.7.0"
+    dependencies {
+        implementation "androidx.viewpager2:viewpager2:1.0.0"
+    }
+
     testImplementation 'junit:junit:4.12'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

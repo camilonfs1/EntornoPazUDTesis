@@ -47,7 +47,6 @@ class MainTeacherChat : AppCompatActivity() {
             intent.putExtra("key", keyTeacher)
             this.startActivity(intent)
         }
-        //setupDummyRows()
         listForLatesMassages(keyTeacher,nameTeacher)
 
     }
