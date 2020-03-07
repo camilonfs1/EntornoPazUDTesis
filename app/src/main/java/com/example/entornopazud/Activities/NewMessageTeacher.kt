@@ -48,7 +48,6 @@ class NewMessageTeacher : AppCompatActivity() {
             var intent = Intent(this, MainTeacherChat::class.java)
             intent.putExtra("name", nameTeacher)
             intent.putExtra("key", keyTeacher)
-            println(nameTeacher+" --------------------------------------- "+keyTeacher)
             this.startActivity(intent)
         }
     }

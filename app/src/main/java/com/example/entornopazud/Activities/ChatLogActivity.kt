@@ -127,7 +127,7 @@ class ChatLogActivity : AppCompatActivity() {
 
             }
         referenceto.setValue(chatMessage)
-        val latesMessageeRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$fromId/$toId")
+        val latesMessageeRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$toId/$fromId")
         latesMessageeRef.setValue(chatMessage)
     }
 
