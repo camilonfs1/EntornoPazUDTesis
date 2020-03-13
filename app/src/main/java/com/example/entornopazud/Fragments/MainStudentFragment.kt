@@ -24,20 +24,17 @@ class MainStudentFragment : Fragment() {
     private var PrizesCard: CardView? = null
     private var ChatsCard: CardView? = null
     private var vista: View? = null
-    private var btnOut: Button?= null
-    private var activitys: Activity?=null
+    private var btnOut: Button? = null
+    private var activitys: Activity? = null
 
 
-    private  var ifragment: iComunicationFragmentsStudent?= null
+    private var ifragment: iComunicationFragmentsStudent? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         saverdInstanceState: Bundle?
     ): View? {
-
-
-
         vista = inflater.inflate(R.layout.fragment_main_student, container, false)
 
         btnOut = vista!!.findViewById(R.id.BtnSigout)
@@ -48,13 +45,11 @@ class MainStudentFragment : Fragment() {
         PrizesCard = vista!!.findViewById(R.id.PrizeCard)
         ChatsCard = vista!!.findViewById(R.id.ChatsCard)
 
-
-
-       listenerEvents()
-
+        listenerEvents()
         return vista
     }
-    fun listenerEvents(){
+
+    fun listenerEvents() {
         ProfileCard!!.setOnClickListener {
             ifragment!!.Profile()
         }

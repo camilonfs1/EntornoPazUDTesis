@@ -1,13 +1,13 @@
-package com.example.entornopazud.Activities
+package com.example.entornopazud.Activities.EducationalModulePack
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.R
 
-class MainEducationalContainer : AppCompatActivity() {
+class ThreePItem : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_educational_container)
+        setContentView(R.layout.main_three_p)
     }
 }

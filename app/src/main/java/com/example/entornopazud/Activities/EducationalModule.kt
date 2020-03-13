@@ -1,7 +1,9 @@
 package com.example.entornopazud.Activities
 
 import android.animation.ArgbEvaluator
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.entornopazud.Adapters.Adapter_Module
@@ -10,17 +12,26 @@ import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.activity_educational_module.*
 
 
-class educationalModule : AppCompatActivity() {
+class EducationalModule : AppCompatActivity() {
 
     var models: ArrayList<Model>? = ArrayList()
     var colors: Array<Int>? = null
     var argbEvaluator: ArgbEvaluator = ArgbEvaluator()
+    private var btnBack : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_educational_module)
+        var nameStudent = intent.getStringExtra("name")
+        var keyStrudent = intent.getStringExtra("key")
 
-
+        btnBack= btnBackk
+        btnBack!!.setOnClickListener {
+            var intent = Intent(this, MainStudentChat::class.java)
+            intent.putExtra("name", nameStudent)
+            intent.putExtra("key", keyStrudent)
+            this.startActivity(intent)
+        }
         models = ArrayList()
         models!!.add(
             Model(
@@ -33,33 +44,32 @@ class educationalModule : AppCompatActivity() {
             Model(
                 R.drawable.children_school,
                 "Resolución De Conflictos",
-                "Sticker is a type of label: a piece of printed paper, plastic, vinyl, or other material with pressure sensitive adhesive on one side"
+                "Los conflictos se producen en todas las culturas"
             )
         )
         models!!.add(
             Model(
                 R.drawable.three_p,
-                "“LAS TRES P” ",
-                "Poster is any piece of printed paper designed to be attached to a wall or vertical surface."
+                "Las Tres P",
+                "(personas, problemas, procesos) "
             )
         )
         models!!.add(
             Model(
                 R.drawable.bullyng,
-                "Acoso Escolar ",
-                "Business cards are cards bearing business information about a company or individual."
+                "Acoso Escolar",
+                "“El niño debe ser protegido contra las practicas que puedan fomentar la discriminación"
             )
         )
         models!!.add(
             Model(
                 R.drawable.mythe,
                 "5 Mitos Sobre El Acoso Escolar",
-                "Business cards are cards bearing business information about a company or individual."
+                " “El acoso escolar es una forma de molestar entre amigos” "
             )
         )
 
-
-        val adapter = Adapter_Module(models!!, this)
+        val adapter = Adapter_Module(models!!, this,nameStudent,keyStrudent)
 
          var viewPager1 = viewPager2
         viewPager1?.setAdapter(adapter)
@@ -72,14 +82,10 @@ class educationalModule : AppCompatActivity() {
             resources.getColor(R.color.color4),
             resources.getColor(R.color.color5)
         )
-
         colors = colors_temp
-
         viewPager1!!.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {
-
             }
-
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
@@ -102,9 +108,6 @@ class educationalModule : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
 
             }
-
         })
-
-
     }
 }

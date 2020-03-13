@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.educationalModule">
+    tools:context=".Activities.EducationalModule">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager2"
@@ -17,8 +17,8 @@
         android:paddingRight="20dp" />
 
     <Button
-        android:id="@+id/btnOrder"
-        android:text="Order Now!"
+        android:id="@+id/btnBackk"
+        android:text="Volver!"
         android:textColor="#fff"
         android:background="@drawable/btn_back"
         android:paddingLeft="30dp"

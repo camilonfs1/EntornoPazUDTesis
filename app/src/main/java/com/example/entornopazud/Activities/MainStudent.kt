@@ -19,8 +19,7 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
         setContentView(R.layout.activity_main_estudent)
         mAuth = FirebaseAuth.getInstance()
         FragmentStudent = MainStudentFragment()//assign the fragment object
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainerStudent, FragmentStudent!!).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerStudent, FragmentStudent!!).commit()
     }
 
     //functions inherited from the iComunicationFragmentsStudent class
@@ -29,7 +28,11 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
     }
 
     override fun Activities1() {
-        startActivity(Intent(this, educationalModule::class.java))
+        var name = nameUser()
+        var intent = Intent(this, EducationalModule::class.java)
+        intent.putExtra("name", name)
+        intent.putExtra("key", mAuth!!.uid)
+        this.startActivity(intent)
     }
 
     override fun Stadistics() {

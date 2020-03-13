@@ -1,6 +1,5 @@
 package com.example.entornopazud.Adapters
 
-import android.R
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -20,9 +19,7 @@ class Adapter_Students (items: ArrayList<User>,resourcek : Int,mUser : String) :
         this.items = items
         this.resource = resourcek
         this.mUser = mUser
-        //this.mContext = context
     }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {//information about each item of the holder
         val item = items?.get(position)
         holder.name?.text = item?.name
@@ -42,22 +39,16 @@ class Adapter_Students (items: ArrayList<User>,resourcek : Int,mUser : String) :
                 intent.putExtra("Teacher",mUser)
                 v.context.startActivity(intent)
             }
-
         })
-
     }
-
     override fun getItemCount(): Int {//size of studentlist
         return this.items!!.size
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter_Students.ViewHolder {
         val vista = LayoutInflater.from(parent?.context).inflate(resource, parent,false)//create instance context
         var Holder = ViewHolder(vista)
-
         return Holder!!
     }
-
     class ViewHolder(v : View): RecyclerView.ViewHolder(v){
         var vista = v
         var name :TextView? = null
@@ -71,11 +62,5 @@ class Adapter_Students (items: ArrayList<User>,resourcek : Int,mUser : String) :
             id = vista.txtId
             cours = vista.txtCourse
         }
-
-
     }
-
-
-
-
 }

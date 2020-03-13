@@ -8,18 +8,21 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
-import com.example.entornopazud.Activities.MainActivity
-import com.example.entornopazud.Activities.MainStudentChat
+import com.example.entornopazud.Activities.EducationalModulePack.*
 import com.example.entornopazud.Clases.Model
 import com.example.entornopazud.R
 
 
-class Adapter_Module(models: ArrayList<Model>, context: Context) : PagerAdapter ()    {
+class Adapter_Module(models: ArrayList<Model>, context: Context, nameStudent: String, KeyStudent : String ) : PagerAdapter ()    {
 
     private var models: ArrayList<Model>? = null
     private var context: Context? = null
+    private var nameStudent: String? = null
+    private var keyStudent: String? = null
 
     init {
+        this.nameStudent = nameStudent
+        this.keyStudent = KeyStudent
         this.models = models
         this.context = context
     }
@@ -44,9 +47,40 @@ class Adapter_Module(models: ArrayList<Model>, context: Context) : PagerAdapter 
         desc.setText(models!!.get(position).desc)
 
         view.setOnClickListener {
-            val intent = Intent(context, MainActivity::class.java)
-            context!!.startActivity(intent)
+            when (models!!.get(position).title) {
+                "Acuerdo de Paz" ->{
+                    var intent = Intent(context, PeaceItem::class.java)
+                   // intent.putExtra("name", nameStudent)
+                   // intent.putExtra("key", keyStudent)
+                    view.context!!.startActivity(intent)
+                }
 
+                "Resolución De Conflictos" ->{
+                    var intent = Intent(context, ConflictResolutionItem::class.java)
+                    intent.putExtra("name", nameStudent)
+                    intent.putExtra("key", keyStudent)
+                    view.context!!.startActivity(intent)
+                }
+                "Las Tres P" ->{
+                    var intent = Intent(context, ThreePItem::class.java)
+                    intent.putExtra("name", nameStudent)
+                    intent.putExtra("key", keyStudent)
+                    view.context!!.startActivity(intent)
+                }
+                "Acoso Escolar" ->{
+                    var intent = Intent(context, BullyngItem::class.java)
+                    intent.putExtra("name", nameStudent)
+                    intent.putExtra("key", keyStudent)
+                    view.context!!.startActivity(intent)
+                }
+                "5 Mitos Sobre El Acoso Escolar" ->{
+                    var intent = Intent(context, MythsItem::class.java)
+                    intent.putExtra("name", nameStudent)
+                    intent.putExtra("key", keyStudent)
+                    view.context!!.startActivity(intent)
+                }
+                else -> println("nothing")
+            }
         }
 
         container.addView(view)
