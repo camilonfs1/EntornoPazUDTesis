@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import com.example.entornopazud.R
 
 
-class IllicitDrugsFragment : Fragment() {
+class IlicitDrugsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

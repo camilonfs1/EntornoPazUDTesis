@@ -8,7 +8,7 @@ import android.view.ViewGroup
 
 import com.example.entornopazud.R
 
-class peace_agreement : Fragment() {
+class PeaceAgreementFragment : Fragment() {
 
 
     override fun onCreateView(

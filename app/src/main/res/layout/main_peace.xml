@@ -72,6 +72,7 @@
                     app:cardCornerRadius="8dp">
 
                     <TextView
+                        android:id="@+id/cardAgreementText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -80,6 +81,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTimeLine"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_rowWeight="1"
@@ -93,6 +95,7 @@
                     app:cardCornerRadius="8dp">
 
                     <TextView
+                        android:id="@+id/cardTimeLineText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -102,6 +105,7 @@
 
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRuralReoform"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_rowWeight="1"
@@ -115,6 +119,7 @@
                     app:cardCornerRadius="8dp">
 
                     <TextView
+                        android:id="@+id/cardRuralReoformText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -122,6 +127,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPoliticalParticipation"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_rowWeight="1"
@@ -135,6 +141,7 @@
                     app:cardCornerRadius="8dp">
 
                     <TextView
+                        android:id="@+id/cardPoliticalParticipationText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -142,6 +149,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardEndConflict"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_rowWeight="1"
@@ -155,6 +163,7 @@
                     app:cardCornerRadius="8dp">
 
                     <TextView
+                        android:id="@+id/cardEndConflictText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -164,6 +173,7 @@
              
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardIlligalDrugs"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_rowWeight="1"
@@ -177,6 +187,7 @@
                     app:cardCornerRadius="8dp">
 
                     <TextView
+                        android:id="@+id/cardIlligalDrugsText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -184,6 +195,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardVictims"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_rowWeight="1"
@@ -197,6 +209,7 @@
                     app:cardCornerRadius="8dp">
 
                     <TextView
+                        android:id="@+id/cardVictimsText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -204,6 +217,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImplementation"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_rowWeight="1"
@@ -217,6 +231,7 @@
                     app:cardCornerRadius="8dp">
 
                     <TextView
+                        android:id="@+id/cardImplementationtext"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"

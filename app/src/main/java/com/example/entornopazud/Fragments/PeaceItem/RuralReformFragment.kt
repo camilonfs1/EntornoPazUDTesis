@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import com.example.entornopazud.R
 
 
-class RuralReform : Fragment() {
+class RuralReformFragment : Fragment() {
 
 
     override fun onCreateView(
