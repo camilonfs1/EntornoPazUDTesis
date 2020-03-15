@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/iconepaz_main_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Fragments.PeaceItem.TimeLineFra"></activity>
+        <activity android:name=".Fragments.PeaceItem.RuralReformFragmet"></activity>
+        <activity android:name=".Fragments.PeaceItem.TimeLineFra" />
         <activity android:name=".Activities.ContainerEducationalModule" />
         <activity android:name=".Activities.EducationalModulePack.MythsItem" />
         <activity android:name=".Activities.EducationalModulePack.ConflictResolutionItem" />

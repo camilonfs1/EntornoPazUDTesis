@@ -11,7 +11,6 @@ import kotlinx.android.synthetic.main.activity_container_educational_module.*
 import kotlinx.android.synthetic.main.main_peace.*
 
 class PeaceItem : AppCompatActivity() {
-    private var agreement: CardView? = null
     private var EncConflic: CardView? = null
     private var Implementation: CardView? = null
     private var PoliticalPar: CardView? = null
@@ -23,7 +22,6 @@ class PeaceItem : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_peace)
-        agreement = cardAgreement
         EncConflic = cardEndConflict
         Implementation = cardImplementation
         PoliticalPar = cardPoliticalParticipation
@@ -33,11 +31,7 @@ class PeaceItem : AppCompatActivity() {
         IllegalDrgus= cardIlligalDrugs
 
 
-        agreement!!.setOnClickListener {
-            var intent = Intent(this, ContainerEducationalModule::class.java)
-            intent.putExtra("fragment", "Agreement")
-            this.startActivity(intent)
-        }
+
         TimeLine!!.setOnClickListener {
             var intent = Intent(this, ContainerEducationalModule::class.java)
             intent.putExtra("fragment", "TimeLine")

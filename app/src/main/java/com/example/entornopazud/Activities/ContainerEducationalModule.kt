@@ -18,10 +18,6 @@ class ContainerEducationalModule : AppCompatActivity() {
         var fragment = intent.getStringExtra("fragment")
 
         when (fragment) {
-            "Agreement" ->{
-                Fragment = PeaceAgreementFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.container, Fragment!!).commit()
-            }
             "TimeLine" -> {
                 var intent = Intent(this, TimeLineFra::class.java)
                 this.startActivity(intent)
@@ -52,9 +48,8 @@ class ContainerEducationalModule : AppCompatActivity() {
 
             }
             "RuralReform" -> {
-                Fragment = RuralReformFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.container, Fragment!!).commit()
-
+                var intent = Intent(this, RuralReformFragmet::class.java)
+                this.startActivity(intent)
             }
         }
 
