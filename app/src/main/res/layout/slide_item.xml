@@ -20,7 +20,7 @@
         android:textSize="18dp"
         android:textStyle="bold"
         />
-    <TextView
+    <me.biubiubiu.justifytext.library.JustifyTextView
         android:id="@+id/TextDescriptionSlide"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
