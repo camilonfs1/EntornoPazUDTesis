@@ -27,7 +27,7 @@ class EducationalModule : AppCompatActivity() {
 
         btnBack= btnBackk
         btnBack!!.setOnClickListener {
-            var intent = Intent(this, MainStudentChat::class.java)
+            var intent = Intent(this, MainStudent::class.java)
             intent.putExtra("name", nameStudent)
             intent.putExtra("key", keyStrudent)
             this.startActivity(intent)
@@ -45,13 +45,6 @@ class EducationalModule : AppCompatActivity() {
                 R.drawable.children_school,
                 "Resolución De Conflictos",
                 "Los conflictos se producen en todas las culturas"
-            )
-        )
-        models!!.add(
-            Model(
-                R.drawable.three_p,
-                "Las Tres P",
-                "(personas, problemas, procesos) "
             )
         )
         models!!.add(
@@ -98,8 +91,6 @@ class EducationalModule : AppCompatActivity() {
                             colors!![position], colors!![position + 1]
                         ) as Int
                     )
-
-
                 }else {
                     viewPager1!!.setBackgroundColor(colors!!.get(colors!!.size - 1));
                 }

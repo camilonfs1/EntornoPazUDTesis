@@ -1,13 +1,14 @@
 package com.example.entornopazud.Activities.EducationalModulePack
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.cardview.widget.CardView
-import com.example.entornopazud.Activities.ContainerEducationalModule
+import com.example.entornopazud.EvaluationActivities.FinalActivityPeace
+import com.example.entornopazud.EvaluationActivities.TimeLineActivityPeace
+import com.example.entornopazud.Fragments.PeaceItem.*
 import com.example.entornopazud.R
-import kotlinx.android.synthetic.main.activity_container_educational_module.*
 import kotlinx.android.synthetic.main.main_peace.*
 
 class PeaceItem : AppCompatActivity() {
@@ -18,6 +19,8 @@ class PeaceItem : AppCompatActivity() {
     private var Victims: CardView? = null
     private var TimeLine: CardView? = null
     private var IllegalDrgus: CardView? = null
+    private var ActivityLine: CardView?= null
+    private var ActivityAll: CardView?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,50 +32,47 @@ class PeaceItem : AppCompatActivity() {
         Victims = cardVictims
         TimeLine = cardTimeLine
         IllegalDrgus= cardIlligalDrugs
-
+        ActivityLine = cardActivityTimeLine
+        ActivityAll = activityAll
 
 
         TimeLine!!.setOnClickListener {
-            var intent = Intent(this, ContainerEducationalModule::class.java)
-            intent.putExtra("fragment", "TimeLine")
+            var intent = Intent(this, TimeLineFra::class.java)
             this.startActivity(intent)
         }
         RuralReform!!.setOnClickListener {
-            var intent = Intent(this, ContainerEducationalModule::class.java)
-            intent.putExtra("fragment", "RuralReform")
+            var intent = Intent(this, RuralReformFragmet::class.java)
             this.startActivity(intent)
         }
         PoliticalPar!!.setOnClickListener {
-            var intent = Intent(this, ContainerEducationalModule::class.java)
-            intent.putExtra("fragment", "Participation")
+            var intent = Intent(this, PoliticalParticipationFragment::class.java)
             this.startActivity(intent)
         }
         EncConflic!!.setOnClickListener {
-            var intent = Intent(this, ContainerEducationalModule::class.java)
-            intent.putExtra("fragment", "EndConflic")
+            var intent = Intent(this, ConflicEndFragment::class.java)
             this.startActivity(intent)
         }
         IllegalDrgus!!.setOnClickListener {
-            var intent = Intent(this, ContainerEducationalModule::class.java)
-            intent.putExtra("fragment", "Drugs")
+            var intent = Intent(this, DrugsFragment::class.java)
             this.startActivity(intent)
+
         }
         Victims!!.setOnClickListener {
-            var intent = Intent(this, ContainerEducationalModule::class.java)
-            intent.putExtra("fragment", "Vitims")
+            var intent = Intent(this, VictimsFragment::class.java)
             this.startActivity(intent)
         }
         Implementation!!.setOnClickListener {
-            var intent = Intent(this, ContainerEducationalModule::class.java)
-            intent.putExtra("fragment", "Implementation")
+            var intent = Intent(this, ImplementationFragment::class.java)
             this.startActivity(intent)
         }
-
-
-
-
-
-
+        ActivityLine!!.setOnClickListener{
+            var intent = Intent(this, TimeLineActivityPeace::class.java)
+            this.startActivity(intent)
+        }
+        ActivityAll!!.setOnClickListener {
+            var intent = Intent(this, FinalActivityPeace::class.java)
+            this.startActivity(intent)
+        }
     }
 
 }

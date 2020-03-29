@@ -6,8 +6,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="vertical">
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="#E8E8E8">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
@@ -42,13 +43,14 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginHorizontal="10dp"
                 android:layout_weight="1"
                 android:layout_toRightOf="@+id/ll_dots"
                 android:id="@+id/ll_one"
                 android:layout_centerInParent="true"
-                android:background="#E6E5E5"
-                android:orientation="horizontal">
+                android:background="@drawable/linear_layuout_back"
+                android:orientation="horizontal"
+                >
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -60,7 +62,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginHorizontal="10dp"
+
                     android:orientation="vertical">
 
                     <TextView
@@ -70,7 +73,7 @@
                         android:layout_marginTop="5dp"
                         android:padding="2dp"
                         android:text="@{obj.title1}"
-                        android:textColor="#2196F3"
+                        android:textColor="#000000"
                         android:textSize="17sp"
                         android:textStyle="bold" />
 
@@ -82,7 +85,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="@{obj.title2}"
                         android:textColor="#2196F3"
-                        android:textSize="13sp" />
+                        android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

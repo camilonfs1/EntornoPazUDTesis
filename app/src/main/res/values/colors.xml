@@ -10,8 +10,18 @@
 
 
     <color name="color1">#89B6F3</color>
-    <color name="color2">#DA1A2B</color>
+    <color name="color2">#1ADABD</color>
     <color name="color3">#E664E5</color>
     <color name="color4">#8ED174</color>
     <color name="color5">#48A2AE</color>
+
+
+    <!-- PeaceItem -->
+
+    <color name="political">#fae778</color>
+    <color name="Rural">#b3deef</color>
+    <color name="EndConflic">#5bc5f1</color>
+    <color name="Drugs">#f5b0b7</color>
+    <color name="Implementation">#D3A7CF</color>
+    <color name="Victims">#f9b769</color>
 </resources>

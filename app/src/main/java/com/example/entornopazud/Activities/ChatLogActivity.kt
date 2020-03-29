@@ -48,7 +48,6 @@ class ChatLogActivity : AppCompatActivity() {
 
         TextNameChat!!.setText(userNameB)
 
-        //setupDummyData()
 
         listenForMessages(UserKeyA, UserKeyB)
 

@@ -17,10 +17,51 @@
     <string name="BtnEnt">Ingresar</string>
     <string name="RegisterHiper"><u>Registrar nuevo usuario</u>.</string>
     <string name="comentari">Esta app fue realizada por Camilo Vargas Romero para la Universidad Distrital Francisco Jose de Caldas</string>
-    <string name="camiloooooooooooooooooooooooooooo">camiloooooooooooooooooooooooooooo</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--Educational Module-->
+
+    <!--Peace Item-->
+    <string name="peaceItemIntro1">El conflicto en Colombia ha dejado más de 8 millones de víctimas y más de 6 millones de personas desplazadas.
+        Ha sido una guerra que ha permeado desde nuestra manera de pensar hasta nuestra manera de sentir. Luego de un enfrentamiento
+        de más de medio siglo de duración, el gobierno nacional y las Farc-ep han acordado poner fin de manera definitiva al
+        conflicto armado interno. El fin del conflicto armado supondrá la apertura de un capítulo nuevo en nuestra historia </string>
+    <string name="peaceItemIntro2">El proceso de paz entre el gobierno Nacional y las Farc-ep que dio inicio a la fase de conversaciones
+        de agosto de 2012 finalizó el 24 de noviembre de 2016 con la firma del Acuerdo Final para la Terminación del Conflicto y la Construcción
+        de una Paz Estable y Duradera que tuvo lugar en el Teatro Colon en Bogotá</string>
+
+
+    <!--Time Line-->
+    <string name="line1">El gobierno del expresidente Julio Cesar Turbay creo una comisión de paz para iniciar conversaciones con la guerrilla. El expresidente Carlos Lleras Restrepo quien tenía la misión de liderar el proceso renuncio con el argumento de que no lo dejaron establecer contactos con la insurgencia</string>
+    <string name="line2"> El entonces presidente conservador Belisario Betancur inicio una negociación de Paz con las Farc. </string>
+    <string name="line3">El gobierno de Betancur y las Farc-Ep firmaron el acuerdo de La Uribe, que incluye el cese al fuego bilateral, la suspensión del secuestro y la apertura de espacios políticos para la guerrilla. El proceso fracaso y se rompió en 1987.</string>
+    <string name="line4">El presidente liberal, Virgilio Barco comienza acercamientos de paz con las Farc, pero el exterminio a manos de paramilitares de ultraderecha de miles de militantes del partido Unión Patriótica impide avanzar </string>
+    <string name="line5">Barco inicia diálogos con el M-19 y expide la ley de amnistía</string>
+    <string name="line6">El gobierno de Barco firma un acuerdo de paz con el M-19 que entrega las armas, se reintegra a la vida civil y se convierte en fuerza política. </string>
+    <string name="line7">El entonces presidente, Cesar Gaviria inicia conversaciones con las Farc-Ep y el ELN en Venezuela y luego se traslada a Tlaxcala en México. En 1992 se rompe el proceso por el asesinato de un exministro secuestrado por la guerrilla. </string>
+    <string name="line8">Durante el gobierno de Gaviria se reintegran a la vida civil y entregan las armas los integrantes de la Corriente de Renovación Socialista, una disidencia del ELN. </string>
+    <string name="line9">El gobierno de Ernesto Samper concede el estatus político al ELN en un esfuerzo por lograr un acuerdo de paz. También hubo un encuentro con el ELN en España y Alemania que no prosperaron </string>
+    <string name="line10">Se inicia el proceso con las Farc-Ep. Los diálogos se realizan en medio de la confrontación y se rompieron en febrero de 2002 </string>
+    <string name="line11">Durante el gobierno de Álvaro Uribe, se iniciaron diálogos con el ELN en Cuba, pero estas aproximaciones fracasaron </string>
+    <string name="line12">El expresidente Juan Manuel Santos anuncia a comienzos de septiembre que su gobierno y las Farc-ep firmaron un acuerdo que establece un procedimiento, una hoja de ruta, para avanzar en la negociación de Paz</string>
+    <string name="title_activity_drugs_peace">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 
 </resources>

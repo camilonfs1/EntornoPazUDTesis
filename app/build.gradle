@@ -56,6 +56,7 @@ dependencies {
     implementation "com.xwray:groupie:2.7.0"
 
 
+    implementation 'androidx.preference:preference:1.1.0-rc01'
     dependencies {
         implementation 'com.github.vipulasri:timelineview:1.1.4'
     }

@@ -61,12 +61,6 @@ class Adapter_Module(models: ArrayList<Model>, context: Context, nameStudent: St
                     intent.putExtra("key", keyStudent)
                     view.context!!.startActivity(intent)
                 }
-                "Las Tres P" ->{
-                    var intent = Intent(context, ThreePItem::class.java)
-                    intent.putExtra("name", nameStudent)
-                    intent.putExtra("key", keyStudent)
-                    view.context!!.startActivity(intent)
-                }
                 "Acoso Escolar" ->{
                     var intent = Intent(context, BullyngItem::class.java)
                     intent.putExtra("name", nameStudent)
@@ -82,10 +76,9 @@ class Adapter_Module(models: ArrayList<Model>, context: Context, nameStudent: St
                 else -> println("nothing")
             }
         }
-
         container.addView(view)
-
         return view
+
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, o1bject: Any) {

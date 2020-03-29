@@ -11,11 +11,10 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.entornopazud.Adapters.Adapter_Courses
 import com.example.entornopazud.Clases.Courses
-import com.example.entornopazud.Clases.User
 import com.example.entornopazud.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_c_r_u_d__courses.*
+import kotlinx.android.synthetic.main.activity_crud__courses.*
 
 class CRUD_Courses : AppCompatActivity() {
     private var btnCreate: Button? = null
@@ -31,7 +30,7 @@ class CRUD_Courses : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_c_r_u_d__courses)
+        setContentView(R.layout.activity_crud__courses)
         initialise()
     }
 

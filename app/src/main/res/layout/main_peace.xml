@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".Activities.EducationalModulePack.PeaceItem">
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,53 +16,48 @@
         android:background="@drawable/linear_layout_back_2"
         android:orientation="vertical"
         android:layout_weight="3">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/progress"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="30dp"
             android:gravity="center"
+            android:layout_weight="3"
             android:text="Acuerdo de Paz"
             android:textColor="#89B6F3"
             android:textSize="30dp"
             android:textStyle="bold" />
-
         <TextView
             android:id="@+id/progress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp"
+            android:layout_weight="3"
             android:gravity="center"
-            android:text="Progreso  100%"
+            android:text="Progreso  0%"
             android:textColor="#89B6F3"
             android:textSize="15dp"
             android:textStyle="bold" />
 
     </RelativeLayout>
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#89B6F3"
                 android:orientation="vertical">
-
-
                 <androidx.cardview.widget.CardView
                 android:id="@+id/cardAgreement"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="-10dp"
                 android:layout_marginBottom="10dp"
                 android:elevation="6dp"
                 android:foreground="?selectableItemBackground">
@@ -72,64 +66,88 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:padding="5dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:textStyle="italic"
-                        android:text="El conflicto en Colombia ha dejado más de 8 millones de víctimas y más de 6 millones de personas desplazadas. Ha sido una guerra que ha permeado desde nuestra manera de pensar hasta nuestra manera de sentir. Luego de un enfrentamiento de más de medio siglo de duración, el gobierno nacional y las Farc-ep han acordado poner fin de manera definitiva al conflicto armado interno. El fin del conflicto armado supondrá la apertura de un capítulo nuevo en nuestra historia" />
+                    android:padding="-5dp"
+                    android:background="#89B6F3">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="-30dp"
-                        android:layout_marginBottom="-30dp"
                         android:src="@drawable/peace_photo" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:textStyle="italic"
-                        android:text="El proceso de paz entre el gobierno Nacional y las Farc-ep que dio inicio a la fase de conversaciones de agosto de 2012 finalizó el 24 de noviembre de 2016 con la firma del Acuerdo Final para la Terminación del Conflicto y la Construcción de una Paz Estable y Duradera que tuvo lugar en el Teatro Colon en Bogotá." />
-
-
-                </LinearLayout>
+                        android:textColor="#FFFFFF"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="@string/peaceItemIntro1"/>
+                         <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:textColor="#FFFFFF"
+                        android:text="@string/peaceItemIntro2"/>
+            </LinearLayout>
 
 
             </androidx.cardview.widget.CardView>
-
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardTimeLine"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:elevation="6dp"
-                    android:foreground="?selectableItemBackground"
-                    app:cardCornerRadius="8dp">
-
-                    <TextView
-                        android:id="@+id/cardTimeLineText"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardTimeLine"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:textSize="23dp"
-                        android:text="Recorrido Cronológico "
-                         />
+                        android:layout_height="100dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:elevation="6dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp">
+                        <TextView
+                            android:id="@+id/cardTimeLineText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="23dp"
+                            android:text="Recorrido Cronológico "/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardActivityTimeLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="6dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp">
 
-                </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:id="@+id/cardTimeLineText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="23dp"
+                            android:text="Actividad 1 "/>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardRuralReoform"
@@ -203,8 +221,6 @@
                         android:text="Fin Del Conflicto " />
                 </androidx.cardview.widget.CardView>
 
-             
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardIlligalDrugs"
                     android:layout_width="match_parent"
@@ -266,7 +282,6 @@
                     android:elevation="6dp"
                     android:foreground="?selectableItemBackground"
                     app:cardCornerRadius="8dp">
-
                     <TextView
                         android:id="@+id/cardImplementationtext"
                         android:layout_width="match_parent"
@@ -275,6 +290,33 @@
                         android:textStyle="bold"
                         android:textSize="23dp"
                         android:text="Implementación Y Verificación " />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/activityAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:elevation="6dp"
+                    android:foreground="?selectableItemBackground"
+                    app:cardCornerRadius="32dp"
+                    android:backgroundTint="#293C51">
+
+                    <TextView
+                        android:id="@+id/activityAlltext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00293C51"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Actividad Final"
+                        android:textColor="#89B6F3"
+                        android:textSize="23dp"
+                        android:textStyle="bold" />
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </ScrollView>
