@@ -15,7 +15,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.entornopazud.Activities.EducationalModulePack.PeaceItem
 import com.example.entornopazud.Adapters.Adapter_Intro_Slider
 import com.example.entornopazud.Clases.IntroSlide
-import com.example.entornopazud.EvaluationActivities.EndConflictActivityPeace
+import com.example.entornopazud.EvaluationActivities.EndConflictPeaceEvaluation
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.peace_container.*
 
@@ -85,7 +85,7 @@ class ConflicEndFragment : AppCompatActivity() {
             this.startActivity(intent)
         }
         btnActivity!!.setOnClickListener {
-            var intent = Intent(this, EndConflictActivityPeace::class.java)
+            var intent = Intent(this, EndConflictPeaceEvaluation::class.java)
             this.startActivity(intent)
         }
 

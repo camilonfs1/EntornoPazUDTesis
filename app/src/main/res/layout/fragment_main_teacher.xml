@@ -38,7 +38,8 @@
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal" />
 
             </LinearLayout>
 
@@ -89,7 +90,8 @@
             android:textAlignment="center"
             android:textColor="#ffffff"
             android:textSize="32sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
 
     </LinearLayout>
 
@@ -141,7 +143,8 @@
                         android:textAlignment="center"
                         android:textColor="#DD0E2F"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
 
@@ -181,7 +184,8 @@
                         android:textAlignment="center"
                         android:textColor="#00B7FF"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
 
@@ -220,7 +224,8 @@
                         android:textAlignment="center"
                         android:textColor="#FF8807"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -258,7 +263,8 @@
                         android:textAlignment="center"
                         android:textColor="#2FBEBA"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -296,7 +302,8 @@
                         android:textAlignment="center"
                         android:textColor="#ffcc00"
                         android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -334,7 +341,8 @@
                         android:textAlignment="center"
                         android:textColor="#7C5AC7"
                         android:textSize="20dp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:gravity="center_horizontal" />
                 </LinearLayout>
 
 

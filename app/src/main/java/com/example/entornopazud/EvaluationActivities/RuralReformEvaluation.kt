@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.R
 
-class ImplementationActivityPeace : AppCompatActivity() {
+class RuralReformEvaluation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_implementation_peace)
+        setContentView(R.layout.evaluation_rural_reform)
     }
 }

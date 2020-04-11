@@ -14,7 +14,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.entornopazud.Activities.EducationalModulePack.PeaceItem
 import com.example.entornopazud.Adapters.Adapter_Intro_Slider
 import com.example.entornopazud.Clases.IntroSlide
-import com.example.entornopazud.EvaluationActivities.VictimsAcvityPeace
+import com.example.entornopazud.EvaluationActivities.VictimsPeaceEvaluation
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.peace_container.*
 
@@ -117,7 +117,7 @@ class VictimsFragment : AppCompatActivity() {
             this.startActivity(intent)
         }
         btnActivity!!.setOnClickListener {
-            var intent = Intent(this, VictimsAcvityPeace::class.java)
+            var intent = Intent(this, VictimsPeaceEvaluation::class.java)
             this.startActivity(intent)
         }
     }

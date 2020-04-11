@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.R
 
-class FinalActivityPeace : AppCompatActivity() {
+class PoliticalPeaceEvaluation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_final_peace)
+        setContentView(R.layout.evaluation_political_peace)
     }
 }

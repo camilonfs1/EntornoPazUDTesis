@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.R
 
-class TimeLineActivityPeace : AppCompatActivity() {
+class DrugsPeaceEvaluation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_time_line_peace)
+        setContentView(R.layout.evaluation_drugs_peace)
     }
 }

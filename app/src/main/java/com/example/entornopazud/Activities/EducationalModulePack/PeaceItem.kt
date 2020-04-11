@@ -1,12 +1,11 @@
 package com.example.entornopazud.Activities.EducationalModulePack
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
-import com.example.entornopazud.EvaluationActivities.FinalActivityPeace
-import com.example.entornopazud.EvaluationActivities.TimeLineActivityPeace
+import com.example.entornopazud.EvaluationActivities.FinalPeaceEvaluation
+import com.example.entornopazud.EvaluationActivities.TimeLinePeaceEvaluation
 import com.example.entornopazud.Fragments.PeaceItem.*
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.main_peace.*
@@ -66,11 +65,11 @@ class PeaceItem : AppCompatActivity() {
             this.startActivity(intent)
         }
         ActivityLine!!.setOnClickListener{
-            var intent = Intent(this, TimeLineActivityPeace::class.java)
+            var intent = Intent(this, TimeLinePeaceEvaluation::class.java)
             this.startActivity(intent)
         }
         ActivityAll!!.setOnClickListener {
-            var intent = Intent(this, FinalActivityPeace::class.java)
+            var intent = Intent(this, FinalPeaceEvaluation::class.java)
             this.startActivity(intent)
         }
     }

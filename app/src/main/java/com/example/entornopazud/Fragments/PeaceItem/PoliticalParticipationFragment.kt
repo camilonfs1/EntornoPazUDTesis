@@ -14,7 +14,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.entornopazud.Activities.EducationalModulePack.PeaceItem
 import com.example.entornopazud.Adapters.Adapter_Intro_Slider
 import com.example.entornopazud.Clases.IntroSlide
-import com.example.entornopazud.EvaluationActivities.PoliticalActivityPeace
+import com.example.entornopazud.EvaluationActivities.PoliticalPeaceEvaluation
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.peace_container.*
 
@@ -95,7 +95,7 @@ class PoliticalParticipationFragment : AppCompatActivity() {
             this.startActivity(intent)
         }
         btnActivity!!.setOnClickListener {
-            var intent = Intent(this, PoliticalActivityPeace::class.java)
+            var intent = Intent(this, PoliticalPeaceEvaluation::class.java)
             this.startActivity(intent)
 
         }

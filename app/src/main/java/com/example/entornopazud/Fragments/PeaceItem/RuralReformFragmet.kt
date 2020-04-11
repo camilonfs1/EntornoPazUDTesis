@@ -15,7 +15,7 @@ import com.example.entornopazud.Activities.EducationalModulePack.PeaceItem
 import com.example.entornopazud.Adapters.Adapter_Intro_Slider
 import com.example.entornopazud.Clases.IntroSlide
 import com.example.entornopazud.R
-import com.example.entornopazud.EvaluationActivities.RuralReform
+import com.example.entornopazud.EvaluationActivities.RuralReformEvaluation
 import kotlinx.android.synthetic.main.peace_container.*
 
 class RuralReformFragmet : AppCompatActivity() {
@@ -114,7 +114,7 @@ class RuralReformFragmet : AppCompatActivity() {
             this.startActivity(intent)
         }
         btnActivity!!.setOnClickListener {
-            var intent = Intent(this, RuralReform::class.java)
+            var intent = Intent(this, RuralReformEvaluation::class.java)
             this.startActivity(intent)
         }
 

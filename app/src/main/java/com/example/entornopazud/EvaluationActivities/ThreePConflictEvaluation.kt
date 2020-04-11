@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.R
 
-class EndConflictActivityPeace : AppCompatActivity() {
+class ThreePConflictEvaluation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_end_conflict_peace)
+        setContentView(R.layout.evaluation_three_p_conflict)
     }
 }
