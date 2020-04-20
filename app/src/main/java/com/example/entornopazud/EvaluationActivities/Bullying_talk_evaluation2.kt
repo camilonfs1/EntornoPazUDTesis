@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.R
 
-class   EndConflictPeaceEvaluation : AppCompatActivity() {
+class Bullying_talk_evaluation2 : AppCompatActivity() {
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.evaluation_end_conflict_peace)
+        setContentView(R.layout.evaluation_bullying_talk_2)
     }
 }

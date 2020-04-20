@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/iconepaz_main_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Fragments.BullyingItem.HowToSolution"></activity>
+        <activity android:name=".EvaluationActivities.Bullying_how_evaluation2"></activity>
+        <activity android:name=".EvaluationActivities.Bullying_how_evaluation1" />
+        <activity android:name=".EvaluationActivities.Bullying_talk_evaluation2" />
+        <activity android:name=".EvaluationActivities.Bullying_talk_evaluation1" />
+        <activity android:name=".EvaluationActivities.Myth_main_Evaluation" />
+        <activity android:name=".EvaluationActivities.bullying_main_evaluation" />
+        <activity android:name=".Fragments.BullyingItem.HowToSolution" />
         <activity android:name=".Fragments.BullyingItem.TalkandListen" />
         <activity android:name=".EvaluationActivities.StepsConflictEvaluation" />
         <activity android:name=".EvaluationActivities.SolutionConflictEvaluation" />

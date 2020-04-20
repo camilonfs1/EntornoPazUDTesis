@@ -82,6 +82,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/Card1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
@@ -116,7 +117,7 @@
                     android:rowCount="3">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/StudentsCard"
+                        android:id="@+id/Card2"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_rowWeight="1"
@@ -142,7 +143,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/CorusesCard"
+                        android:id="@+id/Card3"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_rowWeight="1"
@@ -168,7 +169,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/StadisticCard"
+                        android:id="@+id/Card4"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_rowWeight="1"
@@ -194,7 +195,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/DBCard"
+                        android:id="@+id/Card5"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_rowWeight="1"
@@ -218,6 +219,7 @@
 
                 </GridLayout>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/CardActivityMith"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"

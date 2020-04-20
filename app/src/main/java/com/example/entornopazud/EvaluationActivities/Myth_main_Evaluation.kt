@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.R
 
-class   EndConflictPeaceEvaluation : AppCompatActivity() {
+class Myth_main_Evaluation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.evaluation_end_conflict_peace)
+        setContentView(R.layout.evaluation_myth_main)
     }
 }

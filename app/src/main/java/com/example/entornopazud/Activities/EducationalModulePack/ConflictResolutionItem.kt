@@ -97,11 +97,8 @@ class ConflictResolutionItem : AppCompatActivity() {
         var text: TextView = myDialog!!.findViewById(R.id.textpop)
         var imag: ImageView = myDialog!!.findViewById(R.id.imagepop)
         var btn: Button = myDialog!!.findViewById(R.id.buttonNext)
-
-
         text.setText(text1)
         imag.setImageResource(imag1)
-
         btn!!.setOnClickListener {
             when (rut){
                 "threeP"->
@@ -111,9 +108,7 @@ class ConflictResolutionItem : AppCompatActivity() {
                 "solution"->
                     this.startActivity(Intent(this, solutionConflicts::class.java))
             }
-
         }
-
         close.setOnClickListener {
             myDialog!!.dismiss()
         }

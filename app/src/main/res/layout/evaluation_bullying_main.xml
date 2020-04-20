@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:background="#673AB7"
-    tools:context=".EvaluationActivities.FinalPeaceEvaluation">
+    tools:context=".EvaluationActivities.bullying_main_evaluation">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,5 +63,4 @@
             android:text="Terminar"
             android:textColor="#fff" />
     </LinearLayout>
-
 </RelativeLayout>
