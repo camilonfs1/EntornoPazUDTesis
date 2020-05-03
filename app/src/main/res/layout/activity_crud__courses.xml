@@ -7,7 +7,7 @@
     android:background="#2A836A"
     android:gravity="center"
     android:padding="15dp"
-    tools:context=".Activities.CRUD_Courses">
+    tools:context=".view.activity.CRUD_Courses">
 
     <LinearLayout
         android:layout_width="match_parent"
