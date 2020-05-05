@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.entornopazud.R
 import com.example.entornopazud.data.model.Courses
 import com.example.entornopazud.data.model.User
-import com.example.entornopazud.view.Adapters.Adapter_Students
+import com.example.entornopazud.viewmodel.Adapters.Adapter_Students
 import com.google.firebase.database.*
 
 class FiresList {
@@ -19,9 +19,7 @@ class FiresList {
     private var students: ArrayList<User> = ArrayList<User>()
     private var adapter: Adapter_Students? = null
 
-
-
-
+    //----------------------------------------------------------------------List Courses-------------------------------------------------------------
     fun getCoursesData():LiveData<ArrayList<Courses>>{
         mDatabase = FirebaseDatabase.getInstance()
         val mutableData = MutableLiveData<ArrayList<Courses>>()
@@ -30,7 +28,6 @@ class FiresList {
             //call "Courses" child in database firebase
             override fun onCancelled(p0: DatabaseError) {
             }
-
             override fun onDataChange(p0: DataSnapshot) {
                 if (p0.exists()) {
                     for (e in p0.children) {
@@ -45,8 +42,7 @@ class FiresList {
         })
         return mutableData
     }
-
-    //----------------------------------------------------------------------CRUD Students-------------------------------------------------------------
+    //----------------------------------------------------------------------List Students for teacher and cours-------------------------------------------------------------
     fun readCoursesDb(mUser: String,context: Context,recyStu: RecyclerView) {
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference
@@ -60,21 +56,14 @@ class FiresList {
                 CoursesList1.clear()
                 if (p0.exists()) {
                     for (e in p0.children) {
-                        var cours = Courses(
-                            e.child("Name").getValue().toString()
-                        )
-                        var teacher =
-                            Courses(
-                                e.child("Teacher").getValue().toString()
-                            )
-
+                        var cours = Courses(e.child("Name").getValue().toString())
+                        var teacher =Courses(e.child("Teacher").getValue().toString())
                         if (teacher.name.equals(mUser)) {
                             CoursesList1.add(cours.name)
                         }
                     }
                    datosFirebase(CoursesList1,mUser,context,recyStu)
                 }
-
             }
         })
     }
@@ -99,15 +88,14 @@ class FiresList {
                     var roll = e.child("Roll").getValue().toString()
                     students.add(User(e.key.toString(),name,email,id,roll,it))
                 }
-                adapter = Adapter_Students(students,                    R.layout.recycler_row,
-                    mUser
-                )//sent userlist to adapter class
+                adapter =
+                    Adapter_Students(
+                        students,
+                        R.layout.recycler_row,
+                        mUser
+                    )//sent userlist to adapter class
                 recyclerStudents1!!.adapter = adapter
             }
         })
     }
-
-
-
-
 }

@@ -32,7 +32,7 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
     //functions inherited from the iComunicationFragmentsTeacher class
     override fun Students() {
         var name = nameUser()
-        var intent = Intent(this, CRUD_Student_main::class.java)
+        var intent = Intent(this, List_Student_main::class.java)
         intent.putExtra("name", name)
         this.startActivity(intent)
     }

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.example.entornopazud.view.Adapters.Adapter_Module
+import com.example.entornopazud.viewmodel.Adapters.Adapter_Module
 import com.example.entornopazud.data.model.Model
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.activity_educational_module.*

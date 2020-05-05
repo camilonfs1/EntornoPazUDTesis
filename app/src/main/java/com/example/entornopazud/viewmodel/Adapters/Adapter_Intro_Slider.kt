@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.Adapters
+package com.example.entornopazud.viewmodel.Adapters
 
 import android.view.LayoutInflater
 import android.view.View

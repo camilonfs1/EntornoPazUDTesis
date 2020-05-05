@@ -9,12 +9,18 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.entornopazud.R
+import com.example.entornopazud.data.model.User
+import com.example.entornopazud.viewmodel.CRUDViewModel
+import com.example.entornopazud.viewmodel.FirebaseViewModel
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_crudstuden_indivitual.*
 
 
 class CRUDStudenIndivitual : AppCompatActivity() {
+
+
+    private val CRUDViewModel = CRUDViewModel()
 
     private var TextName: TextView? = null
     private var TextID: TextView? = null
@@ -46,8 +52,7 @@ class CRUDStudenIndivitual : AppCompatActivity() {
         getIncomingIntent()
         mDatabase = FirebaseDatabase.getInstance().reference.child("Courses").child(course+"")
         BtnUpdate?.setOnClickListener {
-            updateStudent()
-
+            updateStudent(course+"",Teacher+"")
         }
         BtnDelete?.setOnClickListener {
             deleteStudent()
@@ -56,7 +61,10 @@ class CRUDStudenIndivitual : AppCompatActivity() {
 
     }
 
-    private fun updateStudent() {
+    private fun updateStudent(course:String,techer:String) {
+        var user = User(key.toString(),TextName?.text.toString(),TextEmail?.text.toString(),TextID?.text.toString(),"Aprendiente",course)
+        CRUDViewModel.CrudStuden(user,this,techer)
+/*
         val currentUser = mDatabase?.child("Students")!!.child(key.toString())
         val map = mutableMapOf<String, Any?>()
         map.put("Name",TextName?.text.toString())
@@ -66,9 +74,9 @@ class CRUDStudenIndivitual : AppCompatActivity() {
         currentUser.updateChildren(map)
         Toast.makeText(this, "Actualizado", Toast.LENGTH_SHORT).show()
         var intent = Intent(this,
-            CRUD_Student_main::class.java)
+            List_Student_main::class.java)
         intent.putExtra("name",Teacher)
-        startActivity(intent)
+        startActivity(intent)*/
     }
 
     private fun deleteStudent() {
@@ -81,7 +89,7 @@ class CRUDStudenIndivitual : AppCompatActivity() {
                 Toast.makeText(this, "Borrado", Toast.LENGTH_SHORT).show()
                 finish()
                 var intent = Intent(this,
-                    CRUD_Student_main::class.java)
+                    List_Student_main::class.java)
                 intent.putExtra("name",Teacher)
                 startActivity(intent)
             })

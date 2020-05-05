@@ -7,7 +7,7 @@ import android.widget.Button
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.entornopazud.view.Adapters.Adapter_Students
+import com.example.entornopazud.viewmodel.Adapters.Adapter_Students
 import com.example.entornopazud.data.model.Courses
 import com.example.entornopazud.data.model.User
 import com.example.entornopazud.R
@@ -15,7 +15,7 @@ import com.example.entornopazud.viewmodel.ListViewModel
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_crud__student_main.*
 
-class CRUD_Student_main : AppCompatActivity() {
+class List_Student_main : AppCompatActivity() {
     /*This class has the student list */
     private val viewModel by lazy{ ViewModelProviders.of(this).get(ListViewModel::class.java) }
 
@@ -29,7 +29,6 @@ class CRUD_Student_main : AppCompatActivity() {
         setContentView(R.layout.activity_crud__student_main)
         initialise()
     }
-
     private fun initialise() {
         recyclerStudents = findViewById(R.id.recyclar_Students)
         recyclerStudents!!.layoutManager = LinearLayoutManager(this)

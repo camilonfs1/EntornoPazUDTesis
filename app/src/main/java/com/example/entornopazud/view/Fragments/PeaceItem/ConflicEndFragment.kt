@@ -13,7 +13,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
 import com.example.entornopazud.view.EducationalModulePack.PeaceItem
-import com.example.entornopazud.view.Adapters.Adapter_Intro_Slider
+import com.example.entornopazud.viewmodel.Adapters.Adapter_Intro_Slider
 import com.example.entornopazud.data.model.IntroSlide
 import com.example.entornopazud.view.EvaluationActivities.EndConflictPeaceEvaluation
 import com.example.entornopazud.R

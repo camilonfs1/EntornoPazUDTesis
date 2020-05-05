@@ -9,7 +9,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.entornopazud.view.Adapters.Adapter_Courses
+import com.example.entornopazud.viewmodel.Adapters.Adapter_Courses
 import com.example.entornopazud.data.model.Courses
 import com.example.entornopazud.R
 import com.google.firebase.auth.FirebaseAuth
@@ -114,10 +114,11 @@ class CRUD_Courses : AppCompatActivity() {
     }
 
     private fun updateList(listaCourses: ArrayList<Courses>) {
-        val adapter = Adapter_Courses(
-            this,
-            listaCourses
-        )
+        val adapter =
+            Adapter_Courses(
+                this,
+                listaCourses
+            )
         coursesList.adapter = adapter
         coursesList.setOnItemClickListener { parent, view, position, id ->
             val course = listaCourses[position]

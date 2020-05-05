@@ -51,7 +51,7 @@
         <activity android:name=".view.activity.MainTeacherChat" />
         <activity android:name=".view.activity.CRUD_Courses" />
         <activity android:name=".view.activity.CRUDStudenIndivitual" />
-        <activity android:name=".view.activity.CRUD_Student_main" />
+        <activity android:name=".view.activity.List_Student_main" />
         <activity android:name=".data.model.Login" />
         <activity android:name=".view.activity.MainTeacher" />
         <activity android:name=".view.activity.MainStudent" />
