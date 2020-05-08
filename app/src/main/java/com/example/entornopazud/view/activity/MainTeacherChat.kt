@@ -58,21 +58,17 @@ class MainTeacherChat : AppCompatActivity() {
         ref.addChildEventListener(object : ChildEventListener {
             override fun onCancelled(p0: DatabaseError) {
             }
-
             override fun onChildMoved(p0: DataSnapshot, p1: String?) {
             }
-
             override fun onChildChanged(p0: DataSnapshot, p1: String?) {
 
             }
-
             override fun onChildAdded(p0: DataSnapshot, p1: String?) {
                 var message = p0.child("text").getValue().toString()
                 var keyStudent = p0.child("from" +
                         "Id").getValue().toString()
                 readStudent(nameTeacher, keyStudent,message)
             }
-
             override fun onChildRemoved(p0: DataSnapshot) {
             }
         })

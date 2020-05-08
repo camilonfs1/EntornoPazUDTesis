@@ -37,8 +37,6 @@ class CRUDStudenIndivitual : AppCompatActivity() {
     private var key: String? = null
     private var Teacher: String? = null
 
-    private var mDatabase: DatabaseReference? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,55 +48,22 @@ class CRUDStudenIndivitual : AppCompatActivity() {
         BtnUpdate = findViewById(R.id.BtnUpdateCrud)
         TextKey = txtKey
         getIncomingIntent()
-        mDatabase = FirebaseDatabase.getInstance().reference.child("Courses").child(course+"")
         BtnUpdate?.setOnClickListener {
             updateStudent(course+"",Teacher+"")
         }
         BtnDelete?.setOnClickListener {
-            deleteStudent()
+            deleteStudent(course+"",Teacher+"")
         }
-
-
     }
 
     private fun updateStudent(course:String,techer:String) {
         var user = User(key.toString(),TextName?.text.toString(),TextEmail?.text.toString(),TextID?.text.toString(),"Aprendiente",course)
         CRUDViewModel.CrudStuden(user,this,techer)
-/*
-        val currentUser = mDatabase?.child("Students")!!.child(key.toString())
-        val map = mutableMapOf<String, Any?>()
-        map.put("Name",TextName?.text.toString())
-        map.put("Id",TextID?.text.toString())
-        map.put("Email",TextEmail?.text.toString())
-        map.put("Roll","Aprendiente")
-        currentUser.updateChildren(map)
-        Toast.makeText(this, "Actualizado", Toast.LENGTH_SHORT).show()
-        var intent = Intent(this,
-            List_Student_main::class.java)
-        intent.putExtra("name",Teacher)
-        startActivity(intent)*/
     }
 
-    private fun deleteStudent() {
-        var currentUser = mDatabase?.child("Students")?.child(key.toString())
-        val dialogBuilder = AlertDialog.Builder(this)
-        dialogBuilder.setMessage("Quieres borrar a "+name+"?")
-            .setCancelable(false)
-            .setPositiveButton("Borrar", DialogInterface.OnClickListener { dialog, id ->
-                currentUser?.removeValue()
-                Toast.makeText(this, "Borrado", Toast.LENGTH_SHORT).show()
-                finish()
-                var intent = Intent(this,
-                    List_Student_main::class.java)
-                intent.putExtra("name",Teacher)
-                startActivity(intent)
-            })
-            .setNegativeButton("Cancelar", DialogInterface.OnClickListener { dialog, id ->
-                dialog.cancel()
-            })
-        val alert = dialogBuilder.create()
-        alert.setTitle("Advertencia")
-        alert.show()
+    private fun deleteStudent(course:String,techer:String) {
+        var user = User(key.toString(),TextName?.text.toString(),TextEmail?.text.toString(),TextID?.text.toString(),"Aprendiente",course)
+        CRUDViewModel.deleteStuden(user,this,techer)
     }
 
     fun getIncomingIntent() {

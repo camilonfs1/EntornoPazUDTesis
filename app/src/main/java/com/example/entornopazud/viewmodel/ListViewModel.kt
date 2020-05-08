@@ -10,6 +10,7 @@ import com.example.entornopazud.data.repositories.FiresList
 
 class ListViewModel: ViewModel() {
     private val listRepo = FiresList()
+
     fun fechCoursData():LiveData<ArrayList<Courses>>{
         val mutableData = MutableLiveData<ArrayList<Courses>>()
         listRepo.getCoursesData().observeForever { coursList ->

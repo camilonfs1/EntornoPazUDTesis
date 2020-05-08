@@ -48,29 +48,28 @@ class ConflictResolutionItem : AppCompatActivity() {
 
 
         threeCard?.setOnClickListener {
-            showPopUp2(R.drawable.johnpaul,"John Paul Lederach  en su documento “Enredos, pleitos y problemas: una guía práctica para ayudar a resolver los conflictos “propone una herramienta de análisis de los conflictos que busca una solución orienta da a la construcción de paz. ", "threeP")
+            showPopUp2(R.drawable.johnpaul,resources.getString(R.string.Item1), "threeP")
         }
         rutCard?.setOnClickListener {
-            showPopUp2(R.drawable.rutconflict,"Algunas sugerencias para encaminar un conflicto a una solución pacifica ", "rut")
+            showPopUp2(R.drawable.rutconflict,resources.getString(R.string.Item2), "rut")
         }
         solutionCard?.setOnClickListener {
-            showPopUp2(R.drawable.solutionconflicts,"No esperes a que las cosas esten mas dificiles, para llegar a una resolucion pacifica del conflicto", "solution")
+            showPopUp2(R.drawable.solutionconflicts,resources.getString(R.string.Item3), "solution")
         }
-
         resourceCard?.setOnClickListener {
-            showPopUp(R.drawable.resolution1,"El petróleo jugó un papel vital en el golpe de Estado organizado en Irán en 1953 con el auspicio de Estados Unidos y Reino Unido.")
+            showPopUp(R.drawable.resolution1,resources.getString(R.string.Item4))
         }
         ideologyCard?.setOnClickListener {
-            showPopUp(R.drawable.resolution2,"La Guerra Fría fue un enfrentamiento político e ideológico que se desarrolló entre los años 1945 y 1947, luego de la Segunda Guerra Mundial, en el cual los Estados Unidos y la Unión Soviética se enfrentaron por la hegemonía política y económica del mundo.")
+            showPopUp(R.drawable.resolution2, resources.getString(R.string.Item5))
         }
         territoryCard?.setOnClickListener {
-            showPopUp(R.drawable.resolution3,"El conflicto israelí-palestino por territorio es un conflicto social y armado en curso entre israelíes y palestinos que se remonta a principios del siglo XX ")
+            showPopUp(R.drawable.resolution3,resources.getString(R.string.Item6))
         }
         personalityCard?.setOnClickListener {
-            showPopUp(R.drawable.resolution4,"“Los mayores conflictos no son entre dos personas, sino entre una persona y sí misma.” Garth Brooks")
+            showPopUp(R.drawable.resolution4,resources.getString(R.string.Item7))
         }
         economicCard?.setOnClickListener {
-            showPopUp(R.drawable.resolution5,"La violencia económica es toda acción efectuada por un individuo que afecta la supervivencia económica de otro. Se presenta a través de limitaciones, orientadas a controlar el ingreso obtenido")
+            showPopUp(R.drawable.resolution5,resources.getString(R.string.Item8))
         }
     }
     private fun showPopUp(imag1: Int, text1: String ){

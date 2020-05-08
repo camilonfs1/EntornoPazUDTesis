@@ -1,14 +1,11 @@
 package com.example.entornopazud.view.activity
 
-import android.app.AlertDialog
 import android.app.ProgressDialog
-import android.content.DialogInterface
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import android.widget.ListView
 import com.example.entornopazud.viewmodel.Adapters.Adapter_Courses
 import com.example.entornopazud.data.model.Courses
 import com.example.entornopazud.R
@@ -17,13 +14,19 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_crud__courses.*
 
 class CRUD_Courses : AppCompatActivity() {
+
+
+    private val CRUDViewModel = com.example.entornopazud.viewmodel.CRUDViewModel()
+
     private var btnCreate: Button? = null
     private var btnDelete: Button? = null
     private var nameCourse: EditText? = null
+    private var list: ListView?=null
 
     private var mDatabaseReference: DatabaseReference? = null
-    private var mDatabase: FirebaseDatabase? = null
+    private var mDatabase: FirebaseDatabase? = null//----------------------
     private var mAuth: FirebaseAuth? = null
+
 
     private var mProgressBar: ProgressDialog? = null
     private var CoursesList: ArrayList<Courses> = ArrayList<Courses>()
@@ -38,8 +41,9 @@ class CRUD_Courses : AppCompatActivity() {
         btnCreate = BtnCreateCourse
         btnDelete = BtnDeleteCourse
         nameCourse = txtCourseName
+        list = coursesList
         mProgressBar = ProgressDialog(this)
-        mDatabase = FirebaseDatabase.getInstance()
+        mDatabase = FirebaseDatabase.getInstance()//---------------------------
         mAuth = FirebaseAuth.getInstance()
         mDatabaseReference = mDatabase!!.reference.child("Courses")//Create child Courses in firebase database
         readCoursesDb()
@@ -57,24 +61,16 @@ class CRUD_Courses : AppCompatActivity() {
     }
 
     private fun createCourse() {
-        var name = nameCourse!!.text.toString()
-        val mUser = nameUser()
-        if (!name.isEmpty()) {
-            val userId = mAuth!!.currentUser!!.uid
-            //update user profile information
-            val currentCoursDb = mDatabaseReference!!.child(name)
-            currentCoursDb.child("Name").setValue(name)
-            currentCoursDb.child("Teacher").setValue(mUser)
-            nameCourse!!.setText("")
-            var intent = Intent(this, CRUD_Courses::class.java)
-            this.startActivity(intent)
-            println("creado el curso")
-            Toast.makeText(this, "Curso creado", Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, "Llena la casilla nombre", Toast.LENGTH_SHORT).show()
-        }
+        CRUDViewModel.createCourse(nameCourse!!.text.toString(),nameUser(),this)
+        nameCourse!!.setText("")
     }
 
+    private fun deleteCourse(){
+        CRUDViewModel.deleteCourse(nameCourse!!.text.toString(),this)
+        nameCourse!!.setText("")
+
+        readCoursesDb()
+    }
     private fun readCoursesDb() {
         mDatabaseReference!!.addValueEventListener(object : ValueEventListener {
             //call "Courses" child in database firebase
@@ -94,33 +90,15 @@ class CRUD_Courses : AppCompatActivity() {
             }
         })
     }
-    private fun deleteCourse(){
-        var currentCours = mDatabaseReference?.child(nameCourse!!.text.toString())
-        val dialogBuilder = AlertDialog.Builder(this)
-        dialogBuilder.setMessage("Quieres borrar a "+nameCourse!!.text.toString()+"?")
-            .setCancelable(false)
-            .setPositiveButton("Borrar", DialogInterface.OnClickListener { dialog, id ->
-                currentCours?.removeValue()
-                Toast.makeText(this, "Borrado", Toast.LENGTH_SHORT).show()
-                nameCourse!!.setText("")
-                readCoursesDb()
-            })
-            .setNegativeButton("Cancelar", DialogInterface.OnClickListener { dialog, id ->
-                dialog.cancel()
-            })
-        val alert = dialogBuilder.create()
-        alert.setTitle("Advertencia")
-        alert.show()
-    }
 
     private fun updateList(listaCourses: ArrayList<Courses>) {
-        val adapter =
-            Adapter_Courses(
-                this,
-                listaCourses
-            )
-        coursesList.adapter = adapter
-        coursesList.setOnItemClickListener { parent, view, position, id ->
+        for (i in listaCourses){
+         System.out.println(i.name)
+        }
+        val adapter =  Adapter_Courses(this, listaCourses)
+
+        list!!.adapter = adapter
+        list!!.setOnItemClickListener { parent, view, position, id ->
             val course = listaCourses[position]
             nameCourse!!.setText(course.name)
         }

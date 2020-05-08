@@ -69,7 +69,6 @@ class FiresList {
     }
     fun datosFirebase(Courses: ArrayList<String>, mUser:String,context: Context,recyStu: RecyclerView) {
         for (value in Courses ){
-            System.out.println(value)
             otra(value,mUser,context,recyStu)
         }
     }
@@ -98,4 +97,5 @@ class FiresList {
             }
         })
     }
+    //----------------------------------------------------------------------List Students for teacher and cours-------------------------------------------------------------
 }
