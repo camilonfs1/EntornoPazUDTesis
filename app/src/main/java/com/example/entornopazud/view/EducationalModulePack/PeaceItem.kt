@@ -8,6 +8,7 @@ import com.example.entornopazud.view.EvaluationActivities.FinalPeaceEvaluation
 import com.example.entornopazud.view.EvaluationActivities.TimeLinePeaceEvaluation
 import com.example.entornopazud.view.Fragments.PeaceItem.*
 import com.example.entornopazud.R
+import com.example.entornopazud.view.EducationalModulePack.Items.PeaceItem.*
 import kotlinx.android.synthetic.main.main_peace.*
 
 class PeaceItem : AppCompatActivity() {

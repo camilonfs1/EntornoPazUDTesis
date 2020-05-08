@@ -7,7 +7,7 @@
     android:background="#f18bb0"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".view.activity.List_Student_main">
+    tools:context=".view.General_activity.List_Student_main">
 
     <Button
         android:id="@+id/BtnHome"

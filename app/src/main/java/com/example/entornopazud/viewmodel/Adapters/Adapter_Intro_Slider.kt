@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.entornopazud.data.model.IntroSlide
+import com.example.entornopazud.model.models.IntroSlide
 import com.example.entornopazud.R
 
 class Adapter_Intro_Slider(private val introSlides: List<IntroSlide>) :

@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import com.example.entornopazud.data.model.Courses
+import com.example.entornopazud.model.models.Courses
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.row_course.view.*
 

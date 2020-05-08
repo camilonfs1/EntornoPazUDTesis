@@ -10,9 +10,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import com.example.entornopazud.view.Fragments.ConflictResolution.rutConflicts
-import com.example.entornopazud.view.Fragments.ConflictResolution.solutionConflicts
-import com.example.entornopazud.view.Fragments.ConflictResolution.threeP
+import com.example.entornopazud.view.EducationalModulePack.Items.ConflictResolutionItem.rutConflicts
+import com.example.entornopazud.view.EducationalModulePack.Items.ConflictResolutionItem.solutionConflicts
+import com.example.entornopazud.view.EducationalModulePack.Items.ConflictResolutionItem.threeP
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.main_conflicts.*
 

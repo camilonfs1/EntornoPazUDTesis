@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.entornopazud.view.activity.CRUDStudenIndivitual
-import com.example.entornopazud.data.model.User
+import com.example.entornopazud.view.General_activity.CRUDStudenIndivitual
+import com.example.entornopazud.model.models.User
 import kotlinx.android.synthetic.main.recycler_row.view.*
 
 class Adapter_Students (items: ArrayList<User>, resourcek : Int, mUser : String) : RecyclerView.Adapter<Adapter_Students.ViewHolder>(){

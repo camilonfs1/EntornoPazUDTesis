@@ -1,8 +1,8 @@
 package com.example.entornopazud.viewmodel
 
 import android.content.Context
-import com.example.entornopazud.data.model.User
-import com.example.entornopazud.data.repositories.FiresCRUD
+import com.example.entornopazud.model.models.User
+import com.example.entornopazud.model.repositories.FiresCRUD
 
 class CRUDViewModel {
     private val repository = FiresCRUD()

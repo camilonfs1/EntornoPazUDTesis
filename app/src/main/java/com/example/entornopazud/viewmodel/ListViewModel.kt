@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
-import com.example.entornopazud.data.model.Courses
-import com.example.entornopazud.data.repositories.FiresList
+import com.example.entornopazud.model.models.Courses
+import com.example.entornopazud.model.repositories.FiresList
 
 class ListViewModel: ViewModel() {
     private val listRepo = FiresList()

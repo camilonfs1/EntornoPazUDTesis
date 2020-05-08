@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fec516"
-    tools:context=".view.activity.NewMessageTeacher"
+    tools:context=".view.ComunicationModule.NewMessageTeacher"
     android:padding="10dp">
     <LinearLayout
         android:layout_width="match_parent"
