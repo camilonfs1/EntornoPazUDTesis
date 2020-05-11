@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.entornopazud.view.EducationalModulePack.Items.MainTeacherFragment
+import com.example.entornopazud.view.EducationalModule.Items.MainTeacherFragment
 import com.example.entornopazud.viewmodel.Interfaces.iComunicationFragmentsTeacher
 import com.example.entornopazud.R
 import com.example.entornopazud.view.ComunicationModule.MainTeacherChat
@@ -51,7 +51,8 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
     }
 
     override fun DataBases() {
-        Toast.makeText(applicationContext, "Bases de datos", Toast.LENGTH_SHORT).show()
+        var intent = Intent(this, ownProfile::class.java)
+        this.startActivity(intent)
     }
 
     override fun Activitys() {

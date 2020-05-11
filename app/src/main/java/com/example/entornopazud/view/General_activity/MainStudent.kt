@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.entornopazud.view.EducationalModulePack.Items.MainStudentFragment
+import com.example.entornopazud.view.EducationalModule.Items.MainStudentFragment
 import com.example.entornopazud.viewmodel.Interfaces.iComunicationFragmentsStudent
 import com.example.entornopazud.R
 import com.example.entornopazud.view.ComunicationModule.MainStudentChat

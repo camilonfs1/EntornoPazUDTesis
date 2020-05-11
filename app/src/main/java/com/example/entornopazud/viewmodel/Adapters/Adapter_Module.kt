@@ -10,10 +10,10 @@ import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import com.example.entornopazud.model.models.Model
 import com.example.entornopazud.R
-import com.example.entornopazud.view.EducationalModulePack.BullyngItem
-import com.example.entornopazud.view.EducationalModulePack.ConflictResolutionItem
-import com.example.entornopazud.view.EducationalModulePack.MythsItem
-import com.example.entornopazud.view.EducationalModulePack.PeaceItem
+import com.example.entornopazud.view.EducationalModule.BullyngItem
+import com.example.entornopazud.view.EducationalModule.ConflictResolutionItem
+import com.example.entornopazud.view.EducationalModule.MythsItem
+import com.example.entornopazud.view.EducationalModule.PeaceItem
 
 
 class Adapter_Module(models: ArrayList<Model>, context: Context, nameStudent: String, KeyStudent : String ) : PagerAdapter ()    {

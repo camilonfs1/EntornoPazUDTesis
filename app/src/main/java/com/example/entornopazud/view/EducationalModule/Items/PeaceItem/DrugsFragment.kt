@@ -1,26 +1,25 @@
-package com.example.entornopazud.view.EducationalModulePack.Items.PeaceItem
-
+package com.example.entornopazud.view.EducationalModule.Items.PeaceItem
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
-import com.example.entornopazud.view.EducationalModulePack.PeaceItem
+import com.example.entornopazud.view.EducationalModule.PeaceItem
 import com.example.entornopazud.viewmodel.Adapters.Adapter_Intro_Slider
 import com.example.entornopazud.model.models.IntroSlide
-import com.example.entornopazud.view.EvaluationActivities.EndConflictPeaceEvaluation
+import com.example.entornopazud.view.EvaluationActivities.DrugsPeaceEvaluation
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.peace_container.*
 
+class DrugsFragment : AppCompatActivity() {
 
-class ConflicEndFragment : AppCompatActivity() {
 
     private var btnActivity: Button?=null
     private var txtBack: TextView? = null
@@ -28,40 +27,45 @@ class ConflicEndFragment : AppCompatActivity() {
         Adapter_Intro_Slider(
             listOf(
                 IntroSlide(
-                    "Fin del Conflicto",
-                    "Ruta para la construcción de una paz estable y duradera\n",
-                    R.drawable.endconflict0
+                    "Drogas Ilícitas",
+                    "Solución al problema de las drogas ilícitas ",
+                    R.drawable.drugs0
                 ),
                 IntroSlide(
-                    "Propósitos: ",
-                    "• Finalizar el conflicto armado de 52 años en Colombia entre Farc-ep y Gobierno Nacional \n" +
-                            "• Lograr la dejación de armas por parte de Farc-ep \n" +
-                            "• Garantizar la reincorporación social, económica y política de todos los integrantes de las Farc-ep \n" +
-                            "• Garantizar las condiciones de seguridad para el ejercicio de la política de todas las fuerzas políticas incluido el nuevo partido que surja de las Farc-ep \n",
-                    R.drawable.end1
+                    "Sustitución de cultivos",
+                    "• Planes integrales de sustitución\n" +
+                            "• Programa nacional de sustitución de cultivos de uso ilícito en parques nacionales naturales\n",
+                    R.drawable.drugs1
                 ),
                 IntroSlide(
-                    "Problemas a resolver: ",
-                    "• Conflicto armado de larga duración y su impacto sobre la población civil \n" +
-                            "• Uso de las armas en el ejercicio de la política\n " +
-                            "• La estigmatización y persecución de las ideas políticas diferentes o de oposición \n",
-                    R.drawable.end2
+                    "Política de salud pública frente al consumo",
+                    "• Enfoque de derechos y de salud pública para la intervención integral frente al consumo de drogas\n" +
+                            "• Planes de acción participativos frente al consumo con enfoque territorial y poblacional \n",
+                    R.drawable.drugs2
                 ),
                 IntroSlide(
-                    "Composición: ",
-                    "• Cese al fuego y de hostilidades bilateral y definitivo \n" +
-                            "▪ Dejación de armas por parte de las Farc-ep \n" +
-                            "▪ Zonas veredales transitorias de normalización \n" +
-                            "▪ Garantías para el nuevo partido o movimiento político \n",
-                    R.drawable.end3
+                    "Solución al problema del narcotráfico",
+                    "• Control sobre la producción importación y comercialización de insumos\n" +
+                            "• Estrategia integral de lucha contra la corrupción\n" +
+                            "• Judicialización efectiva\n",
+                    R.drawable.drugs3
                 ),
                 IntroSlide(
-                    " ",
-                    "• Garantías de seguridad\n" +
-                            "▪ Comisión nacional de garantías de seguridad. \n" +
-                            "▪ Sistema integral de seguridad para el ejercicio de la política. \n",
-                    R.drawable.end4
+                    "Propósitos",
+                    "• Brindar alternativas con campesinos frente a los cultivos de uso ilícito a través de planes integrales de sustitución y desarrollo alternativos \n" +
+                            "• Garantizar un abordaje integral del problema del consumo en torno a una política de promoción en salud, prevención, reducción del daño, atención e inclusión social \n" +
+                            "• Intensificar la lucha contra las organizaciones criminales dedicadas al narcotráfico y el lavado de activos. \n",
+                    R.drawable.drugs4
+                ),
+                IntroSlide(
+                    "Problemas a resolver",
+                    "• Funcionamiento de redes del narcotráfico \n" +
+                            "• Presencia de cultivos de uso ilícito \n" +
+                            "• Impactos negativos de los cultivos de uso ilícito \n" +
+                            "• Consumo de drogas ilícitas \n",
+                    R.drawable.drugs5
                 )
+
             )
         )
 
@@ -70,6 +74,7 @@ class ConflicEndFragment : AppCompatActivity() {
         setContentView(R.layout.peace_container)
         introSliderViewPager.adapter = introSliderAdapter
         setupIndicators()
+        contri.setBackgroundColor(resources.getColor(R.color.Drugs))
         introSliderViewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
@@ -77,7 +82,7 @@ class ConflicEndFragment : AppCompatActivity() {
                 setCurrentIndicator(position)
             }
         })
-        contri.setBackgroundColor(resources.getColor(R.color.EndConflic))
+
         btnActivity = ButtonActivity
         txtBack = txtBackRuralReform
 
@@ -86,7 +91,7 @@ class ConflicEndFragment : AppCompatActivity() {
             this.startActivity(intent)
         }
         btnActivity!!.setOnClickListener {
-            var intent = Intent(this, EndConflictPeaceEvaluation::class.java)
+            var intent = Intent(this, DrugsPeaceEvaluation::class.java)
             this.startActivity(intent)
         }
 
@@ -137,5 +142,4 @@ class ConflicEndFragment : AppCompatActivity() {
             }
         }
     }
-
 }

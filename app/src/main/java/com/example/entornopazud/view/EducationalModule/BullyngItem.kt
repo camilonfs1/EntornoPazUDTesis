@@ -1,12 +1,12 @@
-package com.example.entornopazud.view.EducationalModulePack
+package com.example.entornopazud.view.EducationalModule
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
 import com.example.entornopazud.view.EvaluationActivities.bullying_main_evaluation
-import com.example.entornopazud.view.EducationalModulePack.Items.BullyingItem.HowToSolution
-import com.example.entornopazud.view.EducationalModulePack.Items.BullyingItem.TalkandListen
+import com.example.entornopazud.view.EducationalModule.Items.BullyingItem.HowToSolution
+import com.example.entornopazud.view.EducationalModule.Items.BullyingItem.TalkandListen
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.main_bullyng.*
 

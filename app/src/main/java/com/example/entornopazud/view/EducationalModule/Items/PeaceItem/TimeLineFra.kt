@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.EducationalModulePack.Items.PeaceItem
+package com.example.entornopazud.view.EducationalModule.Items.PeaceItem
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

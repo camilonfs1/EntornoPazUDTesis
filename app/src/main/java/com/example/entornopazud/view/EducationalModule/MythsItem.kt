@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.EducationalModulePack
+package com.example.entornopazud.view.EducationalModule
 
 import android.app.Dialog
 import android.content.Intent

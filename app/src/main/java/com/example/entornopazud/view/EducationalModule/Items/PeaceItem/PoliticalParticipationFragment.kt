@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.EducationalModulePack.Items.PeaceItem
+package com.example.entornopazud.view.EducationalModule.Items.PeaceItem
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
-import com.example.entornopazud.view.EducationalModulePack.PeaceItem
+import com.example.entornopazud.view.EducationalModule.PeaceItem
 import com.example.entornopazud.viewmodel.Adapters.Adapter_Intro_Slider
 import com.example.entornopazud.model.models.IntroSlide
 import com.example.entornopazud.view.EvaluationActivities.PoliticalPeaceEvaluation

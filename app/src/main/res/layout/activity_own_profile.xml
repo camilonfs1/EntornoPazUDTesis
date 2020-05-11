@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".view.General_activity.ownProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@drawable/linear_layuout_back"
+        android:padding="15dp"
+        android:elevation="6dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tu perfil"
+            android:textColor="#FF5722"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/txtNameProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+        <EditText
+            android:id="@+id/txtIdProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Id"
+            android:textColor="#020202"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/txtEmailProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColor="#020202"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/txtPassProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Clave"
+            android:inputType="textPassword"
+            android:textColor="#020202"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtPassConfirmProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmacion Clave"
+            android:inputType="textPassword"
+            android:textColor="#020202"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#020202"
+            android:textStyle="bold"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/BtnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Editar"
+                android:background="@drawable/btn_back"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:elevation="5dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:orientation="vertical"/>
+</LinearLayout>

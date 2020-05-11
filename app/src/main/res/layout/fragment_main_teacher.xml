@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.EducationalModulePack.Items.MainTeacherFragment">
+    tools:context=".view.EducationalModule.Items.MainTeacherFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -253,15 +253,15 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="15dp"
                         android:layout_weight="0.5"
-                        android:src="@drawable/db_icon" />
+                        android:src="@drawable/adjustment_icon" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:text="Bases de datos"
+                        android:text="Perfil"
                         android:textAlignment="center"
-                        android:textColor="#2FBEBA"
+                        android:textColor="#545555"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         android:gravity="center_horizontal" />

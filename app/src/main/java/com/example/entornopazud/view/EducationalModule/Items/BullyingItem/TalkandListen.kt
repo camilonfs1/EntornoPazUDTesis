@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.EducationalModulePack.Items.BullyingItem
+package com.example.entornopazud.view.EducationalModule.Items.BullyingItem
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

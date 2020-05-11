@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.EducationalModulePack.Items
+package com.example.entornopazud.view.EducationalModule.Items
 
 
 import android.app.Activity

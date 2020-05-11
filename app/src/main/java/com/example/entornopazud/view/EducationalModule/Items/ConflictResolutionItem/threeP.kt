@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.EducationalModulePack.Items.ConflictResolutionItem
+package com.example.entornopazud.view.EducationalModule.Items.ConflictResolutionItem
 
 import android.app.Dialog
 import android.content.Intent

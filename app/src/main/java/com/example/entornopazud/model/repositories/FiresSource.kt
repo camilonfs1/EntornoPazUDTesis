@@ -43,7 +43,11 @@ class FiresSource() {
 
     fun RegisterUser(context: Context,Email :String, Pass: String, user: User){
         mDatabase = FirebaseDatabase.getInstance()
-        mDatabaseReference = mDatabase!!.reference!!.child("Courses").child(user.course).child("Students")//Create child Users in firebase database
+        if(user.roll=="Aprendiente"){
+            mDatabaseReference = mDatabase!!.reference!!.child("Courses").child(user.course).child("Students")//Create child Users in firebase database
+        }else if(user.roll=="Docente"){
+            mDatabaseReference = mDatabase!!.reference!!.child("Users").child("Teachers")//Create child Users in firebase database
+        }
         mAuth!!.createUserWithEmailAndPassword(Email!!, Pass!!)//Create login with
             .addOnCompleteListener{ task ->
                 if (task.isSuccessful) { // Sign in success, update UI with the signed-in user's information

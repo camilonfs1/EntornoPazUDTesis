@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.EducationalModulePack
+package com.example.entornopazud.view.EducationalModule
 
 import android.app.Dialog
 import android.content.Intent
@@ -10,9 +10,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import com.example.entornopazud.view.EducationalModulePack.Items.ConflictResolutionItem.rutConflicts
-import com.example.entornopazud.view.EducationalModulePack.Items.ConflictResolutionItem.solutionConflicts
-import com.example.entornopazud.view.EducationalModulePack.Items.ConflictResolutionItem.threeP
+import com.example.entornopazud.view.EducationalModule.Items.ConflictResolutionItem.rutConflicts
+import com.example.entornopazud.view.EducationalModule.Items.ConflictResolutionItem.solutionConflicts
+import com.example.entornopazud.view.EducationalModule.Items.ConflictResolutionItem.threeP
 import com.example.entornopazud.R
 import kotlinx.android.synthetic.main.main_conflicts.*
 

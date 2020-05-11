@@ -38,16 +38,19 @@ class Login : AppCompatActivity() {
         mUserReference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
+
                     var name = snapshot.child("Name").value as String
                     var Roll = snapshot.child("Roll").value as String
+
                     roll(Roll, name)
 
                 } else {
-                    println("No User")
+                    System.out.println("--------------------------------No User")
                     readCoursesDb(mUser)
                 }
             }
             override fun onCancelled(databaseError: DatabaseError) {
+
             }
         })
     }
@@ -58,6 +61,7 @@ class Login : AppCompatActivity() {
         mDatabaseReference!!.addValueEventListener(object : ValueEventListener {
             //call "Courses" child in database firebase
             override fun onCancelled(p0: DatabaseError) {
+
             }
 
             override fun onDataChange(p0: DataSnapshot) {
@@ -90,6 +94,7 @@ class Login : AppCompatActivity() {
                 mDatabaseReference!!.child("Courses").child(f).child("Students").child(user.uid)
             mUserReference?.addValueEventListener(object : ValueEventListener {
                 override fun onCancelled(p0: DatabaseError) {
+                    mens()
                 }
 
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -104,7 +109,9 @@ class Login : AppCompatActivity() {
     }
 
     private fun roll(roll: String, name: String) {
-        if (roll.equals("Docente")) {
+
+        if (roll.equals("Docente") || roll.equals("Teacher")) {
+            System.out.println("-------------------------------- User :"+name)
             var intent = Intent(this, MainTeacher::class.java)
             intent.putExtra("name", name)
             this.startActivity(intent)

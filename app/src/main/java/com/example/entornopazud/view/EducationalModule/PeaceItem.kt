@@ -1,4 +1,4 @@
-package com.example.entornopazud.view.EducationalModulePack
+package com.example.entornopazud.view.EducationalModule
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,9 +6,8 @@ import android.os.Bundle
 import androidx.cardview.widget.CardView
 import com.example.entornopazud.view.EvaluationActivities.FinalPeaceEvaluation
 import com.example.entornopazud.view.EvaluationActivities.TimeLinePeaceEvaluation
-import com.example.entornopazud.view.Fragments.PeaceItem.*
 import com.example.entornopazud.R
-import com.example.entornopazud.view.EducationalModulePack.Items.PeaceItem.*
+import com.example.entornopazud.view.EducationalModule.Items.PeaceItem.*
 import kotlinx.android.synthetic.main.main_peace.*
 
 class PeaceItem : AppCompatActivity() {
