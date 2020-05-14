@@ -27,7 +27,8 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
 
     //functions inherited from the iComunicationFragmentsStudent class
     override fun Profile() {
-        Toast.makeText(applicationContext, "Perfil", Toast.LENGTH_SHORT).show()
+        var intent = Intent(this, ownProfile::class.java)
+        this.startActivity(intent)
     }
 
     override fun Activities1() {
