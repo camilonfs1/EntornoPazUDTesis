@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.example.entornopazud.viewmodel.Interfaces.iComunicationFragmentsStudent
@@ -26,7 +27,7 @@ class MainStudentFragment : Fragment() {
     private var vista: View? = null
     private var btnOut: Button? = null
     private var activitys: Activity? = null
-
+    private var nameStuden: TextView? = null
 
     private var ifragment: iComunicationFragmentsStudent? = null
 
@@ -37,6 +38,7 @@ class MainStudentFragment : Fragment() {
     ): View? {
         vista = inflater.inflate(R.layout.fragment_main_student, container, false)
 
+        nameStuden = vista!!.findViewById(R.id.nameStud)
         btnOut = vista!!.findViewById(R.id.BtnSigout)
         ProfileCard = vista!!.findViewById(R.id.ProfileCard)
         ActivityCard = vista!!.findViewById(R.id.CorusesCard)
@@ -46,6 +48,7 @@ class MainStudentFragment : Fragment() {
         ChatsCard = vista!!.findViewById(R.id.ChatsCard)
 
         listenerEvents()
+        nameStuden!!.setText(ifragment!!.nameUser())
         return vista
     }
 

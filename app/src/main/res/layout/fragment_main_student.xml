@@ -39,7 +39,7 @@
             android:layout_weight="5"
             />
         <TextView
-            android:id="@+id/nameTech"
+            android:id="@+id/nameStud"
             android:layout_weight="0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -227,20 +227,15 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/trophy_icon"
-                        android:layout_weight="0.5"
-                        android:layout_marginTop="15dp"/>
+                    android:orientation="vertical"
+                    android:gravity="center">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Premios"
-                        android:textAlignment="center"
+                        android:text="SALIR"
+                        android:gravity="center"
                         android:textColor="#ffcc00"
-                        android:textSize="20sp"
+                        android:textSize="40sp"
                         android:layout_weight="1"
                         android:textStyle="bold" />
                 </LinearLayout>

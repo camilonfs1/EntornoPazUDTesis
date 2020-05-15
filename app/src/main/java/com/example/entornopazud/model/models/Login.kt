@@ -42,7 +42,7 @@ class Login : AppCompatActivity() {
                     var name = snapshot.child("Name").value as String
                     var Roll = snapshot.child("Roll").value as String
 
-                    roll(Roll, name)
+                    roll(Roll, name,"")
 
                 } else {
                     System.out.println("--------------------------------No User")
@@ -101,23 +101,25 @@ class Login : AppCompatActivity() {
                     if (snapshot.exists()) {
                         var name = snapshot.child("Name").value as String
                         var Roll = snapshot.child("Roll").value as String
-                        roll(Roll, name)
+                        var course = f
+                        roll(Roll, name,course)
                     }
                 }
             })
         }
     }
 
-    private fun roll(roll: String, name: String) {
+    private fun roll(roll: String, name: String, course: String) {
 
         if (roll.equals("Docente") || roll.equals("Teacher")) {
             System.out.println("-------------------------------- User :"+name)
             var intent = Intent(this, MainTeacher::class.java)
             intent.putExtra("name", name)
             this.startActivity(intent)
-        } else if (roll.equals("Aprendiente")) {
+        } else if (roll.equals("Aprendiente")|| roll.equals("student") ) {
             var intent = Intent(this, MainStudent::class.java)
             intent.putExtra("name", name)
+            intent.putExtra("course", course)
             this.startActivity(intent)
         }
     }

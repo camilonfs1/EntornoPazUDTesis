@@ -44,28 +44,31 @@ class ownProfile : AppCompatActivity() {
         pass = txtPassProfile
         passConfirm = txtPassConfirmProfile
         mDatabase = FirebaseDatabase.getInstance()
-        mDatabaseReference = mDatabase!!.reference
-        mDatabaseReference = mDatabase!!.reference.child("Users").child("Teachers")
+
+        var roll = intent.getStringExtra("roll")
+        var course = intent.getStringExtra("course")
+        if(roll==("teacher")){
+            mDatabaseReference = mDatabase!!.reference.child("Users").child("Teachers")
+        }else if(roll==("student") ){
+            mDatabaseReference = mDatabase!!.reference.child("Courses").child(course).child("Students")
+        }
 
         val currentUser = auth.currentUser
         read(currentUser)
         var name = name!!.text.toString()
         var id = id!!.text.toString()
         var email = email!!.text.toString()
-
-        var roll = ""
         userData= User("",name,email,id,"","")
         btUpdate!!.setOnClickListener {
             if (pass!!.text.isEmpty() && passConfirm!!.text.isEmpty()) {
-                key(currentUser, false)
-
+                key(currentUser, false,roll)
             } else {
-                key(currentUser, true)
+                key(currentUser, true,roll)
             }
         }
     }
 
-    private fun key(currentuser: FirebaseUser?, passCheck: Boolean) {
+    private fun key(currentuser: FirebaseUser?, passCheck: Boolean,roll:String) {
         var emailSent = currentuser!!.email.toString()
         mDatabaseReference!!.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
@@ -75,11 +78,10 @@ class ownProfile : AppCompatActivity() {
                     key = e.key
                     var emailSave = e.child("Email").value.toString()
                     if (emailSave == emailSent) {
-
                         var n = name!!.text.toString()
                         var i = id!!.text.toString()
                         var em = email!!.text.toString()
-                        var user = User(key.toString(),n,em,i,"Teacher","")
+                        var user = User(key.toString(),n,em,i,roll,"")
                         update(currentuser, user, passCheck)
                     }
                 }
@@ -89,19 +91,19 @@ class ownProfile : AppCompatActivity() {
     private fun update(currentuser: FirebaseUser?, user: User,passCheck: Boolean) {
         if(passCheck){
             if(pass!!.text.toString().equals(passConfirm!!.text.toString())){
-                val currentUser =  mDatabase!!.reference.child("Users").child("Teachers")!!.child(user.key)
+                val currentUser =  mDatabaseReference!!.child(user.key)
                 val map = mutableMapOf<String, Any?>()
                 map.put("Name", user.name)
                 map.put("Id", user.id)
                 map.put("Email", user.email)
-                map.put("Roll", "Teacher")
+                map.put("Roll", user.roll)
                 currentUser.updateChildren(map)
                 currentuser?.updateEmail(user.email)
                     ?.addOnCompleteListener { task ->
                         currentuser?.updatePassword(pass!!.text.toString())
                             ?.addOnCompleteListener { task ->
                                 if (task.isSuccessful) {
-                                    Toast.makeText(this, "actualizado", Toast.LENGTH_LONG).show()
+                                    Toast.makeText(this, "Actualizado", Toast.LENGTH_LONG).show()
                                     pass!!.setText("")
                                     passConfirm!!.setText("")
                                 }else{
@@ -109,16 +111,17 @@ class ownProfile : AppCompatActivity() {
                                 }
                             }
                     }
+
             }else{
                 Toast.makeText(this,"Verifica la clave ingresada!!!",Toast.LENGTH_LONG).show()
             }
         }else{
-            val currentUser =  mDatabase!!.reference.child("Users").child("Teachers")!!.child(user.key)
+            val currentUser =  mDatabaseReference!!.child(user.key)
             val map = mutableMapOf<String, Any?>()
             map.put("Name", user.name)
             map.put("Id", user.id)
             map.put("Email", user.email)
-            map.put("Roll", "Teacher")
+            map.put("Roll", user.roll)
             currentUser.updateChildren(map)
             currentuser?.updateEmail(user.email)
                 ?.addOnCompleteListener { task ->
@@ -127,20 +130,7 @@ class ownProfile : AppCompatActivity() {
         }
     }
 
-    private fun dates(currentuser: FirebaseUser?, user: User) {
-        val dbUser = mDatabaseReference!!.child(user.key)
-        val map = mutableMapOf<String, Any?>()
-        map.put("Name", user.name)
-        map.put("Id", user.id)
-        map.put("Email", user.email)
-        map.put("Roll", user.roll)
-        dbUser.updateChildren(map)
-        currentuser?.updateEmail(user.email)
-            ?.addOnCompleteListener { task ->
-                Toast.makeText(this, "Datos actualizados", Toast.LENGTH_LONG).show()
 
-            }
-    }
 
     private fun read(user: FirebaseUser?) {
         var emailSent = user!!.email.toString()

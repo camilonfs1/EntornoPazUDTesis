@@ -18,12 +18,11 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
 
     var FragmentTeacher: Fragment? = null
     var mAuth: FirebaseAuth? = null
-    var TextUserN: TextView?=null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_teacher)
-        TextUserN = findViewById(R.id.txtxUserName)
         mAuth = getInstance()
         FragmentTeacher =
             MainTeacherFragment()//assign the fragment object
@@ -52,6 +51,7 @@ class MainTeacher : AppCompatActivity(), iComunicationFragmentsTeacher {
 
     override fun DataBases() {
         var intent = Intent(this, ownProfile::class.java)
+        intent.putExtra("roll","teacher" )
         this.startActivity(intent)
     }
 

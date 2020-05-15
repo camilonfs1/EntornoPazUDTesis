@@ -10,11 +10,13 @@ import com.example.entornopazud.viewmodel.Interfaces.iComunicationFragmentsStude
 import com.example.entornopazud.R
 import com.example.entornopazud.view.ComunicationModule.MainStudentChat
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.fragment_main_student.*
 
 class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
    /* This activity contain the personal login case use for students */
     var FragmentStudent: Fragment? = null
     var mAuth: FirebaseAuth? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +29,11 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
 
     //functions inherited from the iComunicationFragmentsStudent class
     override fun Profile() {
+        var name = nameUser()
+        var course = couserUser()
         var intent = Intent(this, ownProfile::class.java)
+        intent.putExtra("roll", "student")
+        intent.putExtra("course", course)
         this.startActivity(intent)
     }
 
@@ -67,6 +73,11 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
     override fun nameUser(): String {
         var name = intent.getStringExtra("name")
         return name
+
+    }
+    fun couserUser(): String {
+        var course = intent.getStringExtra("course")
+        return course
 
     }
 }
