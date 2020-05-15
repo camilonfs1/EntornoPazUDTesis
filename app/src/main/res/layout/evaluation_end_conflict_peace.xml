@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:background="#673AB7"
-    tools:context=".view.EvaluationActivities.EndConflictPeaceEvaluation">
+    tools:context=".view.EducationalModule.EvaluationActivities.EndConflictPeaceEvaluation">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -3,10 +3,8 @@ package com.example.entornopazud.view.General_activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.entornopazud.view.EducationalModule.Items.MainTeacherFragment
 import com.example.entornopazud.viewmodel.Interfaces.iComunicationFragmentsTeacher
 import com.example.entornopazud.R
 import com.example.entornopazud.view.ComunicationModule.MainTeacherChat

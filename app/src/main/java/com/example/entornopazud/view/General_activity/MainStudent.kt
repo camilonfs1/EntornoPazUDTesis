@@ -5,12 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.entornopazud.view.EducationalModule.Items.MainStudentFragment
 import com.example.entornopazud.viewmodel.Interfaces.iComunicationFragmentsStudent
 import com.example.entornopazud.R
 import com.example.entornopazud.view.ComunicationModule.MainStudentChat
+import com.example.entornopazud.view.EducationalModule.EducationalModule
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.fragment_main_student.*
 
 class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
    /* This activity contain the personal login case use for students */
@@ -41,6 +40,7 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
         var name = nameUser()
         var intent = Intent(this, EducationalModule::class.java)
         intent.putExtra("name", name)
+        intent.putExtra("roll","student")
         intent.putExtra("key", mAuth!!.uid)
         this.startActivity(intent)
     }

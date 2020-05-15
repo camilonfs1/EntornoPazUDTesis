@@ -10,18 +10,24 @@ import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
 import com.example.entornopazud.model.models.Model
 import com.example.entornopazud.R
-import com.example.entornopazud.view.EducationalModule.BullyngItem
-import com.example.entornopazud.view.EducationalModule.ConflictResolutionItem
-import com.example.entornopazud.view.EducationalModule.MythsItem
-import com.example.entornopazud.view.EducationalModule.PeaceItem
+import com.example.entornopazud.view.EducationalModule.Items.Memory.MemoryMain
+import com.example.entornopazud.view.EducationalModule.Items.Peace.PeaceMain
+import com.example.entornopazud.view.EducationalModule.Items.Reconciliation.ReconciliationMain
 
 
-class Adapter_Module(models: ArrayList<Model>, context: Context, nameStudent: String, KeyStudent : String ) : PagerAdapter ()    {
+class Adapter_Module(
+    models: ArrayList<Model>,
+    context: Context,
+    nameStudent: String,
+    KeyStudent: String,
+    roll: String
+) : PagerAdapter() {
 
     private var models: ArrayList<Model>? = null
     private var context: Context? = null
     private var nameStudent: String? = null
     private var keyStudent: String? = null
+    private var roll: String? = null
 
     init {
         this.nameStudent = nameStudent
@@ -41,9 +47,9 @@ class Adapter_Module(models: ArrayList<Model>, context: Context, nameStudent: St
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         var view = LayoutInflater.from(context).inflate(R.layout.item, container, false)
 
-        var image : ImageView= view.findViewById(R.id.image)
-        var title : TextView = view.findViewById(R.id.title)
-        var desc : TextView = view.findViewById(R.id.desc)
+        var image: ImageView = view.findViewById(R.id.image)
+        var title: TextView = view.findViewById(R.id.title)
+        var desc: TextView = view.findViewById(R.id.desc)
 
         image.setImageResource(models!!.get(position).image!!)
         title.setText(models!!.get(position).title)
@@ -51,20 +57,40 @@ class Adapter_Module(models: ArrayList<Model>, context: Context, nameStudent: St
 
         view.setOnClickListener {
             when (models!!.get(position).title) {
-                "Acuerdo de Paz" ->{
-                    var intent = Intent(context, PeaceItem::class.java)
-                   // intent.putExtra("name", nameStudent)
-                   // intent.putExtra("key", keyStudent)
+                "MEMORIA" -> {
+                    var intent = Intent(context, MemoryMain::class.java)
+                    intent.putExtra("name", nameStudent)
+                    intent.putExtra("key", keyStudent)
+                    intent.putExtra("roll", roll)
                     view.context!!.startActivity(intent)
                 }
 
-                "Resolución De Conflictos" ->{
+                "PAZ" -> {
+                    var intent = Intent(context, PeaceMain::class.java)
+                    intent.putExtra("name", nameStudent)
+                    intent.putExtra("key", keyStudent)
+                    intent.putExtra("roll", roll)
+                    view.context!!.startActivity(intent)
+                }
+                "RECONCILIACIÓN" -> {
+                    var intent = Intent(context, ReconciliationMain::class.java)
+                    intent.putExtra("name", nameStudent)
+                    intent.putExtra("key", keyStudent)
+                    intent.putExtra("roll", roll)
+                    view.context!!.startActivity(intent)
+                }
+                /*"MEMORIA" ->{
+                    var intent = Intent(context, PeaceItem::class.java)
+                    view.context!!.startActivity(intent)
+                }
+
+                "PAZ" ->{
                     var intent = Intent(context, ConflictResolutionItem::class.java)
                     intent.putExtra("name", nameStudent)
                     intent.putExtra("key", keyStudent)
                     view.context!!.startActivity(intent)
                 }
-                "Acoso Escolar" ->{
+                "RECONCILIACIÓN" ->{
                     var intent = Intent(context, BullyngItem::class.java)
                     intent.putExtra("name", nameStudent)
                     intent.putExtra("key", keyStudent)
@@ -75,7 +101,7 @@ class Adapter_Module(models: ArrayList<Model>, context: Context, nameStudent: St
                     intent.putExtra("name", nameStudent)
                     intent.putExtra("key", keyStudent)
                     view.context!!.startActivity(intent)
-                }
+                }*/
                 else -> println("nothing")
             }
         }

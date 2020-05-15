@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.EducationalModule.PeaceItem">
+    tools:context=".view.EducationalModule.Items.Peace.PeaceItem">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -321,6 +321,4 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-
-
 </RelativeLayout>

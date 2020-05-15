@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#85FFFFFF"
     android:padding="10dp"
-    tools:context=".view.EducationalModule.Items.ConflictResolutionItem.rutConflicts">
+    tools:context=".view.EducationalModule.Items.Peace.rutConflicts">
 
     <LinearLayout
         android:layout_width="match_parent"

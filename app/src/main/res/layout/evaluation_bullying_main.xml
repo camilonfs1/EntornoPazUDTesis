@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="10dp"
     android:background="#673AB7"
-    tools:context=".view.EvaluationActivities.bullying_main_evaluation">
+    tools:context=".view.EducationalModule.EvaluationActivities.bullying_main_evaluation">
 
     <LinearLayout
         android:layout_width="match_parent"
