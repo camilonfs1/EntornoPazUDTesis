@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.example.entornopazud.R
 import com.example.entornopazud.view.EducationalModule.Items.Memory.Activity.ActivityMemory
@@ -39,6 +40,10 @@ class MemoryMain : AppCompatActivity() {
         var roll = intent.getStringExtra("roll")
         var name = intent.getStringExtra("name")
         var key = intent.getStringExtra("key")
+
+
+
+
 
         myDialog0 = Dialog(this)
 

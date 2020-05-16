@@ -71,6 +71,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/Card1Peace"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_rowWeight="1"
@@ -93,6 +94,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/Card2Peace"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_rowWeight="1"
@@ -122,7 +124,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/CardJustificationR"
+                        android:id="@+id/Card3Peace"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_rowWeight="1"
@@ -145,7 +147,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/CardObjectiveR"
+                        android:id="@+id/Card4Peace"
                         android:layout_width="match_parent"
                         android:layout_height="150dp"
                         android:layout_rowWeight="1"

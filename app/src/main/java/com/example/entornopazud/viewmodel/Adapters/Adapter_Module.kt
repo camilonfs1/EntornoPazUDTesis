@@ -34,6 +34,7 @@ class Adapter_Module(
         this.keyStudent = KeyStudent
         this.models = models
         this.context = context
+        this.roll = roll
     }
 
     override fun getCount(): Int {

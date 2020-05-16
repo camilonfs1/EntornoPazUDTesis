@@ -27,17 +27,19 @@ class ActivityMemory : AppCompatActivity() {
         var name = intent.getStringExtra("name")
         var key = intent.getStringExtra("key")
 
+
+
         card1!!.setOnClickListener {
-            var intent = Intent(this, Activity_entry::class.java)
+            var intent = Intent(this, Activity_entry_Memory::class.java)
             intent.putExtra("activity", "Diseña una historieta donde pueda plasmar los diferentes tipos de violencia en tu país. Puedes hacer una historia en forma de comic donde puedas ir mostrando los diferentes tipos de violencia directa, estructural y cultural.\\n")
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "uno")
+            intent.putExtra("activityName", "Memory_1")
             this.startActivity(intent)
         }
         card2!!.setOnClickListener {
-            var intent = Intent(this, Activity_entry::class.java)
+            var intent = Intent(this, Activity_entry_Memory::class.java)
             intent.putExtra("activity", "Identifique personas cercanas que estén dispuestas a contar sus diferentes historias y experiencias de la violencia." +
                     "\n• Organiza una entrevista con día y hora del encuentro " +
                     "\n• Prepara un cuestionario de preguntas para tu entrevista y envíalas al entrevistador con antelación. " +
@@ -46,11 +48,11 @@ class ActivityMemory : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "dos")
+            intent.putExtra("activityName", "Memory_2")
             this.startActivity(intent)
         }
         card3!!.setOnClickListener {
-            var intent = Intent(this, Activity_entry::class.java)
+            var intent = Intent(this, Activity_entry_Memory::class.java)
             intent.putExtra("activity", "Identifica situaciones cotidianas de la violencia en la casa, la escuela, el barrio, los medios de comunicación y el Estado." +
                     "\n• Organiza una entrevista con día y hora del encuentro " +
                     "\n• Prepara un cuestionario de preguntas para tu entrevista y envíalas al entrevistador con antelación. " +
@@ -59,12 +61,12 @@ class ActivityMemory : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "tres")
+            intent.putExtra("activityName", "Memory_3")
             this.startActivity(intent)
 
         }
         card4!!.setOnClickListener {
-            var intent = Intent(this, Activity_entry::class.java)
+            var intent = Intent(this, Activity_entry_Memory::class.java)
             intent.putExtra("activity", "Escoge una cancion popular o famosa y responde:" +
                     "\n• ¿cuál es la imagen de mujer prevalece en esta canción? " +
                     "\n• ¿Por qué esta canción se puede identificar cómo violencia de género? " +
@@ -74,7 +76,7 @@ class ActivityMemory : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "cuatro")
+            intent.putExtra("activityName", "Memory_4")
             this.startActivity(intent)
         }
 

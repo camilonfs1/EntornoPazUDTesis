@@ -4,6 +4,7 @@ import android.animation.ArgbEvaluator
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.entornopazud.viewmodel.Adapters.Adapter_Module
@@ -26,6 +27,8 @@ class EducationalModule : AppCompatActivity() {
         var nameStudent = intent.getStringExtra("name")
         var keyStrudent = intent.getStringExtra("key")
         var roll = intent.getStringExtra("roll")
+
+
 
         btnBack= btnBackk
         btnBack!!.setOnClickListener {
