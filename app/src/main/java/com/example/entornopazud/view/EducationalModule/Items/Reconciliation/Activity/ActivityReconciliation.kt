@@ -1,13 +1,13 @@
-package com.example.entornopazud.view.EducationalModule.EvaluationActivities
+package com.example.entornopazud.view.EducationalModule.Items.Reconciliation.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.entornopazud.R
 
-class TimeLinePeaceEvaluation : AppCompatActivity() {
+class ActivityReconciliation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.evaluation_time_line_peace)
+        setContentView(R.layout.activity_reconciliation)
     }
 }

@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.entornopazud.R
+import com.example.entornopazud.view.EducationalModule.Items.Memory.Activity.ActivityMemory
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_memory_main.*
 
@@ -76,7 +77,11 @@ class MemoryMain : AppCompatActivity() {
             this.startActivity(intent)
         }
         ActivityCard!!.setOnClickListener {
-            //ventana falta
+            var intent = Intent(this, ActivityMemory::class.java)
+            intent.putExtra("roll", roll)
+            intent.putExtra("name", name)
+            intent.putExtra("key", key)
+            this.startActivity(intent)
         }
 
     }

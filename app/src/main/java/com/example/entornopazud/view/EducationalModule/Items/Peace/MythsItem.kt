@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import com.example.entornopazud.view.EducationalModule.EvaluationActivities.Myth_main_Evaluation
 import com.example.entornopazud.R
+import com.example.entornopazud.view.EducationalModule.Items.Peace.Activity.ActivityPeace
 import kotlinx.android.synthetic.main.main_myth.*
 
 class MythsItem : AppCompatActivity() {
@@ -55,7 +55,7 @@ class MythsItem : AppCompatActivity() {
         }
 
         cardActivity?.setOnClickListener {
-            this.startActivity(Intent(this, Myth_main_Evaluation::class.java))
+            this.startActivity(Intent(this, ActivityPeace::class.java))
         }
     }
 

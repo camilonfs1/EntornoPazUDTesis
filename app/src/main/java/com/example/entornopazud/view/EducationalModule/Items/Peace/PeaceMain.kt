@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.entornopazud.R
 import com.example.entornopazud.view.EducationalModule.Items.Memory.Banana1928
+import com.example.entornopazud.view.EducationalModule.Items.Peace.Activity.ActivityPeace
 import kotlinx.android.synthetic.main.activity_peace_main.*
 
 class PeaceMain : AppCompatActivity() {
@@ -67,6 +68,11 @@ class PeaceMain : AppCompatActivity() {
             this.startActivity(intent)
         }
         activityCard!!.setOnClickListener {
+            var intent = Intent(this, ActivityPeace::class.java)
+            intent.putExtra("roll", roll)
+            intent.putExtra("name", name)
+            intent.putExtra("key", key)
+            this.startActivity(intent)
 
         }
     }

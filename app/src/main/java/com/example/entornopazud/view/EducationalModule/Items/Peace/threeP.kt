@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import com.example.entornopazud.view.EducationalModule.EvaluationActivities.ThreePConflictEvaluation
 import com.example.entornopazud.R
+import com.example.entornopazud.view.EducationalModule.Items.Peace.Activity.ActivityPeace
 import kotlinx.android.synthetic.main.activity_three_p.*
 
 class threeP : AppCompatActivity() {
@@ -43,7 +43,7 @@ class threeP : AppCompatActivity() {
             showPopUp("Los intereses y necesidades de cada uno las diferencias y valores esenciales que los separan y las diferencias de cada uno en cuanto al proceso a seguir. ")
         }
         cardActivity?.setOnClickListener {
-            this.startActivity(Intent(this, ThreePConflictEvaluation::class.java))
+            this.startActivity(Intent(this, ActivityPeace::class.java))
         }
 
 

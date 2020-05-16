@@ -13,8 +13,8 @@ import androidx.core.view.get
 import androidx.viewpager2.widget.ViewPager2
 import com.example.entornopazud.viewmodel.Adapters.Adapter_Intro_Slider
 import com.example.entornopazud.model.models.IntroSlide
-import com.example.entornopazud.view.EducationalModule.EvaluationActivities.DrugsPeaceEvaluation
 import com.example.entornopazud.R
+import com.example.entornopazud.view.EducationalModule.Items.Peace.Activity.ActivityPeace
 import com.example.entornopazud.view.EducationalModule.Items.Peace.PeaceItem
 import kotlinx.android.synthetic.main.peace_container.*
 
@@ -91,7 +91,7 @@ class DrugsFragment : AppCompatActivity() {
             this.startActivity(intent)
         }
         btnActivity!!.setOnClickListener {
-            var intent = Intent(this, DrugsPeaceEvaluation::class.java)
+            var intent = Intent(this, ActivityPeace::class.java)
             this.startActivity(intent)
         }
 

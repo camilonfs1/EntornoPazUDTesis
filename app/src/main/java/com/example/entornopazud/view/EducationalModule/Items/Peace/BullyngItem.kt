@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
-import com.example.entornopazud.view.EducationalModule.EvaluationActivities.bullying_main_evaluation
 import com.example.entornopazud.R
+import com.example.entornopazud.view.EducationalModule.Items.Peace.Activity.ActivityPeace
 import kotlinx.android.synthetic.main.main_bullyng.*
 
 class BullyngItem : AppCompatActivity() {
@@ -23,7 +23,7 @@ class BullyngItem : AppCompatActivity() {
         howtoCard = cardHowto
 
         activityMainCard?.setOnClickListener {
-            this.startActivity(Intent(this, bullying_main_evaluation::class.java))
+            this.startActivity(Intent(this, ActivityPeace::class.java))
         }
         talkListenCard?.setOnClickListener {
             this.startActivity(Intent(this, TalkandListen::class.java))

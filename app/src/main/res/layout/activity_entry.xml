@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FF5722"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+    tools:context=".view.EducationalModule.Items.Memory.Activity.Activity_entry">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@drawable/linear_layuout_back"
+        android:padding="15dp"
+        android:elevation="6dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Actividad"
+            android:textColor="#FF5722"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_weight="1"/>
+
+        <me.biubiubiu.justifytext.library.JustifyTextView
+            android:id="@+id/TextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="dsdsd"
+            android:textStyle="italic"
+            android:textSize="16dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/txtReflection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa tu Refleccion"
+            android:textColor="#020202"
+
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/BtnUpdateEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:background="@drawable/btn_back"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:elevation="5dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:orientation="vertical"/>
+</LinearLayout>

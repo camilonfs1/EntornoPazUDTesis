@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
-import com.example.entornopazud.view.EducationalModule.EvaluationActivities.SolutionConflictEvaluation
 import com.example.entornopazud.R
+import com.example.entornopazud.view.EducationalModule.Items.Peace.Activity.ActivityPeace
 import kotlinx.android.synthetic.main.activity_solution_conflicts.*
 
 class solutionConflicts : AppCompatActivity() {
@@ -17,7 +17,7 @@ class solutionConflicts : AppCompatActivity() {
         cardSolutEvaluaction = cardEvaluationSol
 
         cardSolutEvaluaction!!.setOnClickListener {
-            this.startActivity(Intent(this, SolutionConflictEvaluation::class.java))
+            this.startActivity(Intent(this, ActivityPeace::class.java))
         }
 
     }

@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.example.entornopazud.R
+import com.example.entornopazud.view.EducationalModule.Items.Reconciliation.Activity.ActivityReconciliation
 import kotlinx.android.synthetic.main.activity_reconciliation_main.*
 import kotlinx.android.synthetic.main.activity_reconciliation_main.cardEndConflict
 import kotlinx.android.synthetic.main.activity_reconciliation_main.cardIlligalDrugs
@@ -100,7 +101,11 @@ class ReconciliationMain : AppCompatActivity() {
             this.startActivity(intent)
         }
         ActivityAllCard!!.setOnClickListener {
-            //faltaa
+            var intent = Intent(this, ActivityReconciliation::class.java)
+            intent.putExtra("roll", roll)
+            intent.putExtra("name", name)
+            intent.putExtra("key", key)
+            this.startActivity(intent)
         }
     }
     private fun showPopUp( text1: String ){
