@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".view.EducationalModule.Items.Peace.Activity.activity1Peace">
+
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="@drawable/linear_layuout_back"
+        android:padding="15dp"
+        android:elevation="6dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONTEXTO"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+        <me.biubiubiu.justifytext.library.JustifyTextView
+            android:id="@+id/TextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="a) Muchas de las personas debido al confinamiento producido por el coronavirus han venido cumpliendo con las normas impuestas por el gobierno central: pico y género, teletrabajo, aislamiento social en casa, entre otras. Sin embargo, otros de los ciudadanos por su condición precaria económica han tenido que salir a las calles al rebusque sin cumplir con ninguna norma de seguridad como el uso del tapabocas, el uso del gel antimaterial, guantes y lo más importante el aislamiento social, lo que ha generado conflictos entre los vecinos en los diferentes barrios de la capital.
+
+\n\nb) El trabajo de los médicos en los hospitales y el riego de contagio que corren de contraer en coronavirus ha hecho que muchos de estos se hallan visto estigmatizados y en algunos casos agredidos por los vecinos de los conjuntos residenciales donde estos viven.
+
+\n\nc) El estado de emergencia económica decretado por el gobierno central ha terminado por beneficiar a partir de grandes prestamos económicos a las grandes empresas excluyendo a las pequeñas y medianas empresas. Esto ha hecho que una gran mayoría de empresas pequeñas se encuentren cerca a la quiebra y que sus trabajadores se queden sin empleo.
+
+\n\nd) Las ayudas económicas prometidas por el Estado a la gran mayoría de la población de los estratos más pobres del país no han sido suficientes y en algunos casos las ayudas se han quedado en manos de los empresarios y las personas más ricas del país. Lo que ha llevado a bloquear las principales vías de salida y entrada de Bogotá\n"
+            android:textStyle="italic"
+            android:textSize="16dp"
+            android:textColor="#000000" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Actividad"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+        <me.biubiubiu.justifytext.library.JustifyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Para cada una de las situaciones de conflicto anteriormente señaladas se proponen seis pasos:
+            \n\n• Identificar las necesidades. ¿qué están pidiendo los ciudadanos?
+            \n\n• Definir el problema. ¿Cuál es el problema?
+            \n\n• Buscar soluciones. ¿Qué soluciones podemos proponer frente al problema?
+             \n\n• Evaluar las soluciones. ¿Identificar cuáles podrían ser las soluciones que se podría
+             \n\n• proponer por cada uno de los actores involucrados en el conflicto?
+            \n\n • Seleccionar la mejor decisión. ¿A qué acuerdos se podría llegar entre los actores
+             \n\n• para solucionar el problema?
+             \n\n• Aplicar la mejor solución propuesta entre las partes. ¿Se consiguió con la propuesta
+             \n\n• acordada darle salida al problema? \n"
+            android:textStyle="italic"
+            android:textSize="16dp"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/txtReflection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa tu Refleccion"
+            android:textColor="#020202"
+
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center">
+            <Button
+                android:id="@+id/BtnUpdateEntry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:background="@drawable/btn_back"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:elevation="5dp"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

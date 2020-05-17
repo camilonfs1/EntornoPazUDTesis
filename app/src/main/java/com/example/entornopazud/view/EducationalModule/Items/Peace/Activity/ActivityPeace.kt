@@ -29,6 +29,12 @@ class ActivityPeace : AppCompatActivity() {
 
 
         card1!!.setOnClickListener {
+            var intent = Intent(this, Activity_entry_Peace::class.java)
+            intent.putExtra("roll", roll)
+            intent.putExtra("name", name)
+            intent.putExtra("key", key)
+            intent.putExtra("activityName", "Paz 2")
+            this.startActivity(intent)
 
         }
         card2!!.setOnClickListener {

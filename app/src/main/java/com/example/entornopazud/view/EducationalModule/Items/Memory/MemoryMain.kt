@@ -20,7 +20,6 @@ class MemoryMain : AppCompatActivity() {
     private var BananaCard : CardView?=null
     private var April1948Card : CardView?=null
     private var Marquetalia1955Card : CardView?=null
-    private var BipartCard : CardView?=null
     private var ActivityCard : CardView?=null
 
     private var myDialog0: Dialog?=null
@@ -34,16 +33,11 @@ class MemoryMain : AppCompatActivity() {
         BananaCard = Card1928
         April1948Card = Card1948
         Marquetalia1955Card = Card1955
-        BipartCard = CardBipartisanship
         ActivityCard = CardActivityAllM
 
         var roll = intent.getStringExtra("roll")
         var name = intent.getStringExtra("name")
         var key = intent.getStringExtra("key")
-
-
-
-
 
         myDialog0 = Dialog(this)
 
@@ -69,13 +63,6 @@ class MemoryMain : AppCompatActivity() {
         }
         Marquetalia1955Card!!.setOnClickListener {
             var intent = Intent(this, BirthFarc::class.java)
-            intent.putExtra("roll", roll)
-            intent.putExtra("name", name)
-            intent.putExtra("key", key)
-            this.startActivity(intent)
-        }
-        BipartCard!!.setOnClickListener {
-            var intent = Intent(this, Bipartisanship::class.java)
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)

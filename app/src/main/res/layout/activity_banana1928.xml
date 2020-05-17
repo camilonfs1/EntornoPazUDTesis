@@ -1,9 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".view.EducationalModule.Items.Memory.Banana1928">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Masacre de las Bananeras 1928 "
+            android:textColor="#512Da8"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Por aquella época el momento político era autoritario y dictatorial en cabeza de los ideales conservadores de Miguel Abadía Méndez, se buscaba la industrialización del país, sin embargo, era una época donde se dieron batallas por derechos y mejores condiciones laborales para la clase obrera del país: \n"
+                        android:textColor="#fff"
+
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="	Huelga de los trabajadores de la Tropical Oil Company en 1924\n\n
+	Huelga del Ferrocarril del Pacifico en 1926\n\n
+	Huelga de los trabajadores de la Zona Bananera del Magdalena en 1928\n\n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="172dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="La United Fruit Company era una firma comercial estadounidense fundada 1899 que producía frutas tropicales en especial el banano, esta firma se convirtió en una fuerza política y económica que influyo en Colombia en gobiernos y partidos.\n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Al interior de la compañía se empezó a dar un movimiento de trabajadores producto de las malas condiciones de pago y trabajo; los trabajadores de dicha empresa solicitaban en un pliego con nueve exigencias básicas para continuar con sus labores cotidianas. \n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Con la ayuda del Partido Socialista Revolucionario en cabeza de María Cano, Raúl Eduardo Mahecha e Ignacio Torres Giraldo el 12 de noviembre de 1928 se dio inicio a la huelga de trabajadores de la zona bananera de Ciénaga y Santa Marta. \n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />>
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="352dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="El seis de diciembre de 1928 tras casi un mes de huelga de los diez mil trabajadores de la United Fruit Company, se escuchó que el gobernador del Magdalena se reuniría con ellos en la estación del tren de Ciénaga, dado que el encuentro no se realizó los ánimos subieron entre los trabajadores y soldados que se encontraban en este lugar, en este momento se dio orden por parte de las autoridades de desalojo. Lamentablemente este día a eso de las diez de la noche los soldados del ejército dispararon contra los trabajadores y personas que estaban en el lugar el echo dejo un sin número de muertos, según diferentes. "
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="252dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sin embargo, las cosas no quedaron así y según cuentan las narraciones orales, esa noche los soldados lanzaron personas heridas y cadáveres al mar como alimento de tiburones, además días después se comenzó una cacería de muerte pueblo a pueblo y casa a casa de los huelguistas.\n "
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</ScrollView >

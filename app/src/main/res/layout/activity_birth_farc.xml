@@ -1,9 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.EducationalModule.Items.Memory.BirthFarc">
+    tools:context=".view.EducationalModule.Items.Memory.BirthFarc"
+    android:padding="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Marquetalia, surgimiento de las FARC"
+            android:textColor="#512Da8"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tras los suceso violentos protagonizados por el bipartidismo  que existía en Colombia por la década de los 40s y 50s, en la que conservadores y liberales se disputaban la división ideológica y política del país, la época denominada “la violencia” se caracterizó por la política represiva y persecución a líderes políticos campesinos por medio de grupos paramilitares llamados en aquella época “los pájaros” que de la manera mas sanguinaria y violenta buscaban erradicar del país todo ideal diferente al conservador. Esta época se marco por las constantes olas de desplazamiento forzado y la acumulación de tierras por parte de lideres de estos grupos armados, volviéndose así algunos de los mas grandes terratenientes del país.\n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/marquetalia"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Para 1955 y 1956 los liberales y conservadores llegaron a un acuerdo de no violencia y la creación del denominado FRENTE NACIONAL, con el fin de alternar la presidencia del país entre los dos partidos Liberal y Conservador de a cuadro años, la distribución de ministerios y las ramas del poder público. Sin embargo, el conflicto violento y la disputa por la tierra y la política en todo el país no termino, tras arduos combates las guerrillas liberales ahora se acercaban mas a las ideas comunistas. \n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="210dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="En 1958 tras posicionarse como presidente Alberto Lleras ofreció una amnistía a guerrilleros y se dio la primera reunión entre el gobierno nacional y la guerrilla en Aipe, departamento del Huila, que buscaban reintegrar a todos
+los guerrilleros en armas a la vida civil. Para 1969 se llego a un acuerdo y las guerrillas conformaron grupos de autodefensas campesinas.
+\n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="252dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A pesar de los intentos por llevar paz a las zonas campesinas del país, los asesinatos y la persecución política continuo, lo que obligo al rearme y concentración de campesinos bajo el liderato de Manuel Marulanda en una zona llamada Marquetalia, en el corregimiento de la Gaitana en el departamento del Tolima. Para el 1962 el gobierno ataca a las guerrillas asentadas en Marquetalia sin dar frutos para ninguna de las dos partes.\n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="El 14 de mayo de 1964 la Operación Marquetalia, fue ordenada por el gobierno nacional la intervención terrestre y aérea con cerca de 16.000 soldados y con asesoría Norte Americana a la zona donde se concentraba la guerrilleada que buscaba la toma del poder. Por parte de la entonces guerrilla solo se quedaron 52 hombres y 2 mujeres a hacerle frente al ataque.  \n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tomamarquetalia"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="“El gobierno nos ha decretado una guerra que se puede prolongar por muchos años”, \ndijo Marulanda"
+            android:textColor="#512Da8"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="El gobierno nacional no se alcanzo a imaginar las consecuencias que tuvo esta operación, ya que, el 20 de julio de ese mismo año en medio de la selva se realizo la asamblea general de pobladores de Marquetalia y se definió que a partir de ese momento se convertirían en guerrilleros revolucionarios, dando origen a las Fuerzas Armadas Revolucionarias de Colombia – Ejército del Pueblo FARC-EP.\n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/carddesign1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <me.biubiubiu.justifytext.library.JustifyTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Las Farc alcanzo a tener cerca de 15000 mil hombres y mujeres. Durante más de 50 años libro un conflicto armado y violento contra el Estado Colombiano, dejado de parte y parte cientos de miles de muertos y una etapa violenta que ha dejado cicatrices imborrables en todos los aspectos de la cultura, política, economía y ecología del país.\n"
+                        android:textColor="#fff"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

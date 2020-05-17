@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/iconepaz_main_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.QualiModule.StatisticStudentsList"></activity>
+        <activity android:name=".view.EducationalModule.Items.Peace.Activity.activity1Peace"></activity>
+        <activity android:name=".view.QualiModule.StatisticStudentsList" />
         <activity android:name=".view.EducationalModule.Items.Reconciliation.Activity.Activity_entry_Reconcilitation" />
         <activity android:name=".view.EducationalModule.Items.Peace.Activity.Activity_entry_Peace" />
         <activity android:name=".view.EducationalModule.Items.Memory.Activity.Activity_entry_Memory" />
@@ -17,7 +18,6 @@
         <activity android:name=".view.EducationalModule.Items.Peace.Activity.ActivityPeace" />
         <activity android:name=".view.EducationalModule.Items.Reconciliation.Activity.ActivityReconciliation" />
         <activity android:name=".view.QualiModule.statisticsStudent" />
-        <activity android:name=".view.EducationalModule.Items.Memory.Bipartisanship" />
         <activity android:name=".view.EducationalModule.Items.Memory.BirthFarc" />
         <activity
             android:name=".view.EducationalModule.Items.Memory.BogotaRevolt"
