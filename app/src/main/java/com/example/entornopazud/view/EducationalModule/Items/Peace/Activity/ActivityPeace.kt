@@ -37,7 +37,7 @@ class ActivityPeace : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Peace_2")
+            intent.putExtra("activityName", "Paz 2")
             this.startActivity(intent)
         }
         card3!!.setOnClickListener {
@@ -46,7 +46,7 @@ class ActivityPeace : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Peace_3")
+            intent.putExtra("activityName", "Paz 3")
             this.startActivity(intent)
 
         }
@@ -57,7 +57,7 @@ class ActivityPeace : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Peace_4")
+            intent.putExtra("activityName", "Paz 4")
             this.startActivity(intent)
         }
 

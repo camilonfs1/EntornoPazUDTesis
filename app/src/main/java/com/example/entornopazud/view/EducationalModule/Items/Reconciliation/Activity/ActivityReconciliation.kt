@@ -35,7 +35,7 @@ class ActivityReconciliation : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Reconciliation_1")
+            intent.putExtra("activityName", "Reconciliacion 1")
             this.startActivity(intent)
 
         }
@@ -45,7 +45,7 @@ class ActivityReconciliation : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Reconciliation_2")
+            intent.putExtra("activityName", "Reconciliacion 2")
             this.startActivity(intent)
         }
         card3!!.setOnClickListener {
@@ -54,7 +54,7 @@ class ActivityReconciliation : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Reconciliation_3")
+            intent.putExtra("activityName", "Reconciliacion 3")
             this.startActivity(intent)
 
         }
@@ -64,7 +64,7 @@ class ActivityReconciliation : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Reconciliation_4")
+            intent.putExtra("activityName", "Reconciliacion 4")
             this.startActivity(intent)
         }
     }

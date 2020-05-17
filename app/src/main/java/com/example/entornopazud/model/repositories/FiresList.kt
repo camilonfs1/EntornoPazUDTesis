@@ -43,7 +43,7 @@ class FiresList {
         return mutableData
     }
     //----------------------------------------------------------------------List Students for teacher and cours-------------------------------------------------------------
-    fun readCoursesDb(mUser: String,context: Context,recyStu: RecyclerView) {
+    fun readCoursesDb(mUser: String,context: Context,recyStu: RecyclerView,activity:String) {
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference
 
@@ -62,19 +62,20 @@ class FiresList {
                             CoursesList1.add(cours.name)
                         }
                     }
-                   datosFirebase(CoursesList1,mUser,context,recyStu)
+                   datosFirebase(CoursesList1,mUser,context,recyStu,activity)
                 }
             }
         })
     }
-    fun datosFirebase(Courses: ArrayList<String>, mUser:String,context: Context,recyStu: RecyclerView) {
+    fun datosFirebase(Courses: ArrayList<String>, mUser:String,context: Context,recyStu: RecyclerView,activity:String) {
         for (value in Courses ){
-            otra(value,mUser,context,recyStu)
+            otra(value,mUser,context,recyStu,activity)
         }
     }
-    fun otra(it : String,mUser: String, context: Context,recyclerStudents1: RecyclerView ){
+    fun otra(it : String,mUser: String, context: Context,recyclerStudents1: RecyclerView,activity:String ){
         recyclerStudents1!!.layoutManager = LinearLayoutManager(context)
         mDatabaseReference = mDatabase!!.reference.child("Courses").child(it+"").child("Students")
+
         mDatabaseReference!!.addValueEventListener(object : ValueEventListener {
             //call "User" child in database firebase
             override fun onCancelled(p0: DatabaseError) {
@@ -87,15 +88,19 @@ class FiresList {
                     var roll = e.child("Roll").getValue().toString()
                     students.add(User(e.key.toString(),name,email,id,roll,it))
                 }
-                adapter =
-                    Adapter_Students(
-                        students,
-                        R.layout.recycler_row,
-                        mUser
-                    )//sent userlist to adapter class
+                adapter = Adapter_Students( students,R.layout.recycler_row, mUser,activity)//sent userlist to adapter class
                 recyclerStudents1!!.adapter = adapter
             }
         })
     }
-    //----------------------------------------------------------------------List Students for teacher and cours-------------------------------------------------------------
+    //----------------------------------------------------------------------List Reflection per student-------------------------------------------------------------
+    fun reflection(key:String){
+        mDatabase!!.reference.child("Courses")!!.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+            }
+            override fun onDataChange(p0: DataSnapshot) {
+                    System.out.println("----------------------->"+p0)
+            }
+        })
+    }
 }

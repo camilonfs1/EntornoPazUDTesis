@@ -71,9 +71,7 @@ class MainStudentFragment : Fragment() {
         ChatsCard!!.setOnClickListener {
             ifragment!!.Chats()
         }
-        btnOut!!.setOnClickListener {
-            ifragment!!.SigOut()
-        }
+
 
     }
 

@@ -7,7 +7,7 @@
     android:background="#f18bb0"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".view.QualiModule.statisticsStudent">
+    tools:context=".view.QualiModule.StatisticStudentsList">
     <Button
         android:id="@+id/BtnHome"
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         android:layout_marginBottom="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclar_reflection"
+        android:id="@+id/recyclar_Students"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

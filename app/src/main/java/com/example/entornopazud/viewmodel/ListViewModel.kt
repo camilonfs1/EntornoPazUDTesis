@@ -19,5 +19,6 @@ class ListViewModel: ViewModel() {
         return mutableData
     }
 
-    fun courses(mUser: String, context: Context,recyStu: RecyclerView)= listRepo.readCoursesDb(mUser,context,recyStu)
+    fun courses(mUser: String, context: Context,recyStu: RecyclerView,activity:String)= listRepo.readCoursesDb(mUser,context,recyStu,activity)
+    fun reflections(key:String )= listRepo.reflection("")
 }

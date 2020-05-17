@@ -9,6 +9,7 @@ import com.example.entornopazud.viewmodel.Interfaces.iComunicationFragmentsStude
 import com.example.entornopazud.R
 import com.example.entornopazud.view.ComunicationModule.MainStudentChat
 import com.example.entornopazud.view.EducationalModule.EducationalModule
+import com.example.entornopazud.view.QualiModule.statisticsStudent
 import com.google.firebase.auth.FirebaseAuth
 
 class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
@@ -46,15 +47,27 @@ class MainStudent : AppCompatActivity(), iComunicationFragmentsStudent {
     }
 
     override fun Stadistics() {
-        Toast.makeText(applicationContext, "Estadisticas", Toast.LENGTH_SHORT).show()
+        var name = nameUser()
+        var intent = Intent(this, statisticsStudent::class.java)
+        intent.putExtra("name", name)
+        intent.putExtra("roll","student")
+        intent.putExtra("key", mAuth!!.uid)
+        this.startActivity(intent)
     }
 
     override fun Avatar() {
-        Toast.makeText(applicationContext, "Avatar", Toast.LENGTH_SHORT).show()
+        var name = nameUser()
+        var course = couserUser()
+        var intent = Intent(this, ownProfile::class.java)
+        intent.putExtra("roll", "student")
+        intent.putExtra("course", course)
+        this.startActivity(intent)
     }
 
     override fun Prize() {
-        Toast.makeText(applicationContext, "Premios", Toast.LENGTH_SHORT).show()
+        mAuth!!.signOut()
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
     override fun Chats() {

@@ -11,6 +11,7 @@ import com.example.entornopazud.viewmodel.Adapters.Adapter_Module
 import com.example.entornopazud.model.models.Model
 import com.example.entornopazud.R
 import com.example.entornopazud.view.General_activity.MainStudent
+import com.example.entornopazud.view.General_activity.MainTeacher
 import kotlinx.android.synthetic.main.activity_educational_module.*
 
 
@@ -32,10 +33,18 @@ class EducationalModule : AppCompatActivity() {
 
         btnBack= btnBackk
         btnBack!!.setOnClickListener {
-            var intent = Intent(this, MainStudent::class.java)
-            intent.putExtra("name", nameStudent)
-            intent.putExtra("key", keyStrudent)
-            this.startActivity(intent)
+            if (roll==("student")){
+                var intent = Intent(this, MainStudent::class.java)
+                intent.putExtra("name", nameStudent)
+                intent.putExtra("key", keyStrudent)
+                this.startActivity(intent)
+            }else{
+                var intent = Intent(this, MainTeacher::class.java)
+                intent.putExtra("name", nameStudent)
+                intent.putExtra("key", keyStrudent)
+                this.startActivity(intent)
+            }
+
         }
         models = ArrayList()
         models!!.add(

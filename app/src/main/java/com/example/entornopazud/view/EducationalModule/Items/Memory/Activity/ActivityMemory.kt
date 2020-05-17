@@ -35,7 +35,7 @@ class ActivityMemory : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Memory_1")
+            intent.putExtra("activityName", "Memoria 1")
             this.startActivity(intent)
         }
         card2!!.setOnClickListener {
@@ -48,7 +48,7 @@ class ActivityMemory : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Memory_2")
+            intent.putExtra("activityName", "Memoria 2")
             this.startActivity(intent)
         }
         card3!!.setOnClickListener {
@@ -61,7 +61,7 @@ class ActivityMemory : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Memory_3")
+            intent.putExtra("activityName", "Memoria 3")
             this.startActivity(intent)
 
         }
@@ -76,7 +76,7 @@ class ActivityMemory : AppCompatActivity() {
             intent.putExtra("roll", roll)
             intent.putExtra("name", name)
             intent.putExtra("key", key)
-            intent.putExtra("activityName", "Memory_4")
+            intent.putExtra("activityName", "Memoria 4")
             this.startActivity(intent)
         }
 
